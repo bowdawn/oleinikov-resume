@@ -1,0 +1,25 @@
+.resume {
+    background-color: white;
+    width: 600px;
+    padding-top: 50px;
+    padding-left:25px;
+    padding-right: 25px;
+    text-align: start;
+}
+
+.name-box{
+    
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.first-name {
+    color: #6FA8DC;
+}
+.last-name {
+    color: #073763;
+}
+
+.right-column{
+    background-color: #CFE2F3;
+}

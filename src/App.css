@@ -1,5 +1,12 @@
+@import '~antd/dist/antd.css';
+@import 'style/ant-override.css';
+@import 'style/resume.css';
 .App {
   text-align: center;
+  background-color: #525659 ;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
 }
 
 .App-logo {
