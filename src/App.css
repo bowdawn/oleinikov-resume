@@ -47,7 +47,7 @@
 
 @media only screen and (max-width: 750px) {
   .App {
-    background-color: lightblue;
+    background-color: white ;
     zoom: 0.5;
   }
 }
