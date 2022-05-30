@@ -44,3 +44,10 @@
     transform: rotate(360deg);
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .App {
+    background-color: lightblue;
+    zoom: 0.5;
+  }
+}
