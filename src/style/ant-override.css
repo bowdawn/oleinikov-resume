@@ -1,3 +1,27 @@
 .ant-divider-horizontal{
     margin: 0px;
 }
+
+h5.ant-typography {
+    margin: 0px;
+}
+
+h4.ant-typography {
+    margin: 0px;
+}
+
+h3.ant-typography {
+    margin: 0px;
+}
+h2.ant-typography{
+    margin: 0px;
+}
+
+.ant-typography + h4.ant-typography {
+    margin: 0px;
+}
+
+.ant-divider {
+    padding-right: 5px;
+    border-top: 2px solid rgba(0, 0, 0, 0.06);
+}
