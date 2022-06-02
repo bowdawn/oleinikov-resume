@@ -25,8 +25,7 @@ const App: FC = () => (
           <Divider />
           <div>
             <div>
-              <Title level={5} >Master's Degree in Computer Science <br />
-                Specialization in Computing Systems
+              <Title level={5} >Master's Degree in Computer Science 
               </Title>
               <div className='description-title'>Georgia Tech | 2020 - 2022 </div>
               <div className='description-detail'>↪Expected graduation December 2022</div>
