@@ -28,3 +28,11 @@
     background-color: #CFE2F3;
     padding: 5px;
 }
+
+.description-title{
+    font-size: 14px;
+}
+
+.description-detail{
+    font-size: 12px
+}

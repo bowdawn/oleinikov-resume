@@ -26,15 +26,15 @@ const App: FC = () => (
           <div>
             <div>
               <Title level={5} >Online Master of Computer Science </Title>
-              Georgia Tech | 2020 - 2022 <br />
-              ↪Expected graduation December 2022
+              <div className='description-title'>Georgia Tech | 2020 - 2022 </div>
+              <div className='description-detail'>↪Expected graduation December 2022</div>
             </div>
             <div>
               <Title level={5}> Undergraduate Computer Science Student in College of
                 Engineering and Applied Sciences </Title>
-              SUNY Korea University | 2015 - 2017 & 2018 - 2019 <br />
-              ↪Cumulative GPA 3.49/4.00 <br />
-              Stony Brook University | 2017 - 2018 <br />
+              <div className='description-title'>SUNY Korea University | 2015 - 2017 & 2018 - 2019</div>
+              <div className='description-detail'>↪Cumulative GPA 3.49/4.00 </div >
+              <div className='description-title'>Stony Brook University | 2017 - 2018 </div>
             </div>
           </div>
         </div>
@@ -44,24 +44,25 @@ const App: FC = () => (
           <div>
             <div>
               <Title level={5}> Jinjoosoft Software Engineer</Title>
-              Web/Mobile Frontend & Backend Developer | Oct 2019 - Oct 2020<br />
-              • Use of Angular, React, and Vue libraries for web development.<br />
-              • Use of React Native for mobile development.<br />
-              • Use of Netcore, Docker, and Express for backend development.
+              <div className='description-title'>Web/Mobile Frontend & Backend Developer | Oct 2019 - Oct 2020</div>
+              <div className='description-detail'>• Use of Angular, React, and Vue libraries for web development.<br />
+                • Use of React Native for mobile development.<br />
+                • Use of Netcore, Docker, and Express for backend development.
+              </div>
             </div>
             <div>
               <Title level={5}>BNR Technology Intern</Title>
-              Android Mobile Development &<br />
-              Eng-Rus-Kor Translator Position | Jan 2019 - Mar 2019<br />
-              • Use of Android Studios and Firebase for mobile app software development.<br />
-              • Created written translations for English, Russian, and Korean language.
+              <div className='description-title'>Android Mobile Development &<br />
+                Eng-Rus-Kor Translator Position | Jan 2019 - Mar 2019</div>
+              <div className='description-detail'>• Use of Android Studios and Firebase for mobile app software development.<br />
+                • Created written translations for English, Russian, and Korean language.</div>
             </div>
             <div>
               <Title level={5}>Family Library Project</Title>
-              Personal Project | Spring 2022<br />
-              • Deployment of a family library database providing frontend React Typescript
-              GUI and backend implementation for addition/modification of book records
-              using MongoDB.
+              <div className='description-title'>Personal Project | Spring 2022</div>
+              <div className='description-detail'>• Deployment of a family library database providing frontend React Typescript
+                GUI and backend implementation for addition/modification of book records
+                using MongoDB.</div>
             </div>
           </div>
         </div>
@@ -71,23 +72,23 @@ const App: FC = () => (
           <div>
             <div>
               <Title level={5}>Oracle Certified Professional</Title>
-              Java SE 8 Programmer | July 20, 2018<br />
-              • Verified understanding of Concurrency, Fork - Join Framework, Functional Interfaces,
-              JDBC, Java Design Patterns, Java NIO.2 API, Localization, Regular Expressions,
-              Parallel Streams and Stream API.
+              <div className='description-title'>Java SE 8 Programmer | July 20, 2018</div>
+              <div className='description-detail'>• Verified understanding of Concurrency, Fork - Join Framework, Functional Interfaces,
+                JDBC, Java Design Patterns, Java NIO.2 API, Localization, Regular Expressions,
+                Parallel Streams and Stream API.</div>
             </div>
             <div>
               <Title level={5}>Oracle Certified Associate</Title>
-              Java SE 8 Programmer | June 2, 2018<br />
-              • Verified understanding of Java, JDK 8, Java SE 8, Lambda Expressions, Java
-              Application Development, and Java 8 Date & Time API.
+              <div className='description-title'>Java SE 8 Programmer | June 2, 2018</div>
+              <div className='description-detail'>• Verified understanding of Java, JDK 8, Java SE 8, Lambda Expressions, Java
+                Application Development, and Java 8 Date & Time API.</div>
             </div>
             <div>
               <Title level={5}>Test of Proficiency in Korean</Title>
-              TOPIK Level 6 | Oct 2021<br />
-              • Absolutely fluent in the Korean language for professional research or work, Capacity
-              to understand and express oneself without problem, although without the full fluency of
-              a native speaker.
+              <div className='description-title'>TOPIK Level 6 | Oct 2021</div>
+              <div className='description-detail'>• Absolutely fluent in the Korean language for professional research or work, Capacity
+                to understand and express oneself without problem, although without the full fluency of
+                a native speaker.</div>
             </div>
           </div>
         </div>
@@ -97,17 +98,19 @@ const App: FC = () => (
         <Title level={4} >Relevent Coursework</Title>
 
         <Divider />
-        <div>
+        <div className='description-title'>
           Object Oriented Programming <br />
           & Data Structures<br />
           System Fundamentals Ⅰ<br />
-          • MIPS Assembly<br />
+          <div className='description-detail'>• MIPS Assembly</div>
           System Fundamentals Ⅱ<br />
-          • C language<br />
+          <div className='description-detail'>• C language</div>
           Software Engineering<br />
-          • Android Studios<br />
-          • Eclipse IDE<br />
-          • NetBeans IDE<br />
+          <div className='description-detail'>
+            • Android Studios<br />
+            • Eclipse IDE<br />
+            • NetBeans IDE
+          </div>
           Discrete Mathematics<br />
           & Theory of Computation<br />
           Analysis of Algorithms<br />
@@ -127,8 +130,8 @@ const App: FC = () => (
           Proficient in Java, Python, C#<br />
           Adept in Web Component<br />
           Development & Design<br />
-          •Servlets, JSP, Html, CSS, XML,<br />
-          React, Angular, Vue, Express<br />
+          <div className='description-detail'>•Servlets, JSP, Html, CSS, XML,<br />
+          React, Angular, Vue, Express</div>
           Intermediate in C/C++, SQL,<br />
           MongoDB, Network Sockets<br />
           Novice in Lisp, SML<br />
