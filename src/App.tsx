@@ -52,7 +52,7 @@ const App: FC = () => (
               </div>
             </div>
             <div>
-              <Title level={5}>BNR Technology Intern</Title>
+              <Title level={5}>BNR Technology</Title>
               <div className='description-title'>Android Mobile Development &<br />
                 Eng-Rus-Kor Translator Position | Jan 2019 - Mar 2019</div>
               <div className='description-detail'>• Use of Android Studios and Firebase for mobile app software development.<br />
@@ -133,9 +133,9 @@ const App: FC = () => (
           Development & Design<br />
           <div className='description-detail'>•Servlets, JSP, Html, CSS, XML,<br />
             React, Angular, Vue, Express</div>
-          Intermediate in C/C++, SQL,<br />
+          C/C++, SQL,<br />
           MongoDB, Network Sockets<br />
-          Novice in Lisp, SML<br />
+          Lisp, SML<br />
         </div>
         <Title level={5} >Languages</Title>
         <div>
