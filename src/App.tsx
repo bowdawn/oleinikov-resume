@@ -31,8 +31,8 @@ const App: FC = () => (
               <div className='description-detail'>↪Expected graduation December 2022</div>
             </div>
             <div>
-              <Title level={5}>Bachelor's Degree in Computer Science<br />
-                College of Engineering and Applied Sciences </Title>
+              <Title level={5}>Bachelor's Degree in Computer Science
+                </Title>
               <div className='description-title'>SUNY Korea University | 2015 - 2017 & 2018 - 2019</div>
               <div className='description-detail'>↪Cumulative GPA 3.49/4.00 </div >
               <div className='description-title'>Stony Brook University | 2017 - 2018 </div>
