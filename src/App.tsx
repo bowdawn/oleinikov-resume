@@ -25,13 +25,15 @@ const App: FC = () => (
           <Divider />
           <div>
             <div>
-              <Title level={5} >Online Master of Computer Science </Title>
+              <Title level={5} >Master's Degree in Computer Science <br />
+                Specialization in Computing Systems
+              </Title>
               <div className='description-title'>Georgia Tech | 2020 - 2022 </div>
               <div className='description-detail'>↪Expected graduation December 2022</div>
             </div>
             <div>
-              <Title level={5}> Undergraduate Computer Science Student in College of
-                Engineering and Applied Sciences </Title>
+              <Title level={5}>Bachelor's Degree in Computer Science<br />
+                College of Engineering and Applied Sciences </Title>
               <div className='description-title'>SUNY Korea University | 2015 - 2017 & 2018 - 2019</div>
               <div className='description-detail'>↪Cumulative GPA 3.49/4.00 </div >
               <div className='description-title'>Stony Brook University | 2017 - 2018 </div>
@@ -131,7 +133,7 @@ const App: FC = () => (
           Adept in Web Component<br />
           Development & Design<br />
           <div className='description-detail'>•Servlets, JSP, Html, CSS, XML,<br />
-          React, Angular, Vue, Express</div>
+            React, Angular, Vue, Express</div>
           Intermediate in C/C++, SQL,<br />
           MongoDB, Network Sockets<br />
           Novice in Lisp, SML<br />
