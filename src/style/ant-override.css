@@ -17,11 +17,25 @@ h2.ant-typography{
     margin: 0px;
 }
 
+h1.ant-typography{
+    margin: 0px;
+}
+
 .ant-typography + h4.ant-typography {
     margin: 0px;
 }
 
 .ant-divider {
-    padding-right: 5px;
     border-top: 2px solid rgba(0, 0, 0, 0.06);
+}
+
+.ant-switch-checked{
+    background: #073763;
+    
+}
+
+
+.ant-page-header {
+    padding-right: 0px;
+    padding-left: 0px;
 }
