@@ -71,7 +71,10 @@ const resume_en: Resume =
 
                 {
                     type: "detail", text: `• Deployment of a family library database providing frontend React Typescript 
-                    GUI and backend implementation for addition/modification of book records using MongoDB.`
+                    GUI.`
+                },
+                {
+                    type: "detail", text: `• Deployment of backend for addition/modification of book records using MongoDB.`
                 },
             ]
     }],

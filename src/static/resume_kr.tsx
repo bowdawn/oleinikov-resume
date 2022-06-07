@@ -25,9 +25,9 @@ const resume_kr: Resume =
     educationitem: [{
         description:
             [
-                { type: "header", text: "Master's Degree in Computer Science" },
-                { type: "title", text: "Georgia Tech | 2020 - 2022" },
-                { type: "detail", text: "↪Expected graduation December 2022" }
+                { type: "header", text: "검퓨터공학 학사" },
+                { type: "title", text: "조지아 공과대학교 | 2020 - 2022" },
+                { type: "detail", text: "↪2022년 12월 졸업 예상" }
             ]
     }
         ,
@@ -35,21 +35,21 @@ const resume_kr: Resume =
     {
         description:
             [
-                { type: "header", text: "Bachelor's Degree in Computer Science" },
-                { type: "title", text: "SUNY Korea University | 2015 - 2017 & 2018 - 2019" },
-                { type: "detail", text: "↪Cumulative GPA 3.49/4.00" },
-                { type: "title", text: "Stony Brook University | 2017 - 2018" },
+                { type: "header", text: "검퓨터공학 학사" },
+                { type: "title", text: "한국 뉴욕주립대학교 | 2015 - 2017 & 2018 - 2019" },
+                { type: "detail", text: "↪전체 학점 평균 3.49/4.00" },
+                { type: "title", text: "스토니브룩 대학교 | 2017 - 2018" },
             ]
     }],
     experience: "경력사항",
     experienceitem: [{
         description:
             [
-                { type: "header", text: "Jinjoosoft Software Engineer" },
-                { type: "title", text: "Web/Mobile Frontend & Backend Developer | Oct 2019 - Oct 2020" },
-                { type: "detail", text: "• Use of Angular, React, and Vue libraries for web development." },
-                { type: "detail", text: "• Use of React Native for mobile development." },
-                { type: "detail", text: "• Use of Netcore, Docker, and Express for backend development." }
+                { type: "header", text: "Jinjoosoft 소프트웨어 엔지니어" },
+                { type: "title", text: "웹/모바일 프론트앤드 & 백앤드 개발자 | 2019.10 - 2020.20" },
+                { type: "detail", text: "• 웹앱 개발 위한 Angular, React 및 Vue를 쓴 경력." },
+                { type: "detail", text: "• 모바일앱 개발 위한 React Native를 쓴 경력." },
+                { type: "detail", text: "• 모바일앱 개발 위한 Netcore, Docker 및 Express 쓴 경력." },
             ]
     }
         ,
@@ -57,22 +57,24 @@ const resume_kr: Resume =
         description:
             [
                 { type: "header", text: "BNR Technology" },
-                { type: "title", text: "Android Mobile Development &" },
-                { type: "title", text: "Eng-Rus-Kor Translator Position | Jan 2019 - Mar 2019" },
-                { type: "detail", text: "• Use of Android Studios and Firebase for mobile app software development." },
-                { type: "detail", text: "• Created written translations for English, Russian, and Korean language." },
+                { type: "title", text: "안드로이드 모바일 어플리케이션 개발 &" },
+                { type: "title", text: "영어-러시아어-한국어 번역 | 2019.1 - 2019.3" },
+                { type: "detail", text: "• 안드로이드 스튜디오, Firebase를 사용하여 모바일 소프트웨어 개발." },
+                { type: "detail", text: "• 영어, 러시아어, 한국어 번역." },
             ]
     }
         ,
     {
         description:
             [
-                { type: "header", text: "Family Library Project" },
-                { type: "title", text: "Personal Project | Spring 2022" },
+                { type: "header", text: "가족 도서관 프로젝트" },
+                { type: "title", text: "개인 프로잭트 | 2022 봄" },
 
                 {
-                    type: "detail", text: `• Deployment of a family library database providing frontend React Typescript 
-                    GUI and backend implementation for addition/modification of book records using MongoDB.`
+                    type: "detail", text: `• 타입스크립트하고 리액트로 구현된 가족 책 기록 하는 웹앱 배포.`,
+                },
+                {
+                    type: "detail", text: `• 몽고DB를 통해서 백앤드 책기록 추가 및 수정 기능 구현.`,  
                 },
             ]
     }],
@@ -80,12 +82,11 @@ const resume_kr: Resume =
     certificationitem: [{
         description:
             [
-                { type: "header", text: "Oracle Certified Professional" },
-                { type: "title", text: "Java SE 8 Programmer | July 20, 2018" },
+                { type: "header", text: "Professional Oracle 자격증 " },
+                { type: "title", text: "자바 SE 8 프로그래머 | 2018.07.20" },
                 {
-                    type: "detail", text: `• Verified understanding of Concurrency, Fork - Join Framework, Functional Interfaces, 
-                    JDBC, Java Design Patterns, Java NIO.2 API, Localization, Regular Expressions,
-                    Parallel Streams and Stream API.`
+                    type: "detail", text: `• Concurrency, Fork - Join Framework, Functional Interfaces, JDBC, 
+                    Java Design Patterns, Java NIO.2 API, Localization, Regular Expressions, Parallel Streams & Stream API 사용가능`
                 },
             ]
     }
@@ -93,11 +94,11 @@ const resume_kr: Resume =
     {
         description:
             [
-                { type: "header", text: "Oracle Certified Associate" },
-                { type: "title", text: "Java SE 8 Programmer | June 2, 2018" },
+                { type: "header", text: "Associate Oracle 자격증" },
+                { type: "title", text: "자바 SE 8 프로그래머 | 2018.06.02" },
                 {
-                    type: "detail", text: `• Verified understanding of Java, JDK 8, Java SE 8, Lambda Expressions, Java
-                    Application Development, and Java 8 Date & Time API.`
+                    type: "detail", text: `• Java, JDK 8, Java SE 8, Lambda Expressions, Java Application 
+                    Development, and Java 8 Date & Time API 사용가능`
                 },
             ]
     }
@@ -108,8 +109,9 @@ const resume_kr: Resume =
                 { type: "header", text: "Test of Proficiency in Korean" },
                 { type: "title", text: "TOPIK Level 6 | Oct 2021" },
                 {
-                    type: "detail", text: `• Absolutely fluent in the Korean language for professional research or work, Capacity
-                    to understand and express oneself without problem, although without the full fluency of a native speaker.`
+                    type: "detail", text: `• 전문 분야에서의 연구나 업무 수행에 필요한 언어 기능을 비교적 정확하고 유창하게 
+                    수행할 수 있으며 정치, 경제, 사회, 문화 전반에 걸쳐 친숙하지 않은 주제에 관해서도 이해하고 사용할 수 있다. 
+                    원어민 화자의 수준에는 이르지 못하나 기능 수행이나 의미 표현에는 어려움을 겪지 않는다`
                 },
             ]
     }],
@@ -119,25 +121,25 @@ const resume_kr: Resume =
     releventcourseworkitem: [
         {description: 
             [
-                {type: "title" , text: "Object Oriented Programming"},
-                {type: "title" , text: "& Data Structures"},
+                {type: "title" , text: "객체 지향 프로그래밍 (OOP)"},
+                {type: "title" , text: "& 자료 구조"},
             ]
         },
         {description: 
             [
-                {type: "title" , text: "System Fundamentals Ⅰ"},
-                {type: "detail" , text: "• MIPS Assembly"},
+                {type: "title" , text: "컴퓨터 아키텍처 Ⅰ"},
+                {type: "detail" , text: "• MIPS "},
             ]
         },
         {description: 
             [
-                {type: "title" , text: "System Fundamentals Ⅱ"},
-                {type: "detail" , text: "• C language"},
+                {type: "title" , text: "컴퓨터 아키텍처 Ⅱ"},
+                {type: "detail" , text: "• C 언어"},
             ]
         },
         {description: 
             [
-                {type: "title" , text: "Software Engineering"},
+                {type: "title" , text: "소프트웨어 공학"},
                 {type: "detail" , text: "• Android Studios"},
                 {type: "detail" , text: "• Eclipse IDE"},
                 {type: "detail" , text: "• NetBeans IDE"},
@@ -145,50 +147,48 @@ const resume_kr: Resume =
         },
         {description: 
             [
-                {type: "title" , text: "Discrete Mathematics"},
-                {type: "title" , text: " & Theory of Computation"},
+                {type: "title" , text: "이산수학"},
+                {type: "title" , text: " & 계산 이론"},
             ]
         },
         {description: 
             [
-                {type: "title" , text: "Analysis of Algorithms"},
+                {type: "title" , text: "알고리즘 분석"},
               
             ]
         },
         {description: 
             [
-                {type: "title" , text: "Principles of Databases"},
+                {type: "title" , text: "데이터베이스 원리"},
                 
             ]
         },
         {description: 
             [
-                {type: "title" , text: "Computer Networks"},
+                {type: "title" , text: "컴퓨터 네트워크"},
                 
             ]
         },
         {description: 
             [
-                {type: "title" , text: "Artificial Intelligence"},
+                {type: "title" , text: "인공지능"},
                 
             ]
         },
         {description: 
             [
-                {type: "title" , text: "Principles of Programming"},
-                {type: "title" , text: "Languages"},
+                {type: "title" , text: "프로그래밍 언어의 원리"},  
+            ]
+        },
+        {description: 
+            [
+                {type: "title" , text: "로봇공학"},
                 
             ]
         },
         {description: 
             [
-                {type: "title" , text: "Robotics"},
-                
-            ]
-        },
-        {description: 
-            [
-                {type: "title" , text: "Visualization"},
+                {type: "title" , text: "컴퓨처 비전"},
                 
             ]
         },
@@ -198,27 +198,34 @@ const resume_kr: Resume =
     computeritem: [
         {description: 
             [
-                {type: "title" , text: "Proficient in Java, Python, C#"},
+                {type: "title" , text: "자바, 파이썬: 능숙함"},
                 
             ]
         },
         {description: 
             [
-                {type: "title" , text: "Adept in Web Component"},
-                {type: "title" , text: "Development & Design"},
-                {type: "detail" , text: "•Servlets, JSP, Html, CSS, XML,"},
-                {type: "detail" , text: " React, Angular, Vue, Express"},
-               
+                {type: "title" , text: "웹 컴포넌트 개발 & 웹 디자인"},
+                {type: "detail" , text: "•Servlets, JSP, Html, CSS, XML, React"},
             ]
         },
         {description: 
             [
-                {type: "title" , text: "C/C++, SQL,"},
+                {type: "title" , text: "C/C++"},
             ]
         },
         {description: 
             [
-                {type: "title" , text: "MongoDB, Network Sockets"},
+                {type: "title" , text: "SQL"},
+            ]
+        },
+        {description: 
+            [
+                {type: "title" , text: "몽고DB, "},
+            ]
+        },
+        {description: 
+            [
+                {type: "title" , text: "네트워크 소켓"},
             ]
         },
         {description: 
@@ -226,12 +233,13 @@ const resume_kr: Resume =
                 {type: "title" , text: "Lisp, SML"},
             ]
         },
+       
         
     ],
     languages: "언어",
-    english: "English (Native/ US Citizen)",
-    korean: "Korean (Fluent/ 6 years+)",
-    russian: "Russian (Fluent/ Heritage Speaker)"
+    english: "영어 (원어민/미국출신) ",
+    korean: "러시아어 (유창함/경험 6년이상)",
+    russian: "러시아어 (유창함/계승어)"
 }
 
 export default resume_kr;
