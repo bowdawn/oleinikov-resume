@@ -13,9 +13,7 @@ const { Title, Text } = Typography;
 const App: FC = () => {
   const {  i18n } = useTranslation();
   const [resume, setResume] = useState( i18n.language.includes("ko") ? resume_kr : resume_en);
-  console.log(i18n)
-  console.log(i18n.language)
-  console.log(i18n.language.includes("ko"))
+  
   return (
     <div className="App">
       <Row className="resume">
@@ -27,7 +25,7 @@ const App: FC = () => {
               unCheckedChildren={<div><GlobalOutlined /> {resume.switch}</div>}
               checkedChildren={<div><GlobalOutlined /> {resume.switch}</div>} />}
           />
-          {i18n.language}
+         
         </Col>
         <Col span={16} className="left-column" >
           <Row align='middle' className="basic-info-container">
