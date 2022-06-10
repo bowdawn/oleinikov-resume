@@ -25,6 +25,7 @@ const App: FC = () => {
               unCheckedChildren={<div><GlobalOutlined /> {resume.switch}</div>}
               checkedChildren={<div><GlobalOutlined /> {resume.switch}</div>} />}
           />
+          {i18n.language}
         </Col>
         <Col span={16} className="left-column" >
           <Row align='middle' className="basic-info-container">
