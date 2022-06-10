@@ -48,7 +48,30 @@
 
 @media only screen and (max-width: 750px) {
   .App {
-    background-color: white ;
     zoom: 0.5;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .App {
+    zoom: 0.49;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .App {
+    zoom: 0.48;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .App {
+    zoom: 0.47;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .App {
+    zoom: 0.46;
   }
 }
