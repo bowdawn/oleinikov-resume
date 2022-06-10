@@ -6,9 +6,13 @@ import ResumeItem from './components/ResumeItem';
 import resume_en from './static/resume_en';
 import resume_kr from './static/resume_kr';
 import progress_props from './static/progress_props';
+import { useTranslation } from 'react-i18next';
+
+
 const { Title, Text } = Typography;
 const App: FC = () => {
-  const [resume, setResume] = useState(resume_en);
+  const {  i18n } = useTranslation();
+  const [resume, setResume] = useState( i18n.language == "ko" ? resume_kr : resume_en);
   return (
     <div className="App">
       <Row className="resume">

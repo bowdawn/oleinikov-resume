@@ -1,5 +1,5 @@
 import Resume from "../types/Resume";
-
+import education from "./locales/kr/education"
 const resume_kr: Resume =
 {
     type: "Kr",
@@ -25,9 +25,9 @@ const resume_kr: Resume =
     educationitem: [{
         description:
             [
-                { type: "header", text: "검퓨터공학 학사" },
-                { type: "title", text: "조지아 공과대학교 | 2020 - 2022" },
-                { type: "detail", text: "↪2022년 12월 졸업 예상" }
+                { type: "header", text: education.id1_header },
+                { type: "title", text: education.id1_title },
+                { type: "detail", text: education.id1_detail }
             ]
     }
         ,

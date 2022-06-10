@@ -3,33 +3,41 @@
     width: 750px;
     min-width: 750px;
     padding-top: 0px;
-    padding-left:25px;
+    padding-left: 25px;
     padding-right: 25px;
     padding-bottom: 25px;
     text-align: start;
 }
-.basic-info-container{
+
+.basic-info-container {
     height: 120px;
 }
+
 .first-name {
     color: #6FA8DC;
 }
+
 .last-name {
     color: #073763;
 }
+
 .job-title {
     color: #073763;
 }
-.left-column{
+
+.left-column {
     padding-right: 5px;
 }
-.right-column{
+
+.right-column {
     background-color: #CFE2F3;
     padding: 5px;
 }
-.description-title{
+
+.description-title {
     font-size: 14px;
 }
-.description-detail{
+
+.description-detail {
     font-size: 12px
 }

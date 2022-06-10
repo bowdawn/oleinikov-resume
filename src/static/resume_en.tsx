@@ -1,4 +1,7 @@
 import Resume from "../types/Resume";
+import education from "./locales/en/education"
+
+
 const resume_en: Resume =
 {
     type: "En",
@@ -24,9 +27,9 @@ const resume_en: Resume =
     educationitem: [{
         description:
             [
-                { type: "header", text: "Master's Degree in Computer Science" },
-                { type: "title", text: "Georgia Tech | 2020 - 2022" },
-                { type: "detail", text: "↪Expected graduation December 2022" }
+                { type: "header", text: education.id1_header },
+                { type: "title", text: education.id1_title },
+                { type: "detail", text: education.id1_detail }
             ]
     }
         ,

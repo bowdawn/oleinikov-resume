@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import { Typography, } from 'antd';
-
 import ResumeItemType from '../types/ResumeItem';
 const { Title } = Typography;
 const ResumeItem: FC<ResumeItemType> = (props: ResumeItemType) => {

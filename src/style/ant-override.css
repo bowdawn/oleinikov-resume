@@ -1,4 +1,4 @@
-.ant-divider-horizontal{
+.ant-divider-horizontal {
     margin: 0px;
 }
 
@@ -13,15 +13,16 @@ h4.ant-typography {
 h3.ant-typography {
     margin: 0px;
 }
-h2.ant-typography{
+
+h2.ant-typography {
     margin: 0px;
 }
 
-h1.ant-typography{
+h1.ant-typography {
     margin: 0px;
 }
 
-.ant-typography + h4.ant-typography {
+.ant-typography+h4.ant-typography {
     margin: 0px;
 }
 
@@ -29,11 +30,10 @@ h1.ant-typography{
     border-top: 2px solid rgba(0, 0, 0, 0.06);
 }
 
-.ant-switch-checked{
+.ant-switch-checked {
     background: #073763;
-    
-}
 
+}
 
 .ant-page-header {
     padding-right: 0px;
