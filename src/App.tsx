@@ -27,7 +27,7 @@ const App: FC = () => {
         </Col>
         <Col span={16} className="left-column" >
           <Row align='middle' className="basic-info-container">
-            <Col span={12}  >
+            <Col xs={24} sm={12} md={12} lg={12} xl={12}  >
               {resume.type == "En" ?
                 <Title level={1}>
                   <div className='first-name'>{resume_en.first}</div>
@@ -43,7 +43,7 @@ const App: FC = () => {
                 </>
               }
             </Col>
-            <Col span={12} >
+            <Col xs={24} sm={12} md={12} lg={12} xl={12} >
               <Title level={4} underline={true}>{resume.contact}</Title>
               {resume.contactitem.map((x) => <ResumeItem description={x.description} />)}
             </Col>

@@ -1,9 +1,10 @@
 @import '~antd/dist/antd.css';
 @import 'style/ant-override.css';
 @import 'style/resume.css';
+
 .App {
   text-align: center;
-  background-color: #525659 ;
+  background-color: #525659;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -41,49 +42,33 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-@media screen and (max-device-width:350px), screen and (max-width:350px) {
+
+
+@media screen and (max-device-width:576px),
+screen and (max-width:576px) {
   .App {
     background-color: white;
-    zoom: 0.4;
+    zoom: 0.3;
+  }
+  .basic-info-container {
+    height: unset;
+  }
+  .job-title {
+   font-size: 28px;
   }
 }
 
-@media screen and (max-device-width:450px), screen and (max-width:450px) {
+
+@media screen and (max-device-width:750px),
+screen and (max-width:750px) {
   .App {
     background-color: white;
     zoom: 0.5;
   }
 }
-
-@media screen and (max-device-width:550px), screen and (max-width:550px) {
-  .App {
-    background-color: white;
-    zoom: 0.6;
-  }
-}
-
-@media screen and (max-device-width:650px), screen and (max-width:650px) {
-  .App {
-    background-color: white;
-    zoom: 0.7;
-  }
-}
-
-@media screen and (max-device-width:750px), screen and (max-width:750px) {
-  .App {
-    background-color: white;
-    zoom: 0.8;
-  }
-}
-
-
-
-
-
-
-
