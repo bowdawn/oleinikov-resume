@@ -234,9 +234,9 @@ const resume_en: Resume =
         
     ],
     languages: "Langauges",
-    english: "English (Native/ US Citizen)",
-    korean: "Korean (Fluent/ 6 years+)",
-    russian: "Russian (Fluent/ Heritage Speaker)"
+    english: "English (Native/US Citizen)",
+    korean: "Korean (Fluent/6 years+)",
+    russian: "Russian (Fluent/Heritage Speaker)"
 }
 
 
