@@ -13,6 +13,7 @@ const { Title, Text } = Typography;
 const App: FC = () => {
   const {  i18n } = useTranslation();
   const [resume, setResume] = useState( i18n.language == "ko" ? resume_kr : resume_en);
+  console.log(i18n)
   return (
     <div className="App">
       <Row className="resume">
