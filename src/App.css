@@ -46,35 +46,35 @@
   }
 }
 
-@media only screen and (max-width: 350px) {
+@media screen and (max-device-width:350px), screen and (max-width:350px) {
   .App {
     background-color: white;
     zoom: 0.40;
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media screen and (max-device-width:450px), screen and (max-width:450px) {
   .App {
     background-color: white;
     zoom: 0.42;
   }
 }
 
-@media only screen and (max-width: 550px) {
+@media screen and (max-device-width:550px), screen and (max-width:550px) {
   .App {
     background-color: white;
     zoom: 0.46;
   }
 }
 
-@media only screen and (max-width: 650px) {
+@media screen and (max-device-width:650px), screen and (max-width:650px) {
   .App {
     background-color: white;
     zoom: 0.48;
   }
 }
 
-@media only screen and (max-width: 750px) {
+@media screen and (max-device-width:750px), screen and (max-width:750px) {
   .App {
     background-color: white;
     zoom: 0.5;
