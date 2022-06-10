@@ -49,28 +49,28 @@
 @media screen and (max-device-width:350px), screen and (max-width:350px) {
   .App {
     background-color: white;
-    zoom: 0.40;
+    zoom: 0.10;
   }
 }
 
 @media screen and (max-device-width:450px), screen and (max-width:450px) {
   .App {
     background-color: white;
-    zoom: 0.42;
+    zoom: 0.2;
   }
 }
 
 @media screen and (max-device-width:550px), screen and (max-width:550px) {
   .App {
     background-color: white;
-    zoom: 0.46;
+    zoom: 0.3;
   }
 }
 
 @media screen and (max-device-width:650px), screen and (max-width:650px) {
   .App {
     background-color: white;
-    zoom: 0.48;
+    zoom: 0.4;
   }
 }
 
