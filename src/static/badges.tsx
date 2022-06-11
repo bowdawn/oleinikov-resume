@@ -1,4 +1,4 @@
-import { CheckCircleOutlined } from "@ant-design/icons";
+import { CheckCircleOutlined, LinkOutlined } from "@ant-design/icons";
 import Link from "antd/lib/typography/Link";
 
 export default {
@@ -9,5 +9,9 @@ export default {
     "oracle_associate":
         <Link target="_blank" rel="noopener noreferrer" href="https://www.credly.com/badges/801eebf9-a03b-4952-ba8c-1c0127ed104f">
             &nbsp;<CheckCircleOutlined />
-        </Link >
+        </Link >,
+    "library_website": <Link target="_blank" rel="noopener noreferrer" href="https://oleinikov-library.vercel.app">
+    &nbsp;<LinkOutlined />
+</Link >
+
 }

@@ -64,7 +64,7 @@ const resume_kr: Resume =
     {
         description:
             [
-                { type: "header", text: "가족 도서관 프로젝트" },
+                { type: "header", text: <div>가족 도서관 프로젝트{badges.library_website}</div> },
                 { type: "title", text: "개인 프로잭트 | 2022 봄" },
 
                 {

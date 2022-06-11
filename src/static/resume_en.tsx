@@ -67,7 +67,7 @@ const resume_en: Resume =
     {
         description:
             [
-                { type: "header", text: "Family Library Project" },
+                { type: "header", text: <div>Family Library Project{badges.library_website}</div>  },
                 { type: "title", text: "Personal Project | Spring 2022" },
 
                 {
