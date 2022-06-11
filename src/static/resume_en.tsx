@@ -1,4 +1,6 @@
+
 import Resume from "../types/Resume";
+import badges from "./badges";
 import contact from "./contact";
 import education from "./locales/en/education"
 
@@ -81,8 +83,13 @@ const resume_en: Resume =
     certificationitem: [{
         description:
             [
-                { type: "header", text: "Oracle Certified Professional" },
-                { type: "title", text: "Java SE 8 Programmer | July 20, 2018" },
+                {
+                    type: "header", text: <div>
+                        Oracle Certified Professional
+                        {badges.oracle_professional}
+                    </div>
+                },
+                { type: "title", text: "Java SE 8 Programmer | July 20, 2018 " },
                 {
                     type: "detail", text: `• Verified understanding of Concurrency, Fork - Join Framework, Functional Interfaces, 
                     JDBC, Java Design Patterns, Java NIO.2 API, Localization, Regular Expressions,
@@ -94,7 +101,13 @@ const resume_en: Resume =
     {
         description:
             [
-                { type: "header", text: "Oracle Certified Associate" },
+                {
+                    type: "header", text:
+                        <div>
+                            Oracle Certified Associate
+                            {badges.oracle_associate}
+                        </div>
+                },
                 { type: "title", text: "Java SE 8 Programmer | June 2, 2018" },
                 {
                     type: "detail", text: `• Verified understanding of Java, JDK 8, Java SE 8, Lambda Expressions, Java

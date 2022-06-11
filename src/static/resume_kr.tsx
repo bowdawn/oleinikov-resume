@@ -1,4 +1,5 @@
 import Resume from "../types/Resume";
+import badges from "./badges";
 import contact from "./contact";
 import education from "./locales/kr/education"
 const resume_kr: Resume =
@@ -78,7 +79,7 @@ const resume_kr: Resume =
     certificationitem: [{
         description:
             [
-                { type: "header", text: "Professional Oracle 자격증 " },
+                { type: "header", text: <div>Professional Oracle 자격증{badges.oracle_professional}</div> },
                 { type: "title", text: "자바 SE 8 프로그래머 | 2018.07.20" },
                 {
                     type: "detail", text: `• Concurrency, Fork - Join Framework, Functional Interfaces, JDBC, 
@@ -90,7 +91,7 @@ const resume_kr: Resume =
     {
         description:
             [
-                { type: "header", text: "Associate Oracle 자격증" },
+                { type: "header", text: <div> Associate Oracle 자격증{badges.oracle_associate}</div>},
                 { type: "title", text: "자바 SE 8 프로그래머 | 2018.06.02" },
                 {
                     type: "detail", text: `• Java, JDK 8, Java SE 8, Lambda Expressions, Java Application 
