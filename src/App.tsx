@@ -28,7 +28,7 @@ const App: FC = () => {
          
         </Col>
         <Col span={16} className="left-column" >
-          <Row align='middle' className="basic-info-container">
+          <Row align='top'>
             <Col xs={24} sm={12} md={12} lg={12} xl={12}  >
               {resume.type == "En" ?
                 <Title level={1}>

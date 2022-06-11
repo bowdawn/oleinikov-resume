@@ -1,12 +1,13 @@
+import { ReactNode } from "react";
 
-
-interface ResumeItemText {
+interface ResumeItemContent {
     type: "header" | "title" | "detail";
-    text: string;
+    link?: string;
+    text: string | ReactNode;
 }
 
 interface ResumeItemType {
-    description: ResumeItemText[]
+    description: ResumeItemContent[]
 }
 
 export default ResumeItemType;

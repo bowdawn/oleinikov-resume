@@ -1,4 +1,5 @@
 import Resume from "../types/Resume";
+import contact from "./contact";
 import education from "./locales/kr/education"
 const resume_kr: Resume =
 {
@@ -7,20 +8,15 @@ const resume_kr: Resume =
     first: "복단",
     last: "오",
     contact: "연락처",
-    contactitem: [{
-        description:
-            [
-                { type: "title", text: "☏ +82 010-4478-6630" },
-
-            ]
-    },
-    {
-        description:
-            [
-                { type: "title", text: "✉ boleinikov@gmail.com" },
-
-            ]
-    }],
+    contactitem: [
+        {
+            description: [
+                { type: "title", text: contact.email },
+                { type: "title", text: contact.mobile },
+                { type: "title", text: contact.linkedin },
+                { type: "title", text: contact.github },]
+        },
+    ],
     education: "학력사항",
     educationitem: [{
         description:
@@ -74,7 +70,7 @@ const resume_kr: Resume =
                     type: "detail", text: `• 타입스크립트하고 리액트로 구현된 가족 책 기록 하는 웹앱 배포.`,
                 },
                 {
-                    type: "detail", text: `• 몽고DB를 통해서 백앤드 책기록 추가 및 수정 기능 구현.`,  
+                    type: "detail", text: `• 몽고DB를 통해서 백앤드 책기록 추가 및 수정 기능 구현.`,
                 },
             ]
     }],
@@ -119,122 +115,141 @@ const resume_kr: Resume =
     engineer: "엔지니어",
     releventcoursework: "관련 전공수강 내역",
     releventcourseworkitem: [
-        {description: 
-            [
-                {type: "title" , text: "객체 지향 프로그래밍 (OOP)"},
-                {type: "title" , text: "& 자료 구조"},
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "객체 지향 프로그래밍 (OOP)" },
+                    { type: "title", text: "& 자료 구조" },
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "컴퓨터 아키텍처 Ⅰ"},
-                {type: "detail" , text: "• MIPS "},
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "컴퓨터 아키텍처 Ⅰ" },
+                    { type: "detail", text: "• MIPS " },
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "컴퓨터 아키텍처 Ⅱ"},
-                {type: "detail" , text: "• C 언어"},
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "컴퓨터 아키텍처 Ⅱ" },
+                    { type: "detail", text: "• C 언어" },
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "소프트웨어 공학"},
-                {type: "detail" , text: "• Android Studios"},
-                {type: "detail" , text: "• Eclipse IDE"},
-                {type: "detail" , text: "• NetBeans IDE"},
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "소프트웨어 공학" },
+                    { type: "detail", text: "• Android Studios" },
+                    { type: "detail", text: "• Eclipse IDE" },
+                    { type: "detail", text: "• NetBeans IDE" },
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "이산수학"},
-                {type: "title" , text: " & 계산 이론"},
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "이산수학" },
+                    { type: "title", text: " & 계산 이론" },
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "알고리즘 분석"},
-              
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "알고리즘 분석" },
+
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "데이터베이스 원리"},
-                
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "데이터베이스 원리" },
+
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "컴퓨터 네트워크"},
-                
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "컴퓨터 네트워크" },
+
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "인공지능"},
-                
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "인공지능" },
+
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "프로그래밍 언어의 원리"},  
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "프로그래밍 언어의 원리" },
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "로봇공학"},
-                
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "로봇공학" },
+
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "컴퓨처 비전"},
-                
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "컴퓨처 비전" },
+
+                ]
         },
     ],
     skills: "보유능력",
     computer: "컴퓨터",
     computeritem: [
-        {description: 
-            [
-                {type: "title" , text: "자바, 파이썬: 능숙함"},
-                
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "자바, 파이썬: 능숙함" },
+
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "웹 컴포넌트 개발 & 웹 디자인"},
-                {type: "detail" , text: "•Servlets, JSP, Html, CSS, XML, React"},
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "웹 컴포넌트 개발 & 웹 디자인" },
+                    { type: "detail", text: "•Servlets, JSP, Html, CSS, XML, React" },
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "C/C++"},
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "C/C++" },
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "SQL"},
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "SQL" },
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "몽고DB, "},
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "몽고DB, " },
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "네트워크 소켓"},
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "네트워크 소켓" },
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "Lisp, SML"},
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "Lisp, SML" },
+                ]
         },
-       
-        
+
+
     ],
     languages: "언어",
     english: "영어 (원어민/미국출신) ",

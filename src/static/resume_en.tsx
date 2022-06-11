@@ -1,4 +1,5 @@
 import Resume from "../types/Resume";
+import contact from "./contact";
 import education from "./locales/en/education"
 
 
@@ -9,20 +10,15 @@ const resume_en: Resume =
     first: "Bogdan K.",
     last: "Oleinikov",
     contact: "Contact",
-    contactitem: [{
-        description:
-            [
-                { type: "title", text: "☏ +82 010-4478-6630" },
-
-            ]
-    },
-    {
-        description:
-            [
-                { type: "title", text: "✉ boleinikov@gmail.com" },
-
-            ]
-    }],
+    contactitem: [
+        {
+            description: [
+                { type: "title", text: contact.email },
+                { type: "title", text: contact.mobile },
+                { type: "title", text: contact.linkedin },
+                { type: "title", text: contact.github },]
+        },
+    ],
     education: "Education",
     educationitem: [{
         description:
@@ -122,116 +118,133 @@ const resume_en: Resume =
     engineer: "Engineer",
     releventcoursework: "Relevent Coursework",
     releventcourseworkitem: [
-        {description: 
-            [
-                {type: "title" , text: "Object Oriented Programming"},
-                {type: "title" , text: "& Data Structures"},
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "Object Oriented Programming" },
+                    { type: "title", text: "& Data Structures" },
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "System Fundamentals Ⅰ"},
-                {type: "detail" , text: "• MIPS Assembly"},
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "System Fundamentals Ⅰ" },
+                    { type: "detail", text: "• MIPS Assembly" },
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "System Fundamentals Ⅱ"},
-                {type: "detail" , text: "• C language"},
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "System Fundamentals Ⅱ" },
+                    { type: "detail", text: "• C language" },
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "Software Engineering"},
-                {type: "detail" , text: "• Android Studios"},
-                {type: "detail" , text: "• Eclipse IDE"},
-                {type: "detail" , text: "• NetBeans IDE"},
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "Software Engineering" },
+                    { type: "detail", text: "• Android Studios" },
+                    { type: "detail", text: "• Eclipse IDE" },
+                    { type: "detail", text: "• NetBeans IDE" },
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "Discrete Mathematics"},
-                {type: "title" , text: " & Theory of Computation"},
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "Discrete Mathematics" },
+                    { type: "title", text: " & Theory of Computation" },
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "Analysis of Algorithms"},
-              
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "Analysis of Algorithms" },
+
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "Principles of Databases"},
-                
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "Principles of Databases" },
+
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "Computer Networks"},
-                
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "Computer Networks" },
+
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "Artificial Intelligence"},
-                
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "Artificial Intelligence" },
+
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "Principles of Programming"},
-                {type: "title" , text: "Languages"},
-                
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "Principles of Programming" },
+                    { type: "title", text: "Languages" },
+
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "Robotics"},
-                
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "Robotics" },
+
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "Visualization"},
-                
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "Visualization" },
+
+                ]
         },
     ],
     skills: "Skills",
     computer: "Computer",
     computeritem: [
-        {description: 
-            [
-                {type: "title" , text: "Proficient in Java, Python, C#"},
-                
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "Proficient in Java, Python, C#" },
+
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "Adept in Web Component"},
-                {type: "title" , text: "Development & Design"},
-                {type: "detail" , text: "•Servlets, JSP, Html, CSS, XML,"},
-                {type: "detail" , text: " React, Angular, Vue, Express"},
-               
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "Adept in Web Component" },
+                    { type: "title", text: "Development & Design" },
+                    { type: "detail", text: "•Servlets, JSP, Html, CSS, XML," },
+                    { type: "detail", text: " React, Angular, Vue, Express" },
+
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "C/C++, SQL,"},
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "C/C++, SQL," },
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "MongoDB, Network Sockets"},
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "MongoDB, Network Sockets" },
+                ]
         },
-        {description: 
-            [
-                {type: "title" , text: "Lisp, SML"},
-            ]
+        {
+            description:
+                [
+                    { type: "title", text: "Lisp, SML" },
+                ]
         },
-        
+
     ],
     languages: "Langauges",
     english: "English (Native/US Citizen)",
