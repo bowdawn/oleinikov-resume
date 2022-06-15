@@ -9,10 +9,6 @@
     text-align: start;
 }
 
-.basic-info-container {
-  
-}
-
 .first-name {
     color: #6FA8DC;
 }
@@ -40,4 +36,16 @@
 
 .description-detail {
     font-size: 12px
+}
+
+.download{
+    font-size: 22px;  
+}
+
+.download-en{
+    color: #BFBFBF;
+}
+
+.download-kr{
+    color: #073763;
 }

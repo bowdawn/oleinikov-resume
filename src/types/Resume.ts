@@ -3,6 +3,7 @@ import ResumeItem from "./ResumeItem";
 interface ResumeType {
     type: "En" | "Kr";
     switch: string;
+    link: string;
     first: string;
     last: string;
     contact: string;

@@ -6,6 +6,7 @@ const resume_kr: Resume =
 {
     type: "Kr",
     switch: "한/영",
+    link:"https://docs.google.com/document/d/1RP1pIF0FY17Ht_en6M6Qs5ERcD1qj9eUkm4FAixl30A/export?format=pdf",
     first: "복단",
     last: "오",
     contact: "연락처",
@@ -32,7 +33,7 @@ const resume_kr: Resume =
     {
         description:
             [
-                { type: "header", text: "검퓨터공학 학사" },
+                { type: "header", text: "컴퓨터공학 학사" },
                 { type: "title", text: "한국 뉴욕주립대학교 | 2015 - 2017 & 2018 - 2019" },
                 { type: "detail", text: "↪전체 학점 평균 3.49/4.00" },
                 { type: "title", text: "스토니브룩 대학교 | 2017 - 2018" },
@@ -43,7 +44,7 @@ const resume_kr: Resume =
         description:
             [
                 { type: "header", text: "Jinjoosoft 소프트웨어 엔지니어" },
-                { type: "title", text: "웹/모바일 프론트앤드 & 백앤드 개발자 | 2019.10 - 2020.20" },
+                { type: "title", text: "웹/모바일 프론트엔드 & 백엔드 개발자 | 2019.10 - 2020.20" },
                 { type: "detail", text: "• 웹앱 개발 위한 Angular, React 및 Vue를 쓴 경력." },
                 { type: "detail", text: "• 모바일앱 개발 위한 React Native를 쓴 경력." },
                 { type: "detail", text: "• 모바일앱 개발 위한 Netcore, Docker 및 Express 쓴 경력." },
@@ -65,7 +66,7 @@ const resume_kr: Resume =
         description:
             [
                 { type: "header", text: <div>가족 도서관 프로젝트{badges.library_website}</div> },
-                { type: "title", text: "개인 프로잭트 | 2022 봄" },
+                { type: "title", text: "개인 프로젝트 | 2022 봄" },
 
                 {
                     type: "detail", text: `• 타입스크립트하고 리액트로 구현된 가족 책 기록 하는 웹앱 배포.`,

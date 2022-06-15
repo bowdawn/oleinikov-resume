@@ -9,6 +9,7 @@ const resume_en: Resume =
 {
     type: "En",
     switch: "En/Kr",
+    link:"https://docs.google.com/document/d/1strcvdGnFYgnZcr6p-ZkN-jG5LUgcatPFOw1RdPp54o/export?format=pdf",
     first: "Bogdan K.",
     last: "Oleinikov",
     contact: "Contact",

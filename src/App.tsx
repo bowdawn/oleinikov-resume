@@ -1,12 +1,13 @@
 import React, { FC, useState } from 'react';
-import { Row, Col, Divider, Typography, Progress, PageHeader, Switch } from 'antd';
+import { Row, Col, Divider, Typography, Progress, PageHeader, Switch, Space } from 'antd';
 import './App.css';
-import { GlobalOutlined } from '@ant-design/icons';
+import { DownloadOutlined, FontSizeOutlined, GlobalOutlined } from '@ant-design/icons';
 import ResumeItem from './components/ResumeItem';
 import resume_en from './static/resume_en';
 import resume_kr from './static/resume_kr';
 import progress_props from './static/progress_props';
 import { useTranslation } from 'react-i18next';
+import Link from 'antd/lib/typography/Link';
 
 
 const { Title, Text } = Typography;
@@ -19,11 +20,17 @@ const App: FC = () => {
       <Row className="resume">
         <Col span={24}>
           <PageHeader extra={
+            <Space align='center' size="middle">
             <Switch checked={resume.type == "Kr"}
+              style={{marginBottom: "6px"}}
               onClick={() => { setResume(resume.type == "En" ? resume_kr : resume_en) }
               }
               unCheckedChildren={<div><GlobalOutlined /> {resume.switch}</div>}
-              checkedChildren={<div><GlobalOutlined /> {resume.switch}</div>} />}
+              checkedChildren={<div><GlobalOutlined /> {resume.switch}</div>} />
+            <Link href={resume.link}><DownloadOutlined  className={"download " + (resume.type == "En" ? "download-en" : "download-kr")} /></Link>
+            </Space>
+            
+            }
           />
          
         </Col>
