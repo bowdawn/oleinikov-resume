@@ -44,7 +44,7 @@ const resume_kr: Resume =
         description:
             [
                 { type: "header", text: "Jinjoosoft 소프트웨어 엔지니어" },
-                { type: "title", text: "웹/모바일 프론트엔드 & 백엔드 개발자 | 2019.10 - 2020.20" },
+                { type: "title", text: "웹/모바일 프론트엔드 & 백엔드 개발자 | 2019.10 - 2020.10" },
                 { type: "detail", text: "• 웹앱 개발 위한 Angular, React 및 Vue를 쓴 경력." },
                 { type: "detail", text: "• 모바일앱 개발 위한 React Native를 쓴 경력." },
                 { type: "detail", text: "• 모바일앱 개발 위한 Netcore, Docker 및 Express 쓴 경력." },
