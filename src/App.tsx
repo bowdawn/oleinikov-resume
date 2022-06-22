@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
-import { Row, Col, Divider, Typography, Progress, PageHeader, Switch, Space } from 'antd';
+import { Row, Col, Divider, Typography, Progress, PageHeader, Switch, Space, Alert } from 'antd';
 import './App.css';
-import { DownloadOutlined, FontSizeOutlined, GlobalOutlined } from '@ant-design/icons';
+import { ArrowRightOutlined, DownloadOutlined, FontSizeOutlined, GlobalOutlined } from '@ant-design/icons';
 import ResumeItem from './components/ResumeItem';
 import resume_en from './static/resume_en';
 import resume_kr from './static/resume_kr';
@@ -63,6 +63,7 @@ const App: FC = () => {
           <Title level={4} >{resume.experience}</Title>
           <Divider />
           {resume.experienceitem.map((x) => <ResumeItem description={x.description} />)}
+          <Alert message={resume.experienceviewmore} type="info"  closable />
           <Title level={4} >{resume.certifications}</Title>
           <Divider />
           {resume.certificationitem.map((x) => <ResumeItem description={x.description} />)}

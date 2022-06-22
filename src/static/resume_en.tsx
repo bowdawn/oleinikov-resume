@@ -1,7 +1,9 @@
 
+import { ArrowRightOutlined } from "@ant-design/icons";
+import Link from "antd/lib/typography/Link";
 import Resume from "../types/Resume";
 import badges from "./badges";
-import contact from "./contact";
+import contact from "./locales/contact";
 import education from "./locales/en/education"
 
 
@@ -36,10 +38,10 @@ const resume_en: Resume =
     {
         description:
             [
-                { type: "header", text: "Bachelor's Degree in Computer Science" },
-                { type: "title", text: "SUNY Korea University | 2015 - 2017 & 2018 - 2019" },
-                { type: "detail", text: "↪Cumulative GPA 3.49/4.00" },
-                { type: "title", text: "Stony Brook University | 2017 - 2018" },
+                { type: "header", text: education.id2_header },
+                { type: "title", text: education.id2_title },
+                { type: "detail", text: education.id2_detail },
+                { type: "title", text: education.id2_title_2 },
             ]
     }],
     experience: "Experience",
@@ -80,6 +82,7 @@ const resume_en: Resume =
                 },
             ]
     }],
+    experienceviewmore: <Link target="_blank" rel="noopener noreferrer" href="https://docs.google.com/viewer?url=https://docs.google.com/document/d/1reOvkzQh9aAVc7uFfWqpd9gFGzJa3YJgE4gK3yv_15U/export?format=pdf">View More <ArrowRightOutlined /></Link>,
     certifications: "Certifications",
     certificationitem: [{
         description:

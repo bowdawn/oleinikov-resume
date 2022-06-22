@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 import ResumeItem from "./ResumeItem";
 
 interface ResumeType {
@@ -12,6 +13,7 @@ interface ResumeType {
     educationitem: ResumeItem[];
     experience: string;
     experienceitem: ResumeItem[];
+    experienceviewmore: string | ReactNode;
     certifications: string;
     certificationitem: ResumeItem[];
     software: string;

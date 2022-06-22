@@ -1,6 +1,8 @@
+import { ArrowRightOutlined } from "@ant-design/icons";
+import Link from "antd/lib/typography/Link";
 import Resume from "../types/Resume";
 import badges from "./badges";
-import contact from "./contact";
+import contact from "./locales/contact";
 import education from "./locales/kr/education"
 const resume_kr: Resume =
 {
@@ -33,10 +35,10 @@ const resume_kr: Resume =
     {
         description:
             [
-                { type: "header", text: "컴퓨터공학 학사" },
-                { type: "title", text: "한국 뉴욕주립대학교 | 2015 - 2017 & 2018 - 2019" },
-                { type: "detail", text: "↪전체 학점 평균 3.49/4.00" },
-                { type: "title", text: "스토니브룩 대학교 | 2017 - 2018" },
+                { type: "header", text: education.id2_header },
+                { type: "title", text: education.id2_title },
+                { type: "detail", text: education.id2_detail },
+                { type: "title", text: education.id2_title_2 },
             ]
     }],
     experience: "경력사항",
@@ -76,6 +78,7 @@ const resume_kr: Resume =
                 },
             ]
     }],
+    experienceviewmore: <Link target="_blank" rel="noopener noreferrer" href="https://docs.google.com/viewer?url=https://docs.google.com/document/d/1pX7y7ewYfvFU70IfEAZTECGm5HQgG8TATX4fXq8ZgvA/export?format=pdf">다 보기 <ArrowRightOutlined /></Link>,
     certifications: "자격사항",
     certificationitem: [{
         description:
