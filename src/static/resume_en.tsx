@@ -82,7 +82,7 @@ const resume_en: Resume =
                 },
             ]
     }],
-    experienceviewmore: <Link target="_blank" rel="noopener noreferrer" href="https://docs.google.com/viewer?url=https://docs.google.com/document/d/1reOvkzQh9aAVc7uFfWqpd9gFGzJa3YJgE4gK3yv_15U/export?format=pdf">View More <ArrowRightOutlined /></Link>,
+    experienceviewmore: <Link target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/1HGdZjSPC7v3nXF0BpbTTVdj-s-10n8i0Sz6U6I17lXM/view">View More <ArrowRightOutlined /></Link>,
     certifications: "Certifications",
     certificationitem: [{
         description:

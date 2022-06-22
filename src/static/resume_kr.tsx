@@ -78,7 +78,7 @@ const resume_kr: Resume =
                 },
             ]
     }],
-    experienceviewmore: <Link target="_blank" rel="noopener noreferrer" href="https://docs.google.com/viewer?url=https://docs.google.com/document/d/1pX7y7ewYfvFU70IfEAZTECGm5HQgG8TATX4fXq8ZgvA/export?format=pdf">다 보기 <ArrowRightOutlined /></Link>,
+    experienceviewmore: <Link target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/1pX7y7ewYfvFU70IfEAZTECGm5HQgG8TATX4fXq8ZgvA/view">다 보기 <ArrowRightOutlined /></Link>,
     certifications: "자격사항",
     certificationitem: [{
         description:
