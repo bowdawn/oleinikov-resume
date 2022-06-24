@@ -5,13 +5,14 @@ import Resume from "../types/Resume";
 import badges from "./badges";
 import contact from "./locales/contact";
 import education from "./locales/en/education"
+import experience from "./locales/en/experience";
 
 
 const resume_en: Resume =
 {
     type: "En",
     switch: "En/Kr",
-    link:"https://docs.google.com/document/d/1strcvdGnFYgnZcr6p-ZkN-jG5LUgcatPFOw1RdPp54o/export?format=pdf",
+    link: "https://docs.google.com/document/d/1strcvdGnFYgnZcr6p-ZkN-jG5LUgcatPFOw1RdPp54o/export?format=pdf",
     first: "Bogdan K.",
     last: "Oleinikov",
     contact: "Contact",
@@ -48,38 +49,32 @@ const resume_en: Resume =
     experienceitem: [{
         description:
             [
-                { type: "header", text: "Jinjoosoft Software Engineer" },
-                { type: "title", text: "Web/Mobile Frontend & Backend Developer | Oct 2019 - Oct 2020" },
-                { type: "detail", text: "• Use of Angular, React, and Vue libraries for web development." },
-                { type: "detail", text: "• Use of React Native for mobile development." },
-                { type: "detail", text: "• Use of Netcore, Docker, and Express for backend development." }
+                { type: "header", text: experience.id1_header},
+                { type: "title", text: experience.id1_title },
+                { type: "detail", text: experience.id1_detail_1 },
+                { type: "detail", text: experience.id1_detail_2 },
+                { type: "detail", text: experience.id1_detail_3 },
             ]
     }
         ,
     {
         description:
             [
-                { type: "header", text: "BNR Technology" },
-                { type: "title", text: "Android Mobile Development &" },
-                { type: "title", text: "Eng-Rus-Kor Translator Position | Jan 2019 - Mar 2019" },
-                { type: "detail", text: "• Use of Android Studios and Firebase for mobile app software development." },
-                { type: "detail", text: "• Created written translations for English, Russian, and Korean language." },
+                { type: "header", text: experience.id2_header },
+                { type: "title", text: experience.id2_title_1 },
+                { type: "title", text: experience.id2_title_2 },
+                { type: "detail", text: experience.id2_detail_1 },
+                { type: "detail", text: experience.id2_detail_2 },
             ]
     }
         ,
     {
         description:
             [
-                { type: "header", text: <div>Family Library Project{badges.library_website}</div>  },
-                { type: "title", text: "Personal Project | Spring 2022" },
-
-                {
-                    type: "detail", text: `• Deployment of a family library database providing frontend React Typescript 
-                    GUI.`
-                },
-                {
-                    type: "detail", text: `• Deployment of backend for addition/modification of book records using MongoDB.`
-                },
+                { type: "header", text: <div>{experience.id3_header }{ badges.library_website}</div> },
+                { type: "title", text: experience.id3_title },
+                { type: "detail", text: experience.id3_detail_1},
+                { type: "detail", text: experience.id3_detail_2 },
             ]
     }],
     experienceviewmore: <Link target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/1HGdZjSPC7v3nXF0BpbTTVdj-s-10n8i0Sz6U6I17lXM/view">View More <ArrowRightOutlined /></Link>,

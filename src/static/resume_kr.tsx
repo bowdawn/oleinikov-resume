@@ -4,6 +4,7 @@ import Resume from "../types/Resume";
 import badges from "./badges";
 import contact from "./locales/contact";
 import education from "./locales/kr/education"
+import experience from "./locales/kr/experience";
 const resume_kr: Resume =
 {
     type: "Kr",
@@ -45,37 +46,32 @@ const resume_kr: Resume =
     experienceitem: [{
         description:
             [
-                { type: "header", text: "Jinjoosoft 소프트웨어 엔지니어" },
-                { type: "title", text: "웹/모바일 프론트엔드 & 백엔드 개발자 | 2019.10 - 2020.10" },
-                { type: "detail", text: "• 웹앱 개발 위한 Angular, React 및 Vue를 쓴 경력." },
-                { type: "detail", text: "• 모바일앱 개발 위한 React Native를 쓴 경력." },
-                { type: "detail", text: "• 모바일앱 개발 위한 Netcore, Docker 및 Express 쓴 경력." },
+                { type: "header", text: experience.id1_header},
+                { type: "title", text: experience.id1_title },
+                { type: "detail", text: experience.id1_detail_1 },
+                { type: "detail", text: experience.id1_detail_2 },
+                { type: "detail", text: experience.id1_detail_3 },
             ]
     }
         ,
     {
         description:
             [
-                { type: "header", text: "BNR Technology" },
-                { type: "title", text: "안드로이드 모바일 어플리케이션 개발 &" },
-                { type: "title", text: "영어-러시아어-한국어 번역 | 2019.1 - 2019.3" },
-                { type: "detail", text: "• 안드로이드 스튜디오, Firebase를 사용하여 모바일 소프트웨어 개발." },
-                { type: "detail", text: "• 영어, 러시아어, 한국어 번역." },
+                { type: "header", text: experience.id2_header },
+                { type: "title", text: experience.id2_title_1 },
+                { type: "title", text: experience.id2_title_2 },
+                { type: "detail", text: experience.id2_detail_1 },
+                { type: "detail", text: experience.id2_detail_2 },
             ]
     }
         ,
     {
         description:
             [
-                { type: "header", text: <div>가족 도서관 프로젝트{badges.library_website}</div> },
-                { type: "title", text: "개인 프로젝트 | 2022 봄" },
-
-                {
-                    type: "detail", text: `• 타입스크립트하고 리액트로 구현된 가족 책 기록 하는 웹앱 배포.`,
-                },
-                {
-                    type: "detail", text: `• 몽고DB를 통해서 백앤드 책기록 추가 및 수정 기능 구현.`,
-                },
+                { type: "header", text: <div>{experience.id3_header}{  badges.library_website}</div> },
+                { type: "title", text: experience.id3_title },
+                { type: "detail", text: experience.id3_detail_1},
+                { type: "detail", text: experience.id3_detail_2 },
             ]
     }],
     experienceviewmore: <Link target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/1pX7y7ewYfvFU70IfEAZTECGm5HQgG8TATX4fXq8ZgvA/view">다 보기 <ArrowRightOutlined /></Link>,
