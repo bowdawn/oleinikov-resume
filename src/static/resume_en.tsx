@@ -6,6 +6,7 @@ import badges from "./badges";
 import contact from "./contact";
 import education from "./locales/en/education"
 import experience from "./locales/en/experience";
+import language from "./locales/en/language";
 
 
 const resume_en: Resume =
@@ -259,9 +260,9 @@ const resume_en: Resume =
 
     ],
     languages: "Langauges",
-    english: "English (Native/US Citizen)",
-    korean: "Korean (Fluent/6 years+)",
-    russian: "Russian (Fluent/Heritage Speaker)"
+    english: language.english,
+    korean: language.korean,
+    russian: language.russian
 }
 
 

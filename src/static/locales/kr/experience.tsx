@@ -1,4 +1,4 @@
-import ExperienceType from "../../../types/Experienc";
+import ExperienceType from "../../../types/Experience";
 
 export default {
     "id1_header" : "Jinjoosoft 소프트웨어 엔지니어",

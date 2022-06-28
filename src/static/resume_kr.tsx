@@ -5,6 +5,7 @@ import badges from "./badges";
 import contact from "./contact";
 import education from "./locales/kr/education"
 import experience from "./locales/kr/experience";
+import language from "./locales/kr/language";
 const resume_kr: Resume =
 {
     type: "Kr",
@@ -253,9 +254,9 @@ const resume_kr: Resume =
 
     ],
     languages: "언어",
-    english: "영어 (원어민/미국출신) ",
-    korean: "한국어 (유창함/경험 6년이상)",
-    russian: "러시아어 (유창함/계승어)"
+    english: language.english,
+    korean: language.korean,
+    russian: language.russian
 }
 
 export default resume_kr;
