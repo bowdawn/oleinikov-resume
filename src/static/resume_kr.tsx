@@ -2,7 +2,7 @@ import { ArrowRightOutlined } from "@ant-design/icons";
 import Link from "antd/lib/typography/Link";
 import Resume from "../types/Resume";
 import badges from "./badges";
-import contact from "./locales/contact";
+import contact from "./contact";
 import education from "./locales/kr/education"
 import experience from "./locales/kr/experience";
 const resume_kr: Resume =
