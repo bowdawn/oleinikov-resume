@@ -1,11 +1,11 @@
 import React, { FC, useState } from 'react';
-import { Row, Col, Divider, Typography, Progress, PageHeader, Switch, Space, Alert } from 'antd';
+import { Row, Col, Divider, Typography,  PageHeader, Switch, Space, Alert } from 'antd';
 import './App.css';
-import { ArrowRightOutlined, DownloadOutlined, FontSizeOutlined, GlobalOutlined } from '@ant-design/icons';
+import { DownloadOutlined,  GlobalOutlined } from '@ant-design/icons';
 import ResumeItem from './components/ResumeItem';
 import resume_en from './static/resume_en';
 import resume_kr from './static/resume_kr';
-import progress_props from './static/progress_props';
+
 import { useTranslation } from 'react-i18next';
 import Link from 'antd/lib/typography/Link';
 
@@ -80,13 +80,8 @@ const App: FC = () => {
           <Divider />
           <Title level={5} >{resume.computer}</Title>
           {resume.computeritem.map((x) => <ResumeItem description={x.description} />)}
-          <Title level={5} >{resume.languages}</Title>
-          {resume.english}<br />
-          <Progress status="active" percent={100} {...progress_props} />
-          {resume.korean}<br />
-          <Progress status="active" percent={80} {...progress_props} />
-          {resume.russian}<br />
-          <Progress status="active" percent={80} {...progress_props} />
+          <Title level={5} >{resume.language}</Title>
+          {resume.languageitem.map((x) => <ResumeItem description={x.description} />)}
         </Col>
       </Row>
     </div >

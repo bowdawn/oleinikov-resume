@@ -23,10 +23,8 @@ interface ResumeType {
     skills: string;
     computer: string;
     computeritem: ResumeItem[];
-    languages: string;
-    english: string;
-    korean: string;
-    russian: string;
+    language: string;
+    languageitem: ResumeItem[];
   }
 
   export default ResumeType;

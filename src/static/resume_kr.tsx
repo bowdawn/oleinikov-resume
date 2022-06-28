@@ -1,4 +1,5 @@
 import { ArrowRightOutlined } from "@ant-design/icons";
+import { Progress } from "antd";
 import Link from "antd/lib/typography/Link";
 import Resume from "../types/Resume";
 import badges from "./badges";
@@ -6,11 +7,12 @@ import contact from "./contact";
 import education from "./locales/kr/education"
 import experience from "./locales/kr/experience";
 import language from "./locales/kr/language";
+import progress_props from "./progress_props";
 const resume_kr: Resume =
 {
     type: "Kr",
     switch: "한/영",
-    link:"https://docs.google.com/document/d/1RP1pIF0FY17Ht_en6M6Qs5ERcD1qj9eUkm4FAixl30A/export?format=pdf",
+    link: "https://docs.google.com/document/d/1RP1pIF0FY17Ht_en6M6Qs5ERcD1qj9eUkm4FAixl30A/export?format=pdf",
     first: "복단",
     last: "오",
     contact: "연락처",
@@ -47,7 +49,7 @@ const resume_kr: Resume =
     experienceitem: [{
         description:
             [
-                { type: "header", text: experience.id1_header},
+                { type: "header", text: experience.id1_header },
                 { type: "title", text: experience.id1_title },
                 { type: "detail", text: experience.id1_detail_1 },
                 { type: "detail", text: experience.id1_detail_2 },
@@ -69,9 +71,9 @@ const resume_kr: Resume =
     {
         description:
             [
-                { type: "header", text: <div>{experience.id3_header}{  badges.library_website}</div> },
+                { type: "header", text: <div>{experience.id3_header}{badges.library_website}</div> },
                 { type: "title", text: experience.id3_title },
-                { type: "detail", text: experience.id3_detail_1},
+                { type: "detail", text: experience.id3_detail_1 },
                 { type: "detail", text: experience.id3_detail_2 },
             ]
     }],
@@ -92,7 +94,7 @@ const resume_kr: Resume =
     {
         description:
             [
-                { type: "header", text: <div> Associate Oracle 자격증{badges.oracle_associate}</div>},
+                { type: "header", text: <div> Associate Oracle 자격증{badges.oracle_associate}</div> },
                 { type: "title", text: "자바 SE 8 프로그래머 | 2018.06.02" },
                 {
                     type: "detail", text: `• Java, JDK 8, Java SE 8, Lambda Expressions, Java Application 
@@ -253,10 +255,23 @@ const resume_kr: Resume =
 
 
     ],
-    languages: "언어",
-    english: language.english,
-    korean: language.korean,
-    russian: language.russian
+    language: "언어",
+    languageitem: [
+        {
+            description:
+                [
+                    {type: "title", text: <>{language.english}<br />
+                    <Progress status="active" percent={100} {...progress_props} /></>},
+                    {type: "title", text: <>{language.korean}<br />
+                    <Progress status="active" percent={80} {...progress_props} /></>},
+                    {type: "title", text: <>{language.russian}<br />
+                    <Progress status="active" percent={80} {...progress_props} /></>}
+                ]
+        }
+    ]
+
+
+
 }
 
 export default resume_kr;

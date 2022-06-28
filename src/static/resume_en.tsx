@@ -1,5 +1,6 @@
 
 import { ArrowRightOutlined } from "@ant-design/icons";
+import { Progress } from "antd";
 import Link from "antd/lib/typography/Link";
 import Resume from "../types/Resume";
 import badges from "./badges";
@@ -7,6 +8,7 @@ import contact from "./contact";
 import education from "./locales/en/education"
 import experience from "./locales/en/experience";
 import language from "./locales/en/language";
+import progress_props from "./progress_props";
 
 
 const resume_en: Resume =
@@ -259,10 +261,20 @@ const resume_en: Resume =
         },
 
     ],
-    languages: "Langauges",
-    english: language.english,
-    korean: language.korean,
-    russian: language.russian
+    language: "Languages",
+    languageitem: [
+        {
+            description:
+                [
+                    {type: "title", text: <>{language.english}<br />
+                    <Progress status="active" percent={100} {...progress_props} /></>},
+                    {type: "title", text: <>{language.korean}<br />
+                    <Progress status="active" percent={80} {...progress_props} /></>},
+                    {type: "title", text: <>{language.russian}<br />
+                    <Progress status="active" percent={80} {...progress_props} /></>}
+                ]
+        }
+    ]
 }
 
 
