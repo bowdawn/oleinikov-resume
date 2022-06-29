@@ -36,7 +36,7 @@ export function resume(
 
  return {
     type: type,
-    switchlabel: "En/Kr",
+    switchlabel: switchlabel,
     download: <Link href={download.link}><DownloadOutlined  className={"download " + download.class} /></Link>,
     first: first,
     last: last,
