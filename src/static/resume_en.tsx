@@ -5,6 +5,7 @@ import Link from "antd/lib/typography/Link";
 import Resume from "../types/Resume";
 import badges from "./badges";
 import contact from "./contact";
+import certificate from "./locales/en/certificate";
 import education from "./locales/en/education"
 import experience from "./locales/en/experience";
 import language from "./locales/en/language";
@@ -87,15 +88,13 @@ const resume_en: Resume =
             [
                 {
                     type: "header", text: <div>
-                        Oracle Certified Professional
+                        {certificate.id1_header}
                         {badges.oracle_professional}
                     </div>
                 },
-                { type: "title", text: "Java SE 8 Programmer | July 20, 2018 " },
+                { type: "title", text: certificate.id1_title },
                 {
-                    type: "detail", text: `• Verified understanding of Concurrency, Fork - Join Framework, Functional Interfaces, 
-                    JDBC, Java Design Patterns, Java NIO.2 API, Localization, Regular Expressions,
-                    Parallel Streams and Stream API.`
+                    type: "detail", text: certificate.id1_detail
                 },
             ]
     }
@@ -106,14 +105,13 @@ const resume_en: Resume =
                 {
                     type: "header", text:
                         <div>
-                            Oracle Certified Associate
+                            {certificate.id2_header}
                             {badges.oracle_associate}
                         </div>
                 },
-                { type: "title", text: "Java SE 8 Programmer | June 2, 2018" },
+                { type: "title", text: certificate.id2_title },
                 {
-                    type: "detail", text: `• Verified understanding of Java, JDK 8, Java SE 8, Lambda Expressions, Java
-                    Application Development, and Java 8 Date & Time API.`
+                    type: "detail", text: certificate.id2_detail
                 },
             ]
     }
@@ -121,11 +119,10 @@ const resume_en: Resume =
     {
         description:
             [
-                { type: "header", text: "Test of Proficiency in Korean" },
-                { type: "title", text: "TOPIK Level 6 | Oct 2021" },
+                { type: "header", text: certificate.id3_header },
+                { type: "title", text: certificate.id3_title },
                 {
-                    type: "detail", text: `• Absolutely fluent in the Korean language for professional research or work, Capacity
-                    to understand and express oneself without problem, although without the full fluency of a native speaker.`
+                    type: "detail", text: certificate.id3_detail
                 },
             ]
     }],

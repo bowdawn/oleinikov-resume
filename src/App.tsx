@@ -21,9 +21,9 @@ const App: FC = () => {
         <Col span={24}>
           <PageHeader extra={
             <Space align='center' size="middle">
-            <Switch checked={resume.type == "Kr"}
+            <Switch checked={resume.type == resume_kr.type}
               style={{marginBottom: "6px"}}
-              onClick={() => { setResume(resume.type == "En" ? resume_kr : resume_en) }
+              onClick={() => { setResume(resume.type == resume_en.type ? resume_kr : resume_en) }
               }
               unCheckedChildren={<div><GlobalOutlined /> {resume.switch}</div>}
               checkedChildren={<div><GlobalOutlined /> {resume.switch}</div>} />

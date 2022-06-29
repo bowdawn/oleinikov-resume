@@ -4,6 +4,7 @@ import Link from "antd/lib/typography/Link";
 import Resume from "../types/Resume";
 import badges from "./badges";
 import contact from "./contact";
+import certificate from "./locales/kr/certificate";
 import education from "./locales/kr/education"
 import experience from "./locales/kr/experience";
 import language from "./locales/kr/language";
@@ -82,11 +83,15 @@ const resume_kr: Resume =
     certificationitem: [{
         description:
             [
-                { type: "header", text: <div>Professional Oracle 자격증{badges.oracle_professional}</div> },
-                { type: "title", text: "자바 SE 8 프로그래머 | 2018.07.20" },
                 {
-                    type: "detail", text: `• Concurrency, Fork - Join Framework, Functional Interfaces, JDBC, 
-                    Java Design Patterns, Java NIO.2 API, Localization, Regular Expressions, Parallel Streams & Stream API 사용가능`
+                    type: "header", text: <div>
+                        {certificate.id1_header}
+                        {badges.oracle_professional}
+                    </div>
+                },
+                { type: "title", text: certificate.id1_title },
+                {
+                    type: "detail", text: certificate.id1_detail
                 },
             ]
     }
@@ -94,11 +99,16 @@ const resume_kr: Resume =
     {
         description:
             [
-                { type: "header", text: <div> Associate Oracle 자격증{badges.oracle_associate}</div> },
-                { type: "title", text: "자바 SE 8 프로그래머 | 2018.06.02" },
                 {
-                    type: "detail", text: `• Java, JDK 8, Java SE 8, Lambda Expressions, Java Application 
-                    Development, and Java 8 Date & Time API 사용가능`
+                    type: "header", text:
+                        <div>
+                            {certificate.id2_header}
+                            {badges.oracle_associate}
+                        </div>
+                },
+                { type: "title", text: certificate.id2_title },
+                {
+                    type: "detail", text: certificate.id2_detail
                 },
             ]
     }
@@ -106,12 +116,10 @@ const resume_kr: Resume =
     {
         description:
             [
-                { type: "header", text: "Test of Proficiency in Korean" },
-                { type: "title", text: "TOPIK Level 6 | Oct 2021" },
+                { type: "header", text: certificate.id3_header },
+                { type: "title", text: certificate.id3_title },
                 {
-                    type: "detail", text: `• 전문 분야에서의 연구나 업무 수행에 필요한 언어 기능을 비교적 정확하고 유창하게 
-                    수행할 수 있으며 정치, 경제, 사회, 문화 전반에 걸쳐 친숙하지 않은 주제에 관해서도 이해하고 사용할 수 있음. 
-                    원어민 화자의 수준에는 이르지 못하나 기능 수행이나 의미 표현에는 어려움을 겪지 않음.`
+                    type: "detail", text: certificate.id3_detail
                 },
             ]
     }],
