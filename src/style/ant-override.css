@@ -29,7 +29,9 @@ h1.ant-typography {
 .ant-divider {
     border-top: 2px solid rgba(0, 0, 0, 0.06);
 }
-
+.ant-switch{
+    margin-bottom: 6px;
+}
 .ant-switch-checked {
     background: #073763;
 

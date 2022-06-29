@@ -15,4 +15,6 @@ export default {
     "id3_title" : "개인 프로젝트 | 2022 봄",
     "id3_detail_1" : "• 타입스크립트하고 리액트로 구현된 가족 책 기록 하는 웹앱 배포.",
     "id3_detail_2" : "• 몽고DB를 통해서 백앤드 책기록 추가 및 수정 기능 구현.",
+    "view_more" : " 더 보기",
+    "view_more_link" : "https://docs.google.com/document/d/1pX7y7ewYfvFU70IfEAZTECGm5HQgG8TATX4fXq8ZgvA/view"
 } as ExperienceType

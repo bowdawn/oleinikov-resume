@@ -8,6 +8,7 @@ import resume_kr from './static/resume_kr';
 
 import { useTranslation } from 'react-i18next';
 import Link from 'antd/lib/typography/Link';
+import NameContainer from './components/NameContainer';
 
 
 const { Title, Text } = Typography;
@@ -22,35 +23,19 @@ const App: FC = () => {
           <PageHeader extra={
             <Space align='center' size="middle">
             <Switch checked={resume.type == resume_kr.type}
-              style={{marginBottom: "6px"}}
-              onClick={() => { setResume(resume.type == resume_en.type ? resume_kr : resume_en) }
+              onClick={() => {setResume(resume.type == resume_en.type ? resume_kr : resume_en) }
               }
-              unCheckedChildren={<div><GlobalOutlined /> {resume.switch}</div>}
-              checkedChildren={<div><GlobalOutlined /> {resume.switch}</div>} />
-            <Link href={resume.link}><DownloadOutlined  className={"download " + (resume.type == "En" ? "download-en" : "download-kr")} /></Link>
+              unCheckedChildren={<div><GlobalOutlined /> {resume.switchlabel}</div>}
+              checkedChildren={<div><GlobalOutlined /> {resume.switchlabel}</div>} />
+            {resume.download}
             </Space>
-            
             }
           />
-         
         </Col>
         <Col span={16} className="left-column" >
           <Row align='top'>
             <Col xs={24} sm={12} md={12} lg={12} xl={12}  >
-              {resume.type == "En" ?
-                <Title level={1}>
-                  <div className='first-name'>{resume_en.first}</div>
-                  <div className='last-name'>{resume_en.last}</div>
-                </Title>
-                :
-                <>
-                  <Title level={2}>
-                    <div className='first-name'>{resume_en.first}</div>
-                    <div className='last-name'>{resume_en.last}</div>
-                  </Title>
-                  <Text strong>(국문: {resume_kr.last + resume_kr.first})</Text>
-                </>
-              }
+              <NameContainer type={resume.type} />
             </Col>
             <Col xs={24} sm={12} md={12} lg={12} xl={12} >
               <Title level={4} underline={true}>{resume.contact}</Title>
@@ -64,7 +49,7 @@ const App: FC = () => {
           <Divider />
           {resume.experienceitem.map((x) => <ResumeItem description={x.description} />)}
           <Alert message={resume.experienceviewmore} type="info"  closable />
-          <Title level={4} >{resume.certifications}</Title>
+          <Title level={4} >{resume.certification}</Title>
           <Divider />
           {resume.certificationitem.map((x) => <ResumeItem description={x.description} />)}
         </Col>

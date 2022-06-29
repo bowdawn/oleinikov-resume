@@ -1,10 +1,12 @@
 import { ReactNode } from "react";
 import ResumeItem from "./ResumeItem";
 
+
+
 interface ResumeType {
     type: "En" | "Kr";
-    switch: string;
-    link: string;
+    switchlabel: "En/Kr" | "한/영";
+    download: ReactNode;
     first: string;
     last: string;
     contact: string;
@@ -14,7 +16,7 @@ interface ResumeType {
     experience: string;
     experienceitem: ResumeItem[];
     experienceviewmore: string | ReactNode;
-    certifications: string;
+    certification: string;
     certificationitem: ResumeItem[];
     software: string;
     engineer: string;

@@ -1,4 +1,4 @@
-import CertificateType from "../../../types/Certificate";
+import CertificateType from "../../../types/Certification";
 
 export default {
     "id1_header" : "Oracle Certified Professional",

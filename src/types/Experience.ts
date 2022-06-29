@@ -13,6 +13,8 @@ interface ExperienceType {
     "id3_title" : string;
     "id3_detail_1" : string;
     "id3_detail_2" : string;
+    "view_more": string;
+    "view_more_link": string;
 }
 
 export default ExperienceType;
