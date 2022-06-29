@@ -17,8 +17,8 @@ export default {
     "id7_title" : "Principles of Databases",
     "id8_title" : "Computer Networks",
     "id9_title" : "Artificial Intelligence",
-    "id10_title_1" : "Principles of Programming Languages",
-    "id10_title_2" : "Languages",
+    "id10_title_1" : "Principles of ",
+    "id10_title_2" : "Programming Languages",
     "id11_title" : "Robotics",
     "id12_title" : "Visualization",
 } as RelevantCourseworkType
