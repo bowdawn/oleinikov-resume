@@ -13,8 +13,8 @@ export default {
     "id2_detail_2" : "• Created written translations for English, Russian, and Korean language.",
     "id3_header" : "Family Library Project",
     "id3_title" : "Personal Project | Spring 2022",
-    "id3_detail_1" : "• Deployment of a family library database providing frontend React Typescript GUI.",
-    "id3_detail_2" : "• Backend implementation for add/modify function of book records using MongoDB.",
+    "id3_detail_1" : "• Deployment of a library database providing frontend React Typescript GUI.",
+    "id3_detail_2" : "• Backend MongoDB implementation for add/modify function of book records.",
     "view_more" : "View More",
     "view_more_link": "https://docs.google.com/document/d/1HGdZjSPC7v3nXF0BpbTTVdj-s-10n8i0Sz6U6I17lXM/view"
 } as ExperienceType

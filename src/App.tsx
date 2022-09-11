@@ -1,5 +1,5 @@
 import  { FC, useState } from 'react';
-import { Row, Col, Divider, Typography,  PageHeader, Switch, Space, Alert } from 'antd';
+import { Row, Col, Divider, Typography,  PageHeader, Switch, Space, Alert, Timeline } from 'antd';
 import './App.css';
 import { GlobalOutlined } from '@ant-design/icons';
 import ResumeItem from './components/ResumeItem';
@@ -39,14 +39,20 @@ const App: FC = () => {
           </Row>
           <Title level={4} >{resume.education}</Title>
           <Divider />
-          {resume.educationitem.map((x) => <ResumeItem description={x.description} />)}
+          <Timeline>
+          {resume.educationitem.map((x) =>  <Timeline.Item><ResumeItem description={x.description} /> </Timeline.Item>)}
+          </Timeline>
           <Title level={4} >{resume.experience}</Title>
           <Divider />
-          {resume.experienceitem.map((x) => <ResumeItem description={x.description} />)}
+          <Timeline>
+          {resume.experienceitem.map((x) => <Timeline.Item><ResumeItem description={x.description} /></Timeline.Item>)}
+          </Timeline>
           <Alert message={resume.experienceviewmore} type="info"  closable />
           <Title level={4} >{resume.certification}</Title>
           <Divider />
-          {resume.certificationitem.map((x) => <ResumeItem description={x.description} />)}
+          <Timeline>
+          {resume.certificationitem.map((x) => <Timeline.Item><ResumeItem description={x.description} /></Timeline.Item>)}
+          </Timeline>
         </Col>
         <Col className="right-column" span={8}  >
           <Title level={2}  >

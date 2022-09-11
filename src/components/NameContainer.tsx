@@ -1,15 +1,12 @@
-import { FC, ReactElement } from 'react';
+import { FC} from 'react';
 import { Typography, } from 'antd';
-import ResumeItemType from '../types/ResumeItem';
 import Resume from '../types/Resume';
 import resume_en from '../static/resume_en';
 import resume_kr from '../static/resume_kr';
 const { Title, Text } = Typography;
 const NameContainer: FC<{type: Resume["type"]}> = (props: {type: Resume["type"]}) => {
-
     const level = props.type == "En" ? 1 : 2; 
-    const korean_subheader =  props.type == "Kr" ? <Text strong>(국문: {resume_kr.last + resume_kr.first})</Text> : null;
-    
+    const korean_subheader =  props.type == "Kr" ? <Text type='secondary'>(국문: {resume_kr.last + resume_kr.first})</Text> : null;
     {
         return(
         <>

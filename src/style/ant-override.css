@@ -56,3 +56,20 @@ h1.ant-typography {
     border: none;
     
 }
+
+.ant-timeline-item {
+    padding-bottom: 0px;
+}
+
+.ant-timeline-item-content {
+    top:0;
+}
+
+.ant-timeline-item-head {
+    top: 7.001px;
+}
+
+.ant-timeline-item-tail {
+    
+    height: calc(100% - 3px);
+}
