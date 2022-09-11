@@ -277,7 +277,7 @@ export function resume(
         },
 
     ],
-    language: "Languages",
+    language: sectionlabel.language,
     languageitem: [
         {
             description:

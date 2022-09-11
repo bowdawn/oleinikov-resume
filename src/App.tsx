@@ -1,21 +1,16 @@
-import React, { FC, useState } from 'react';
+import  { FC, useState } from 'react';
 import { Row, Col, Divider, Typography,  PageHeader, Switch, Space, Alert } from 'antd';
 import './App.css';
-import { DownloadOutlined,  GlobalOutlined } from '@ant-design/icons';
+import { GlobalOutlined } from '@ant-design/icons';
 import ResumeItem from './components/ResumeItem';
 import resume_en from './static/resume_en';
 import resume_kr from './static/resume_kr';
-
 import { useTranslation } from 'react-i18next';
-import Link from 'antd/lib/typography/Link';
 import NameContainer from './components/NameContainer';
-
-
 const { Title, Text } = Typography;
 const App: FC = () => {
   const {  i18n } = useTranslation();
-  const [resume, setResume] = useState( i18n.language.includes("ko") ? resume_kr : resume_en);
-  
+  const [resume, setResume] = useState( i18n.language.includes("ko") ? resume_kr : resume_en)
   return (
     <div className="App">
       <Row className="resume">
