@@ -39,7 +39,19 @@ const ResponsiveRow: FC<{
   leftCol: ReactNode;
   rightCol: ReactNode;
 }> = ({ rowProps, leftCol, rightCol, mini }) => {
-  const getRowLayout: (x: number, y: number) => ReactNode = (x, y) => {
+  const getRowLayout: (
+    x: number,
+    y: number,
+    spaceBetween?: boolean
+  ) => ReactNode = (x, y, spaceBetween) => {
+    if (spaceBetween) {
+      return (
+        <Row {...rowProps} justify="space-between">
+          <Col>{leftCol}</Col>
+          <Col>{rightCol}</Col>
+        </Row>
+      );
+    }
     return (
       <Row {...rowProps}>
         <Col span={x}>{leftCol}</Col>
@@ -50,7 +62,7 @@ const ResponsiveRow: FC<{
   if (mini) {
     return (
       <ResponsiveContainer
-        mobile={getRowLayout(12, 12)}
+        mobile={getRowLayout(12, 12, true)}
         web={getRowLayout(12, 12)}
         mini={getRowLayout(24, 24)}
       />
