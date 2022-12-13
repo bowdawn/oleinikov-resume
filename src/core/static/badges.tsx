@@ -1,3 +1,4 @@
+import React from "react";
 import { CheckCircleOutlined, LinkOutlined } from "@ant-design/icons";
 import Link from "antd/lib/typography/Link";
 import badges from "./locales/default/badges";

@@ -1,3 +1,4 @@
+import React from "react";
 import { GithubOutlined, LinkedinOutlined, MailOutlined, PhoneOutlined } from "@ant-design/icons";
 import Link from "antd/lib/typography/Link";
 import contact from "./locales/default/contact";

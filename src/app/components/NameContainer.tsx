@@ -1,4 +1,4 @@
-import { FC} from 'react';
+import React,{ FC} from 'react';
 import { Typography, } from 'antd';
 import Resume from '../../core/types/Resume';
 import resume_en from '../../core/static/resume_en';

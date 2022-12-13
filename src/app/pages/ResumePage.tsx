@@ -1,5 +1,5 @@
-import  { FC, useState } from 'react';
-import { Row, Col, Divider, Typography,  PageHeader, Switch, Space, Alert, Timeline } from 'antd';
+import React , { FC, useState } from 'react';
+import { Row, Col, Divider, Typography, Switch, Space, Alert, Timeline } from 'antd';
 
 import { GlobalOutlined } from '@ant-design/icons';
 import ResumeItem from '../components/ResumeItem';
@@ -10,22 +10,24 @@ import resume_en from '../../core/static/resume_en';
 const { Title, Text } = Typography;
 const App: FC = () => {
   const {  i18n } = useTranslation();
-  const [resume, setResume] = useState( i18n.language.includes("ko") ? resume_kr : resume_en)
+  const [resume, setResume] = useState( i18n.language?.includes("ko") ? resume_kr : resume_en)
   return (
     <div className="App">
       <Row className="resume">
         <Col span={24}>
-          <PageHeader extra={
-            <Space align='center' size="middle">
+          <Row justify="end">
+            <Col><Space align='center' size="middle">
             <Switch checked={resume.type === resume_kr.type}
               onClick={() => {setResume(resume.type === resume_en.type ? resume_kr : resume_en) }
               }
               unCheckedChildren={<div><GlobalOutlined /> {resume.switchlabel}</div>}
               checkedChildren={<div><GlobalOutlined /> {resume.switchlabel}</div>} />
             {resume.download}
-            </Space>
-            }
-          />
+            </Space></Col>
+          </Row>
+            
+            
+          
         </Col>
         <Col span={16} className="left-column" >
           <Row align='top'>
@@ -34,24 +36,24 @@ const App: FC = () => {
             </Col>
             <Col xs={24} sm={12} md={12} lg={12} xl={12} >
               <Title level={4} underline={true}>{resume.contact}</Title>
-              {resume.contactitem.map((x) => <ResumeItem description={x.description} />)}
+              {resume.contactitem.map((x,key) => <ResumeItem key={key} description={x.description} />)}
             </Col>
           </Row>
           <Title level={4} >{resume.education}</Title>
           <Divider />
           <Timeline>
-          {resume.educationitem.map((x) =>  <Timeline.Item><ResumeItem description={x.description} /> </Timeline.Item>)}
+          {resume.educationitem.map((x, key) =>  <Timeline.Item key={key}><ResumeItem description={x.description} /> </Timeline.Item>)}
           </Timeline>
           <Title level={4} >{resume.experience}</Title>
           <Divider />
           <Timeline>
-          {resume.experienceitem.map((x) => <Timeline.Item><ResumeItem description={x.description} /></Timeline.Item>)}
+          {resume.experienceitem.map((x, key) => <Timeline.Item key={key}><ResumeItem description={x.description} /></Timeline.Item>)}
           </Timeline>
           <Alert message={resume.experienceviewmore} type="info"  closable />
           <Title level={4} >{resume.certification}</Title>
           <Divider />
           <Timeline>
-          {resume.certificationitem.map((x) => <Timeline.Item><ResumeItem description={x.description} /></Timeline.Item>)}
+          {resume.certificationitem.map((x, key) => <Timeline.Item key={key}><ResumeItem description={x.description} /></Timeline.Item>)}
           </Timeline>
         </Col>
         <Col className="right-column" span={8}  >
@@ -61,13 +63,13 @@ const App: FC = () => {
           </Title>
           <Title level={4} >{resume.releventcoursework}</Title>
           <Divider />
-          {resume.releventcourseworkitem.map((x) => <ResumeItem description={x.description} />)}
+          {resume.releventcourseworkitem.map((x, key) => <ResumeItem key={key} description={x.description} />)}
           <Title level={4} >{resume.skills}</Title>
           <Divider />
           <Title level={5} >{resume.computer}</Title>
-          {resume.computeritem.map((x) => <ResumeItem description={x.description} />)}
+          {resume.computeritem.map((x, key) => <ResumeItem key={key} description={x.description} />)}
           <Title level={5} >{resume.language}</Title>
-          {resume.languageitem.map((x) => <ResumeItem description={x.description} />)}
+          {resume.languageitem.map((x, key) => <ResumeItem key={key} description={x.description} />)}
         </Col>
       </Row>
     </div >
