@@ -11,7 +11,6 @@ import {
   Layout,
   Card,
 } from "antd";
-
 import { GlobalOutlined } from "@ant-design/icons";
 import ResumeItem from "../components/ResumeItem";
 import resume_kr from "../../core/static/resume_kr";
@@ -19,7 +18,7 @@ import { useTranslation } from "react-i18next";
 import NameContainer from "../components/NameContainer";
 import resume_en from "../../core/static/resume_en";
 
-const { Title, Text } = Typography;
+const { Title } = Typography;
 const App: FC = () => {
   const { i18n } = useTranslation();
   const [resume, setResume] = useState(
@@ -29,6 +28,7 @@ const App: FC = () => {
     <Layout className="resume">
       <Layout.Content>
         <Card
+          className="ant-card-resume"
           bordered={false}
           title={
             <Row justify="end">
@@ -68,6 +68,7 @@ const App: FC = () => {
                   <Title level={4} underline={true}>
                     {resume.contact}
                   </Title>
+
                   {resume.contactitem.map((x, key) => (
                     <ResumeItem key={key} description={x.description} />
                   ))}
@@ -75,32 +76,44 @@ const App: FC = () => {
               </Row>
               <Title level={4}>{resume.education}</Title>
               <Divider />
-              <Timeline>
-                {resume.educationitem.map((x, key) => (
-                  <Timeline.Item key={key}>
-                    <ResumeItem description={x.description} />{" "}
-                  </Timeline.Item>
-                ))}
-              </Timeline>
+              <Card bordered={false} size="small" className="ant-card-section">
+                <Timeline>
+                  {resume.educationitem.map((x, key) => (
+                    <Timeline.Item key={key}>
+                      <ResumeItem description={x.description} />{" "}
+                    </Timeline.Item>
+                  ))}
+                </Timeline>
+              </Card>
               <Title level={4}>{resume.experience}</Title>
               <Divider />
-              <Timeline>
-                {resume.experienceitem.map((x, key) => (
-                  <Timeline.Item key={key}>
-                    <ResumeItem description={x.description} />
-                  </Timeline.Item>
-                ))}
-              </Timeline>
-              <Alert message={resume.experienceviewmore} type="info" closable />
+              <Card bordered={false} size="small" className="ant-card-section">
+                <Space size="small" direction="vertical">
+                  <Timeline>
+                    {resume.experienceitem.map((x, key) => (
+                      <Timeline.Item key={key}>
+                        <ResumeItem description={x.description} />
+                      </Timeline.Item>
+                    ))}
+                  </Timeline>
+                  <Alert
+                    message={resume.experienceviewmore}
+                    type="info"
+                    closable
+                  />
+                </Space>
+              </Card>
               <Title level={4}>{resume.certification}</Title>
               <Divider />
-              <Timeline>
-                {resume.certificationitem.map((x, key) => (
-                  <Timeline.Item key={key}>
-                    <ResumeItem description={x.description} />
-                  </Timeline.Item>
-                ))}
-              </Timeline>
+              <Card bordered={false} size="small" className="ant-card-section">
+                <Timeline>
+                  {resume.certificationitem.map((x, key) => (
+                    <Timeline.Item key={key}>
+                      <ResumeItem description={x.description} />
+                    </Timeline.Item>
+                  ))}
+                </Timeline>
+              </Card>
             </Col>
             <Col span={8}>
               <Card className="ant-card-resume-right-column" size="small">

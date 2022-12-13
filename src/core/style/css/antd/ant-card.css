@@ -1,3 +1,21 @@
+.ant-card-resume > .ant-card-body{
+   padding-top: 0;
+}
+
+.ant-card-resume .ant-card-head {
+    border-bottom: none;
+}
+
+
+
+.ant-card-section{
+    box-shadow: none !important;
+}
+
+
+
+
+
 .ant-card-resume-right-column{
     height: 100%;
     background-color: #CFE2F3;
