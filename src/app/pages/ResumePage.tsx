@@ -23,6 +23,31 @@ import { useTranslation } from "react-i18next";
 import NameContainer from "../components/NameContainer";
 import resume_en from "../../core/static/resume_en";
 import ReactToPrint from "react-to-print";
+import { ResponsiveContainer } from "../components/ResponsiveContainer";
+import ResumeType from "src/core/types/Resume";
+
+const ResponsiveHeader: FC<{ type: "web" | "mobile"; resume: ResumeType }> = ({
+  type,
+  resume,
+}) => {
+  const colSpan = type === "web" ? 12 : type === "mobile" ? 24 : 24;
+  return (
+    <Row align="top">
+      <Col span={colSpan}>
+        <NameContainer type={resume.type} />
+      </Col>
+      <Col span={colSpan}>
+        <Title level={4} underline={true}>
+          {resume.contact}
+        </Title>
+
+        {resume.contactitem.map((x, key) => (
+          <ResumeItem key={key} description={x.description} />
+        ))}
+      </Col>
+    </Row>
+  );
+};
 
 const { Title } = Typography;
 const App: FC = () => {
@@ -45,20 +70,11 @@ const App: FC = () => {
             >
               <Row gutter={token.paddingSM}>
                 <Col span={16} className="left-column">
-                  <Row align="top">
-                    <Col span={12}>
-                      <NameContainer type={resume.type} />
-                    </Col>
-                    <Col span={12}>
-                      <Title level={4} underline={true}>
-                        {resume.contact}
-                      </Title>
+                  <ResponsiveContainer
+                    web={<ResponsiveHeader resume={resume} type="web" />}
+                    mobile={<ResponsiveHeader resume={resume} type="mobile" />}
+                  />
 
-                      {resume.contactitem.map((x, key) => (
-                        <ResumeItem key={key} description={x.description} />
-                      ))}
-                    </Col>
-                  </Row>
                   <Title level={4}>{resume.education}</Title>
                   <Divider />
                   <Card
