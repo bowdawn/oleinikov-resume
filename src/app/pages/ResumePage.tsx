@@ -34,24 +34,32 @@ import ReactToPrint from "react-to-print";
 import { ResponsiveContainer } from "../components/ResponsiveContainer";
 
 const ResponsiveRow: FC<{
+  mini?: boolean;
   rowProps?: RowProps;
   leftCol: ReactNode;
   rightCol: ReactNode;
-}> = ({ rowProps, leftCol, rightCol }) => {
+}> = ({ rowProps, leftCol, rightCol, mini }) => {
+  const getRowLayout: (x: number, y: number) => ReactNode = (x, y) => {
+    return (
+      <Row {...rowProps}>
+        <Col span={x}>{leftCol}</Col>
+        <Col span={y}>{rightCol}</Col>
+      </Row>
+    );
+  };
+  if (mini) {
+    return (
+      <ResponsiveContainer
+        mobile={getRowLayout(12, 12)}
+        web={getRowLayout(12, 12)}
+        mini={getRowLayout(24, 24)}
+      />
+    );
+  }
   return (
     <ResponsiveContainer
-      mobile={
-        <Row {...rowProps}>
-          <Col span={24}>{leftCol}</Col>
-          <Col span={24}>{rightCol}</Col>
-        </Row>
-      }
-      web={
-        <Row {...rowProps}>
-          <Col span={16}>{leftCol}</Col>
-          <Col span={8}>{rightCol}</Col>
-        </Row>
-      }
+      mobile={getRowLayout(24, 24)}
+      web={getRowLayout(16, 8)}
     />
   );
 };
@@ -78,20 +86,20 @@ const App: FC = () => {
               <ResponsiveRow
                 leftCol={
                   <>
-                    <Row>
-                      <Col span={12}>
-                        <NameContainer type={resume.type} />
-                      </Col>
-                      <Col span={12}>
-                        <Title level={4} underline={true}>
-                          {resume.contact}
-                        </Title>
-
-                        {resume.contactitem.map((x, key) => (
-                          <ResumeItem key={key} description={x.description} />
-                        ))}
-                      </Col>
-                    </Row>
+                    <ResponsiveRow
+                      mini
+                      leftCol={<NameContainer type={resume.type} />}
+                      rightCol={
+                        <>
+                          <Title level={4} underline={true}>
+                            {resume.contact}
+                          </Title>
+                          {resume.contactitem.map((x, key) => (
+                            <ResumeItem key={key} description={x.description} />
+                          ))}
+                        </>
+                      }
+                    />
 
                     <Title level={4}>{resume.education}</Title>
                     <Divider />
