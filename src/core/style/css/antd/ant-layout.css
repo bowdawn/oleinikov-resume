@@ -1,8 +1,10 @@
 .ant-layout{
     display: flex;
     align-items: center;
+    min-height: 100vh;
 }
 
 .ant-layout-content{
-    width: 1080px;
+    display: flex;
+    width: 825px;
 }

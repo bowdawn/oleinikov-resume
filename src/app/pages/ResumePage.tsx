@@ -27,120 +27,134 @@ const App: FC = () => {
   return (
     <Layout className="resume">
       <Layout.Content>
-        <Card
-          className="ant-card-resume"
-          bordered={false}
-          title={
-            <Row justify="end">
-              <Col>
-                <Space align="center" size="middle">
-                  <Switch
-                    checked={resume.type === resume_kr.type}
-                    onClick={() => {
-                      setResume(
-                        resume.type === resume_en.type ? resume_kr : resume_en
-                      );
-                    }}
-                    unCheckedChildren={
-                      <div>
-                        <GlobalOutlined /> {resume.switchlabel}
-                      </div>
-                    }
-                    checkedChildren={
-                      <div>
-                        <GlobalOutlined /> {resume.switchlabel}
-                      </div>
-                    }
-                  />
-                  {resume.download}
-                </Space>
-              </Col>
-            </Row>
-          }
-        >
-          <Row>
-            <Col span={16} className="left-column">
-              <Row align="top">
-                <Col xs={24} sm={12}>
-                  <NameContainer type={resume.type} />
-                </Col>
-                <Col xs={24} sm={12}>
-                  <Title level={4} underline={true}>
-                    {resume.contact}
-                  </Title>
-
-                  {resume.contactitem.map((x, key) => (
-                    <ResumeItem key={key} description={x.description} />
-                  ))}
+        <Row align={"middle"}>
+          <Card
+            className="ant-card-resume"
+            bordered={false}
+            title={
+              <Row justify="end">
+                <Col>
+                  <Space align="center" size="middle">
+                    <Switch
+                      checked={resume.type === resume_kr.type}
+                      onClick={() => {
+                        setResume(
+                          resume.type === resume_en.type ? resume_kr : resume_en
+                        );
+                      }}
+                      unCheckedChildren={
+                        <div>
+                          <GlobalOutlined /> {resume.switchlabel}
+                        </div>
+                      }
+                      checkedChildren={
+                        <div>
+                          <GlobalOutlined /> {resume.switchlabel}
+                        </div>
+                      }
+                    />
+                    {resume.download}
+                  </Space>
                 </Col>
               </Row>
-              <Title level={4}>{resume.education}</Title>
-              <Divider />
-              <Card bordered={false} size="small" className="ant-card-section">
-                <Timeline>
-                  {resume.educationitem.map((x, key) => (
-                    <Timeline.Item key={key}>
-                      <ResumeItem description={x.description} />{" "}
-                    </Timeline.Item>
-                  ))}
-                </Timeline>
-              </Card>
-              <Title level={4}>{resume.experience}</Title>
-              <Divider />
-              <Card bordered={false} size="small" className="ant-card-section">
-                <Space size="small" direction="vertical">
+            }
+          >
+            <Row>
+              <Col span={16} className="left-column">
+                <Row align="top">
+                  <Col xs={24} sm={12}>
+                    <NameContainer type={resume.type} />
+                  </Col>
+                  <Col xs={24} sm={12}>
+                    <Title level={4} underline={true}>
+                      {resume.contact}
+                    </Title>
+
+                    {resume.contactitem.map((x, key) => (
+                      <ResumeItem key={key} description={x.description} />
+                    ))}
+                  </Col>
+                </Row>
+                <Title level={4}>{resume.education}</Title>
+                <Divider />
+                <Card
+                  bordered={false}
+                  size="small"
+                  className="ant-card-section"
+                >
                   <Timeline>
-                    {resume.experienceitem.map((x, key) => (
+                    {resume.educationitem.map((x, key) => (
+                      <Timeline.Item key={key}>
+                        <ResumeItem description={x.description} />{" "}
+                      </Timeline.Item>
+                    ))}
+                  </Timeline>
+                </Card>
+                <Title level={4}>{resume.experience}</Title>
+                <Divider />
+                <Card
+                  bordered={false}
+                  size="small"
+                  className="ant-card-section"
+                >
+                  <Space size="small" direction="vertical">
+                    <Timeline>
+                      {resume.experienceitem.map((x, key) => (
+                        <Timeline.Item key={key}>
+                          <ResumeItem description={x.description} />
+                        </Timeline.Item>
+                      ))}
+                    </Timeline>
+                    <Alert
+                      message={resume.experienceviewmore}
+                      type="info"
+                      closable
+                    />
+                  </Space>
+                </Card>
+                <Title level={4}>{resume.certification}</Title>
+                <Divider />
+                <Card
+                  bordered={false}
+                  size="small"
+                  className="ant-card-section"
+                >
+                  <Timeline>
+                    {resume.certificationitem.map((x, key) => (
                       <Timeline.Item key={key}>
                         <ResumeItem description={x.description} />
                       </Timeline.Item>
                     ))}
                   </Timeline>
-                  <Alert
-                    message={resume.experienceviewmore}
-                    type="info"
-                    closable
-                  />
-                </Space>
-              </Card>
-              <Title level={4}>{resume.certification}</Title>
-              <Divider />
-              <Card bordered={false} size="small" className="ant-card-section">
-                <Timeline>
-                  {resume.certificationitem.map((x, key) => (
-                    <Timeline.Item key={key}>
-                      <ResumeItem description={x.description} />
-                    </Timeline.Item>
+                </Card>
+              </Col>
+              <Col span={8}>
+                <Card className="ant-card-resume-right-column" size="small">
+                  <Title level={2}>
+                    {resume.software}
+                    <br />
+                    {resume.engineer}
+                  </Title>
+                  <Title level={4}>{resume.releventcoursework}</Title>
+                  <Divider />
+                  {resume.releventcourseworkitem.map((x, key) => (
+                    <ResumeItem key={key} description={x.description} />
                   ))}
-                </Timeline>
-              </Card>
-            </Col>
-            <Col span={8}>
-              <Card className="ant-card-resume-right-column" size="small">
-                <Title level={2}>
-                  {resume.software}
-                  <br />
-                  {resume.engineer}
-                </Title>
-                <Title level={4}>{resume.releventcoursework}</Title>
-                <Divider />
-                {resume.releventcourseworkitem.map((x, key) => (
-                  <ResumeItem key={key} description={x.description} />
-                ))}
-                <Title level={4}>{resume.skills}</Title>
-                <Divider />
-                <Title level={5}>{resume.computer}</Title>
-                {resume.computeritem.map((x, key) => (
-                  <ResumeItem key={key} description={x.description} />
-                ))}
-                <Title level={5}>{resume.language}</Title>
-                {resume.languageitem.map((x, key) => (
-                  <ResumeItem key={key} description={x.description} />
-                ))}
-              </Card>
-            </Col>
-          </Row>
-        </Card>
+                  <Title level={4}>{resume.skills}</Title>
+                  <Divider />
+                  <Title level={5}>{resume.computer}</Title>
+                  {resume.computeritem.map((x, key) => (
+                    <ResumeItem key={key} description={x.description} />
+                  ))}
+                  <Title level={5}>{resume.language}</Title>
+                  {resume.languageitem.map((x, key) => (
+                    <ResumeItem key={key} description={x.description} />
+                  ))}
+                </Card>
+              </Col>
+            </Row>
+          </Card>
+        </Row>
       </Layout.Content>
     </Layout>
   );
