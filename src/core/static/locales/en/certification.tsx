@@ -1,4 +1,5 @@
-import CertificateType from "../../../types/Certification";
+import { CertificationType } from "../../../types/Certification";
+
 
 export default {
     "id1_header" : "Oracle Certified Professional",
@@ -10,4 +11,4 @@ export default {
     "id3_header" : "Test of Proficiency in Korean",
     "id3_title" : "TOPIK Level 6 | Oct 17, 2021",
     "id3_detail" : "• Absolutely fluent in the Korean language for professional research or work, Capacity to understand and express oneself without problem, although without the full fluency of a native speaker.",
-} as CertificateType
+} as CertificationType

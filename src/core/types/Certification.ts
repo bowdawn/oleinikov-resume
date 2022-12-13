@@ -1,4 +1,4 @@
-interface CertificationType {
+export interface CertificationType {
     "id1_header" : string;
     "id1_title" : string;
     "id1_detail" : string;
@@ -10,4 +10,3 @@ interface CertificationType {
     "id3_detail" : string;
 }
 
-export default CertificationType;

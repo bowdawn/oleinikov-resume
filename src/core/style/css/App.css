@@ -1,6 +1,6 @@
 @import '~antd/dist/antd.css';
-@import 'style/ant-override.css';
-@import 'style/resume.css';
+@import './ant-override.css';
+@import './resume.css';
 
 .App {
   text-align: center;

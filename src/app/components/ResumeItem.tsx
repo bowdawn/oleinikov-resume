@@ -1,12 +1,12 @@
 import { FC } from 'react';
 import { Typography, } from 'antd';
-import ResumeItemType from '../types/ResumeItem';
+import ResumeItemType from '../../core/types/ResumeItem';
 const { Title } = Typography;
 const ResumeItem: FC<ResumeItemType> = (props: ResumeItemType) => {
     return (
         <div>
             {
-                props.description.map((x) => {
+                props.description.map((x: any) => {
                     if (x.type == "header") {
                         return <Title level={5} >{x.text}</Title>
                     }

@@ -1,4 +1,4 @@
-interface SectionLabelType {
+export type SectionLabelType = {
         contact: string;
         education: string;
         experience: string;
@@ -10,4 +10,3 @@ interface SectionLabelType {
         computer: string;
         language: string;
 }
-export default SectionLabelType

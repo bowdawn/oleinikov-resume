@@ -1,4 +1,5 @@
-import SectionLabelType from "../../../types/SectionLabel";
+import { SectionLabelType } from "../../../types/SectionLabel";
+
 
 
 export default {

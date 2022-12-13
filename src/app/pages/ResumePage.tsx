@@ -1,12 +1,12 @@
 import  { FC, useState } from 'react';
 import { Row, Col, Divider, Typography,  PageHeader, Switch, Space, Alert, Timeline } from 'antd';
-import './App.css';
+
 import { GlobalOutlined } from '@ant-design/icons';
-import ResumeItem from './components/ResumeItem';
-import resume_en from './static/resume_en';
-import resume_kr from './static/resume_kr';
+import ResumeItem from '../components/ResumeItem';
+import resume_kr from '../../core/static/resume_kr';
 import { useTranslation } from 'react-i18next';
-import NameContainer from './components/NameContainer';
+import NameContainer from '../components/NameContainer';
+import resume_en from '../../core/static/resume_en';
 const { Title, Text } = Typography;
 const App: FC = () => {
   const {  i18n } = useTranslation();
@@ -17,8 +17,8 @@ const App: FC = () => {
         <Col span={24}>
           <PageHeader extra={
             <Space align='center' size="middle">
-            <Switch checked={resume.type == resume_kr.type}
-              onClick={() => {setResume(resume.type == resume_en.type ? resume_kr : resume_en) }
+            <Switch checked={resume.type === resume_kr.type}
+              onClick={() => {setResume(resume.type === resume_en.type ? resume_kr : resume_en) }
               }
               unCheckedChildren={<div><GlobalOutlined /> {resume.switchlabel}</div>}
               checkedChildren={<div><GlobalOutlined /> {resume.switchlabel}</div>} />

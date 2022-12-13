@@ -2,7 +2,7 @@
 import { ArrowRightOutlined, DownloadOutlined } from "@ant-design/icons";
 import { Progress } from "antd";
 import Link from "antd/lib/typography/Link";
-import CertificateType from "../types/Certification";
+import { CertificationType } from "../types/Certification";
 import ComputerType from "../types/Computer";
 import DownloadType from "../types/Download";
 import EducationType from "../types/Education";
@@ -10,7 +10,10 @@ import ExperienceType from "../types/Experience";
 import LanguageType from "../types/Language";
 import RelevantCourseworkType from "../types/RelevantCoursework";
 import Resume from "../types/Resume";
-import SectionLabelType from "../types/SectionLabel";
+import { SectionLabelType } from "../types/SectionLabel";
+
+
+
 import badges from "./badges";
 import contact from "./contact";
 
@@ -26,7 +29,7 @@ export function resume(
                         download: DownloadType,
                         education: EducationType,   
                         experience: ExperienceType, 
-                        certificate : CertificateType, 
+                        certificate : CertificationType, 
                         relevantcoursework : RelevantCourseworkType,
                         computer: ComputerType,
                         language: LanguageType 
@@ -287,7 +290,7 @@ export function resume(
                     {type: "title", text: <>{language.korean}<br />
                     <Progress status="active" percent={80} {...progress_props} /></>},
                     {type: "title", text: <>{language.russian}<br />
-                    <Progress status="active" percent={80} {...progress_props} /></>}
+                    <Progress status="active" percent={90} {...progress_props} /></>}
                 ]
         }
     ]

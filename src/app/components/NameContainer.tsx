@@ -1,8 +1,9 @@
 import { FC} from 'react';
 import { Typography, } from 'antd';
-import Resume from '../types/Resume';
-import resume_en from '../static/resume_en';
-import resume_kr from '../static/resume_kr';
+import Resume from '../../core/types/Resume';
+import resume_en from '../../core/static/resume_en';
+import resume_kr from '../../core/static/resume_kr';
+
 const { Title, Text } = Typography;
 const NameContainer: FC<{type: Resume["type"]}> = (props: {type: Resume["type"]}) => {
     const level = props.type == "En" ? 1 : 2; 
