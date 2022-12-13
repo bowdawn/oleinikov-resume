@@ -9,6 +9,7 @@ import {
   Alert,
   Timeline,
   Layout,
+  Card,
 } from "antd";
 
 import { GlobalOutlined } from "@ant-design/icons";
@@ -27,8 +28,9 @@ const App: FC = () => {
   return (
     <Layout className="resume">
       <Layout.Content>
-        <Row>
-          <Col span={24}>
+        <Card
+          bordered={false}
+          title={
             <Row justify="end">
               <Col>
                 <Space align="center" size="middle">
@@ -54,73 +56,78 @@ const App: FC = () => {
                 </Space>
               </Col>
             </Row>
-          </Col>
-          <Col span={16} className="left-column">
-            <Row align="top">
-              <Col xs={24} sm={12} md={12} lg={12} xl={12}>
-                <NameContainer type={resume.type} />
-              </Col>
-              <Col xs={24} sm={12} md={12} lg={12} xl={12}>
-                <Title level={4} underline={true}>
-                  {resume.contact}
+          }
+        >
+          <Row>
+            <Col span={16} className="left-column">
+              <Row align="top">
+                <Col xs={24} sm={12}>
+                  <NameContainer type={resume.type} />
+                </Col>
+                <Col xs={24} sm={12}>
+                  <Title level={4} underline={true}>
+                    {resume.contact}
+                  </Title>
+                  {resume.contactitem.map((x, key) => (
+                    <ResumeItem key={key} description={x.description} />
+                  ))}
+                </Col>
+              </Row>
+              <Title level={4}>{resume.education}</Title>
+              <Divider />
+              <Timeline>
+                {resume.educationitem.map((x, key) => (
+                  <Timeline.Item key={key}>
+                    <ResumeItem description={x.description} />{" "}
+                  </Timeline.Item>
+                ))}
+              </Timeline>
+              <Title level={4}>{resume.experience}</Title>
+              <Divider />
+              <Timeline>
+                {resume.experienceitem.map((x, key) => (
+                  <Timeline.Item key={key}>
+                    <ResumeItem description={x.description} />
+                  </Timeline.Item>
+                ))}
+              </Timeline>
+              <Alert message={resume.experienceviewmore} type="info" closable />
+              <Title level={4}>{resume.certification}</Title>
+              <Divider />
+              <Timeline>
+                {resume.certificationitem.map((x, key) => (
+                  <Timeline.Item key={key}>
+                    <ResumeItem description={x.description} />
+                  </Timeline.Item>
+                ))}
+              </Timeline>
+            </Col>
+            <Col span={8}>
+              <Card className="ant-card-resume-right-column" size="small">
+                <Title level={2}>
+                  {resume.software}
+                  <br />
+                  {resume.engineer}
                 </Title>
-                {resume.contactitem.map((x, key) => (
+                <Title level={4}>{resume.releventcoursework}</Title>
+                <Divider />
+                {resume.releventcourseworkitem.map((x, key) => (
                   <ResumeItem key={key} description={x.description} />
                 ))}
-              </Col>
-            </Row>
-            <Title level={4}>{resume.education}</Title>
-            <Divider />
-            <Timeline>
-              {resume.educationitem.map((x, key) => (
-                <Timeline.Item key={key}>
-                  <ResumeItem description={x.description} />{" "}
-                </Timeline.Item>
-              ))}
-            </Timeline>
-            <Title level={4}>{resume.experience}</Title>
-            <Divider />
-            <Timeline>
-              {resume.experienceitem.map((x, key) => (
-                <Timeline.Item key={key}>
-                  <ResumeItem description={x.description} />
-                </Timeline.Item>
-              ))}
-            </Timeline>
-            <Alert message={resume.experienceviewmore} type="info" closable />
-            <Title level={4}>{resume.certification}</Title>
-            <Divider />
-            <Timeline>
-              {resume.certificationitem.map((x, key) => (
-                <Timeline.Item key={key}>
-                  <ResumeItem description={x.description} />
-                </Timeline.Item>
-              ))}
-            </Timeline>
-          </Col>
-          <Col className="right-column" span={8}>
-            <Title level={2}>
-              <Text className="job-title">{resume.software}</Text>
-              <br />
-              <Text className="job-title">{resume.engineer}</Text>
-            </Title>
-            <Title level={4}>{resume.releventcoursework}</Title>
-            <Divider />
-            {resume.releventcourseworkitem.map((x, key) => (
-              <ResumeItem key={key} description={x.description} />
-            ))}
-            <Title level={4}>{resume.skills}</Title>
-            <Divider />
-            <Title level={5}>{resume.computer}</Title>
-            {resume.computeritem.map((x, key) => (
-              <ResumeItem key={key} description={x.description} />
-            ))}
-            <Title level={5}>{resume.language}</Title>
-            {resume.languageitem.map((x, key) => (
-              <ResumeItem key={key} description={x.description} />
-            ))}
-          </Col>
-        </Row>
+                <Title level={4}>{resume.skills}</Title>
+                <Divider />
+                <Title level={5}>{resume.computer}</Title>
+                {resume.computeritem.map((x, key) => (
+                  <ResumeItem key={key} description={x.description} />
+                ))}
+                <Title level={5}>{resume.language}</Title>
+                {resume.languageitem.map((x, key) => (
+                  <ResumeItem key={key} description={x.description} />
+                ))}
+              </Card>
+            </Col>
+          </Row>
+        </Card>
       </Layout.Content>
     </Layout>
   );
