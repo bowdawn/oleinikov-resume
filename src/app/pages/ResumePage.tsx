@@ -1,4 +1,11 @@
-import React, { FC, useState, useRef, MutableRefObject } from "react";
+import React, {
+  FC,
+  useState,
+  useRef,
+  MutableRefObject,
+  Children,
+  ReactNode,
+} from "react";
 import {
   Row,
   Col,
@@ -10,6 +17,7 @@ import {
   Card,
   theme,
   FloatButton,
+  RowProps,
 } from "antd";
 
 import {
@@ -24,28 +32,27 @@ import NameContainer from "../components/NameContainer";
 import resume_en from "../../core/static/resume_en";
 import ReactToPrint from "react-to-print";
 import { ResponsiveContainer } from "../components/ResponsiveContainer";
-import ResumeType from "src/core/types/Resume";
 
-const ResponsiveHeader: FC<{ type: "web" | "mobile"; resume: ResumeType }> = ({
-  type,
-  resume,
-}) => {
-  const colSpan = type === "web" ? 12 : type === "mobile" ? 24 : 24;
+const ResponsiveRow: FC<{
+  rowProps?: RowProps;
+  leftCol: ReactNode;
+  rightCol: ReactNode;
+}> = ({ rowProps, leftCol, rightCol }) => {
   return (
-    <Row align="top">
-      <Col span={colSpan}>
-        <NameContainer type={resume.type} />
-      </Col>
-      <Col span={colSpan}>
-        <Title level={4} underline={true}>
-          {resume.contact}
-        </Title>
-
-        {resume.contactitem.map((x, key) => (
-          <ResumeItem key={key} description={x.description} />
-        ))}
-      </Col>
-    </Row>
+    <ResponsiveContainer
+      mobile={
+        <Row {...rowProps}>
+          <Col span={24}>{leftCol}</Col>
+          <Col span={24}>{rightCol}</Col>
+        </Row>
+      }
+      web={
+        <Row {...rowProps}>
+          <Col span={16}>{leftCol}</Col>
+          <Col span={8}>{rightCol}</Col>
+        </Row>
+      }
+    />
   );
 };
 
@@ -68,62 +75,74 @@ const App: FC = () => {
               ref={componentRef}
               bordered={false}
             >
-              <Row gutter={token.paddingSM}>
-                <Col span={16} className="left-column">
-                  <ResponsiveContainer
-                    web={<ResponsiveHeader resume={resume} type="web" />}
-                    mobile={<ResponsiveHeader resume={resume} type="mobile" />}
-                  />
+              <ResponsiveRow
+                leftCol={
+                  <>
+                    <Row>
+                      <Col span={12}>
+                        <NameContainer type={resume.type} />
+                      </Col>
+                      <Col span={12}>
+                        <Title level={4} underline={true}>
+                          {resume.contact}
+                        </Title>
 
-                  <Title level={4}>{resume.education}</Title>
-                  <Divider />
-                  <Card
-                    bordered={false}
-                    size="small"
-                    className="ant-card-section"
-                  >
-                    <Timeline>
-                      {resume.educationitem.map((x, key) => (
-                        <Timeline.Item key={key}>
-                          <ResumeItem description={x.description} />{" "}
-                        </Timeline.Item>
-                      ))}
-                    </Timeline>
-                  </Card>
-                  <Title level={4}>{resume.experience}</Title>
-                  <Divider />
-                  <Card
-                    bordered={false}
-                    size="small"
-                    className="ant-card-section"
-                  >
-                    <Space size="small" direction="vertical">
+                        {resume.contactitem.map((x, key) => (
+                          <ResumeItem key={key} description={x.description} />
+                        ))}
+                      </Col>
+                    </Row>
+
+                    <Title level={4}>{resume.education}</Title>
+                    <Divider />
+                    <Card
+                      bordered={false}
+                      size="small"
+                      className="ant-card-section"
+                    >
                       <Timeline>
-                        {resume.experienceitem.map((x, key) => (
+                        {resume.educationitem.map((x, key) => (
+                          <Timeline.Item key={key}>
+                            <ResumeItem description={x.description} />{" "}
+                          </Timeline.Item>
+                        ))}
+                      </Timeline>
+                    </Card>
+                    <Title level={4}>{resume.experience}</Title>
+                    <Divider />
+                    <Card
+                      bordered={false}
+                      size="small"
+                      className="ant-card-section"
+                    >
+                      <Space size="small" direction="vertical">
+                        <Timeline>
+                          {resume.experienceitem.map((x, key) => (
+                            <Timeline.Item key={key}>
+                              <ResumeItem description={x.description} />
+                            </Timeline.Item>
+                          ))}
+                        </Timeline>
+                      </Space>
+                    </Card>
+                    <Title level={4}>{resume.certification}</Title>
+                    <Divider />
+                    <Card
+                      bordered={false}
+                      size="small"
+                      className="ant-card-section"
+                    >
+                      <Timeline>
+                        {resume.certificationitem.map((x, key) => (
                           <Timeline.Item key={key}>
                             <ResumeItem description={x.description} />
                           </Timeline.Item>
                         ))}
                       </Timeline>
-                    </Space>
-                  </Card>
-                  <Title level={4}>{resume.certification}</Title>
-                  <Divider />
-                  <Card
-                    bordered={false}
-                    size="small"
-                    className="ant-card-section"
-                  >
-                    <Timeline>
-                      {resume.certificationitem.map((x, key) => (
-                        <Timeline.Item key={key}>
-                          <ResumeItem description={x.description} />
-                        </Timeline.Item>
-                      ))}
-                    </Timeline>
-                  </Card>
-                </Col>
-                <Col span={8}>
+                    </Card>
+                  </>
+                }
+                rightCol={
                   <Card className="ant-card-resume-right-column" size="small">
                     <Title level={2}>
                       {resume.software}
@@ -146,8 +165,9 @@ const App: FC = () => {
                       <ResumeItem key={key} description={x.description} />
                     ))}
                   </Card>
-                </Col>
-              </Row>
+                }
+                rowProps={{ gutter: token.paddingSM }}
+              />
             </Card>
           </Row>
         </Layout.Content>
