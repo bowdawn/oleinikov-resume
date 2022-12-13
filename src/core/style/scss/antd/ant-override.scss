@@ -1,5 +1,5 @@
-@import "./ant-layout.css";
-@import "./ant-card.css";
+@import "./ant-layout.scss";
+@import "./ant-card.scss";
 
 .ant-divider-horizontal {
     margin: 0px;
@@ -40,12 +40,6 @@ h1.ant-typography {
 
 }
 
-.ant-page-header {
-    padding-right: 0px;
-    padding-left: 0px;
-    padding-top: 5px;
-    padding-bottom: 0px;
-}
 
 .ant-alert {
     margin-right: 0px;
