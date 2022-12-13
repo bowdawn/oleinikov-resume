@@ -1,0 +1,10 @@
+.ant-layout{
+    display: flex;
+    align-items: center;
+}
+
+.ant-layout-content{
+    padding: 10px;
+    width: 1080px;
+    background-color: white;
+}
