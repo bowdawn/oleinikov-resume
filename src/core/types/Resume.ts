@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { TooltipType } from "./Tooltip";
 import ResumeItem from "./ResumeItem";
 
 
@@ -27,6 +28,7 @@ interface ResumeType {
     computeritem: ResumeItem[];
     language: string;
     languageitem: ResumeItem[];
+    tooltip: TooltipType;
   }
 
   export default ResumeType;

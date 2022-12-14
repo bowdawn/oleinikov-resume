@@ -1,6 +1,6 @@
 import React from "react";
 import { ArrowRightOutlined, DownloadOutlined } from "@ant-design/icons";
-import { Progress } from "antd";
+import { Progress, Tooltip } from "antd";
 import Link from "antd/lib/typography/Link";
 import { CertificationType } from "../types/Certification";
 import ComputerType from "../types/Computer";
@@ -16,6 +16,7 @@ import badges from "./badges";
 import contact from "./contact";
 
 import progress_props from "./progress_props";
+import { TooltipType } from "../types/Tooltip";
 
 export function resume(
   type: Resume["type"],
@@ -29,7 +30,8 @@ export function resume(
   certificate: CertificationType,
   relevantcoursework: RelevantCourseworkType,
   computer: ComputerType,
-  language: LanguageType
+  language: LanguageType,
+  tooltip: TooltipType
 ): Resume {
   return {
     type: type,
@@ -97,7 +99,9 @@ export function resume(
             text: (
               <div>
                 {experience.id3_header}
-                {badges.library_website}
+                <Tooltip title={tooltip.link} placement={"right"}>
+                  {badges.library_website}
+                </Tooltip>
               </div>
             ),
           },
@@ -125,7 +129,9 @@ export function resume(
             text: (
               <div>
                 {certificate.id1_header}
-                {badges.oracle_professional}
+                <Tooltip title={tooltip.certification} placement={"right"}>
+                  {badges.oracle_professional}
+                </Tooltip>
               </div>
             ),
           },
@@ -143,7 +149,9 @@ export function resume(
             text: (
               <div>
                 {certificate.id2_header}
-                {badges.oracle_associate}
+                <Tooltip title={tooltip.certification} placement={"right"}>
+                  {badges.oracle_associate}
+                </Tooltip>
               </div>
             ),
           },
@@ -286,6 +294,7 @@ export function resume(
         ],
       },
     ],
+    tooltip,
   };
 }
 

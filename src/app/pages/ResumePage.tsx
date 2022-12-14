@@ -18,6 +18,7 @@ import {
   theme,
   FloatButton,
   RowProps,
+  Tooltip,
 } from "antd";
 
 import {
@@ -88,7 +89,6 @@ const App: FC = () => {
   return (
     <>
       <Snowfall />
-
       <Layout>
         <Layout.Content>
           <Row align={"middle"}>
@@ -196,14 +196,21 @@ const App: FC = () => {
         </Layout.Content>
       </Layout>
       <FloatButton.Group icon={<MenuOutlined />} type="primary" trigger="click">
-        <FloatButton
-          onClick={() => {
-            setResume(resume.type === resume_en.type ? resume_kr : resume_en);
-          }}
-          icon={<GlobalOutlined />}
-        />
+        <Tooltip title={resume.tooltip.translate} placement={"left"}>
+          <FloatButton
+            onClick={() => {
+              setResume(resume.type === resume_en.type ? resume_kr : resume_en);
+            }}
+            icon={<GlobalOutlined />}
+          />
+        </Tooltip>
+
         <ReactToPrint
-          trigger={() => <FloatButton icon={<PrinterOutlined />} />}
+          trigger={() => (
+            <Tooltip title={resume.tooltip.print} placement={"left"}>
+              <FloatButton icon={<PrinterOutlined />} />
+            </Tooltip>
+          )}
           content={() => componentRef.current}
         />
       </FloatButton.Group>
