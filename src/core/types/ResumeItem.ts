@@ -1,13 +1,14 @@
-import { ReactNode } from "react";
 
-interface ResumeItemContent {
-    type: "header" | "title" | "detail";
-    link?: string;
-    text: string | ReactNode;
-}
 
-interface ResumeItemType {
-    description: ResumeItemContent[]
-}
+export type ResumeItemKey = "library_website" |  "oracle_associate" | "oracle_professional";
+
+
+export type ResumeItemType = {
+    id?: ResumeItemKey;
+    headers: {content: string, id?: ResumeItemKey}[];
+    titles: {content: string, id?: ResumeItemKey}[];
+    details: {content: string, id?: ResumeItemKey}[];
+};
+
 
 export default ResumeItemType;

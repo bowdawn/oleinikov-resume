@@ -1,22 +1,22 @@
-import { ReactNode } from "react";
+
 import { TooltipType } from "./Tooltip";
 import ResumeItem from "./ResumeItem";
+import LanguageType from "./Language";
+import { ContactType } from "./Contact";
 
 
 
 interface ResumeType {
     type: "En" | "Kr";
-    switchlabel: "En/Kr" | "한/영";
-    download: ReactNode;
+    switchlabel: "En/Kr" | "한/영";   
     first: string;
     last: string;
     contact: string;
-    contactitem: ResumeItem[];
+   
     education: string;
     educationitem: ResumeItem[];
     experience: string;
     experienceitem: ResumeItem[];
-    experienceviewmore: string | ReactNode;
     certification: string;
     certificationitem: ResumeItem[];
     software: string;
@@ -27,7 +27,7 @@ interface ResumeType {
     computer: string;
     computeritem: ResumeItem[];
     language: string;
-    languageitem: ResumeItem[];
+    languageitem: LanguageType;
     tooltip: TooltipType;
   }
 

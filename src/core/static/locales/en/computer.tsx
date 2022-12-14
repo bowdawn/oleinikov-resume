@@ -1,12 +1,54 @@
-import ComputerType from "../../../types/Computer";
+import ResumeItemType from "src/core/types/ResumeItem";
 
-
-export default {
-    "id1_title" : "Proficient in Java, Python, C#",
-    "id2_title_1" : "Adept in Web Component",
-    "id2_title_2" : "Development & Design",
-    "id2_detail" : "•Servlets, JSP, Html, CSS, XML, React, Angular, Vue, Express",
-    "id3_title" : "C/C++, SQL",
-    "id4_title" : "MongoDB, Network Sockets",
-    "id5_title" : "Lisp, SML",
-} as ComputerType
+export const computer_en: ResumeItemType[] = [
+  {
+    headers: [],
+    titles: [
+      {
+        content: "Proficient in Java, Python, C#",
+      },
+    ],
+    details: [],
+  },
+  {
+    headers: [],
+    titles: [
+      {
+        content: "Adept in Web Component",
+      },
+      { content: "Development & Design" },
+    ],
+    details: [
+      {
+        content: "•Servlets, JSP, Html, CSS, XML, React, Angular, Vue, Express",
+      },
+    ],
+  },
+  {
+    headers: [],
+    titles: [
+      {
+        content: "C/C++, SQL",
+      },
+    ],
+    details: [],
+  },
+  {
+    headers: [],
+    titles: [
+      {
+        content: "MongoDB, Network Sockets",
+      },
+    ],
+    details: [],
+  },
+  {
+    headers: [],
+    titles: [
+      {
+        content: "Lisp, SML",
+      },
+    ],
+    details: [],
+  },
+];

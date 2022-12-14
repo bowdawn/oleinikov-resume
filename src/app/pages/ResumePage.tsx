@@ -34,6 +34,8 @@ import resume_en from "../../core/static/resume_en";
 import ReactToPrint from "react-to-print";
 import { ResponsiveContainer } from "../components/ResponsiveContainer";
 import Snowfall from "react-snowfall";
+import { ContactContainer } from "../components/ContactContainer";
+import { LanguageContainer } from "../components/LanguageContainer";
 
 const ResponsiveRow: FC<{
   mini?: boolean;
@@ -109,9 +111,7 @@ const App: FC = () => {
                           <Title level={4} underline={true}>
                             {resume.contact}
                           </Title>
-                          {resume.contactitem.map((x, key) => (
-                            <ResumeItem key={key} description={x.description} />
-                          ))}
+                          <ContactContainer />
                         </>
                       }
                     />
@@ -126,7 +126,11 @@ const App: FC = () => {
                       <Timeline>
                         {resume.educationitem.map((x, key) => (
                           <Timeline.Item key={key}>
-                            <ResumeItem description={x.description} />{" "}
+                            <ResumeItem
+                              headers={x.headers}
+                              titles={x.titles}
+                              details={x.details}
+                            />
                           </Timeline.Item>
                         ))}
                       </Timeline>
@@ -142,7 +146,11 @@ const App: FC = () => {
                         <Timeline>
                           {resume.experienceitem.map((x, key) => (
                             <Timeline.Item key={key}>
-                              <ResumeItem description={x.description} />
+                              <ResumeItem
+                                headers={x.headers}
+                                titles={x.titles}
+                                details={x.details}
+                              />
                             </Timeline.Item>
                           ))}
                         </Timeline>
@@ -158,7 +166,11 @@ const App: FC = () => {
                       <Timeline>
                         {resume.certificationitem.map((x, key) => (
                           <Timeline.Item key={key}>
-                            <ResumeItem description={x.description} />
+                            <ResumeItem
+                              headers={x.headers}
+                              titles={x.titles}
+                              details={x.details}
+                            />
                           </Timeline.Item>
                         ))}
                       </Timeline>
@@ -175,18 +187,24 @@ const App: FC = () => {
                     <Title level={4}>{resume.releventcoursework}</Title>
                     <Divider />
                     {resume.releventcourseworkitem.map((x, key) => (
-                      <ResumeItem key={key} description={x.description} />
+                      <ResumeItem
+                        headers={x.headers}
+                        titles={x.titles}
+                        details={x.details}
+                      />
                     ))}
                     <Title level={4}>{resume.skills}</Title>
                     <Divider />
                     <Title level={5}>{resume.computer}</Title>
                     {resume.computeritem.map((x, key) => (
-                      <ResumeItem key={key} description={x.description} />
+                      <ResumeItem
+                        headers={x.headers}
+                        titles={x.titles}
+                        details={x.details}
+                      />
                     ))}
                     <Title level={5}>{resume.language}</Title>
-                    {resume.languageitem.map((x, key) => (
-                      <ResumeItem key={key} description={x.description} />
-                    ))}
+                    <LanguageContainer language={resume.languageitem} />
                   </Card>
                 }
                 rowProps={{ gutter: token.paddingSM }}
