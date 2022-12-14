@@ -5,7 +5,7 @@ export const computer_en: ResumeItemType[] = [
     headers: [],
     titles: [
       {
-        content: "Proficient in Java, Python, C#",
+        content: "Node JS",
       },
     ],
     details: [],
@@ -14,15 +14,15 @@ export const computer_en: ResumeItemType[] = [
     headers: [],
     titles: [
       {
-        content: "Adept in Web Component",
-      },
-      { content: "Development & Design" },
-    ],
-    details: [
-      {
-        content: "•Servlets, JSP, Html, CSS, XML, React, Angular, Vue, Express",
+        content: "Javascript, Typescript",
       },
     ],
+    details: [],
+  },
+  {
+    headers: [],
+    titles: [{ content: "React, Angular, Vue" }],
+    details: [],
   },
   {
     headers: [],
@@ -37,7 +37,7 @@ export const computer_en: ResumeItemType[] = [
     headers: [],
     titles: [
       {
-        content: "MongoDB, Network Sockets",
+        content: "MongoDB, Express",
       },
     ],
     details: [],
@@ -46,9 +46,75 @@ export const computer_en: ResumeItemType[] = [
     headers: [],
     titles: [
       {
-        content: "Lisp, SML",
+        content: "Java",
+      },
+    ],
+    details: [],
+  },
+  {
+    headers: [],
+    titles: [
+      {
+        content: "Spring, SpringBoot",
+      },
+    ],
+    details: [],
+  },
+  {
+    headers: [],
+    titles: [
+      {
+        content: "Python",
+      },
+    ],
+    details: [],
+  },
+  {
+    headers: [],
+    titles: [
+      {
+        content: "POSTGRESQL, GRAPHQL, DJANGO",
+      },
+    ],
+    details: [],
+  },
+  {
+    headers: [],
+    titles: [
+      {
+        content: "Netcore, C/C++",
+      },
+    ],
+    details: [],
+  },
+  {
+    headers: [],
+    titles: [
+      {
+        content: "Microservices GRPC",
+      },
+    ],
+    details: [],
+  },
+  {
+    headers: [],
+    titles: [
+      {
+        content: "Cassandra Database",
       },
     ],
     details: [],
   },
 ];
+
+// 1. Node JS
+// 2. Javascript, Typescript
+// 2. React, Angular, Vue
+// 3. MongoDB, Express
+// 4. Java
+// 5. Spring, SpringBoot
+// 5. Python
+// 6. POSTGRESQL, GRAPHQL, DJANGO,
+// 7. Netcore, C/C++
+// 8. Microservices GRPC
+// 9. Cassandra Database

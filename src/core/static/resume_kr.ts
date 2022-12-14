@@ -6,9 +6,9 @@ import { language_kr } from "./locales/kr/language";
 import resume from "./resume";
 import { tooltip_kr } from "./locales/kr/tooltip";
 import { certification_kr } from "./locales/kr/certification";
-import { computer_kr } from "./locales/kr/computer";
 import { section_kr } from "./locales/kr/sectionlabel";
 import { relevantcoursework_en } from "./locales/en/relevantcoursework";
+import { computer_en } from "./locales/en/computer";
 
 const resume_kr: Resume = resume(
   "Kr",
@@ -20,7 +20,7 @@ const resume_kr: Resume = resume(
   experience_kr,
   certification_kr,
   relevantcoursework_en,
-  computer_kr,
+  computer_en,
   language_kr,
   tooltip_kr
 );
