@@ -3,8 +3,8 @@ import React, {
   useState,
   useRef,
   MutableRefObject,
-  Children,
   ReactNode,
+  useEffect,
 } from "react";
 import {
   Row,
@@ -36,6 +36,7 @@ import { ResponsiveContainer } from "../components/ResponsiveContainer";
 import Snowfall from "react-snowfall";
 import { ContactContainer } from "../components/ContactContainer";
 import { LanguageContainer } from "../components/LanguageContainer";
+import { motion, AnimatePresence } from "framer-motion";
 
 const ResponsiveRow: FC<{
   mini?: boolean;
@@ -85,9 +86,12 @@ const App: FC = () => {
   const { token } = theme.useToken();
   const componentRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
   const { i18n } = useTranslation();
+  const [isVisible, setIsVisible] = useState(true);
+  const [isVisibleSlow, setIsVisibleSlow] = useState(true);
   const [resume, setResume] = useState(
     i18n.language?.includes("ko") ? resume_kr : resume_en
   );
+
   return (
     <>
       <Snowfall />
@@ -105,18 +109,49 @@ const App: FC = () => {
                   <>
                     <ResponsiveRow
                       mini
-                      leftCol={<NameContainer type={resume.type} />}
+                      leftCol={
+                        <AnimatePresence
+                          onExitComplete={() => setIsVisible(true)}
+                        >
+                          {isVisible ? (
+                            <NameContainer type={resume?.type} />
+                          ) : null}
+                        </AnimatePresence>
+                      }
                       rightCol={
                         <>
-                          <Title level={4} underline={true}>
-                            {resume.contact}
-                          </Title>
+                          <AnimatePresence
+                            onExitComplete={() => setIsVisible(true)}
+                          >
+                            {isVisible ? (
+                              <motion.div
+                                transition={{ duration: 0.5 }}
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                              >
+                                <Title level={4} underline={true}>
+                                  {resume?.contact}
+                                </Title>
+                              </motion.div>
+                            ) : null}
+                          </AnimatePresence>
                           <ContactContainer />
                         </>
                       }
                     />
-
-                    <Title level={4}>{resume.education}</Title>
+                    <AnimatePresence onExitComplete={() => setIsVisible(true)}>
+                      {isVisible ? (
+                        <motion.div
+                          transition={{ duration: 0.5 }}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                        >
+                          <Title level={4}>{resume?.education}</Title>
+                        </motion.div>
+                      ) : null}
+                    </AnimatePresence>
                     <Divider />
                     <Card
                       bordered={false}
@@ -124,18 +159,42 @@ const App: FC = () => {
                       className="ant-card-section"
                     >
                       <Timeline>
-                        {resume.educationitem.map((x, key) => (
-                          <Timeline.Item key={key}>
-                            <ResumeItem
-                              headers={x.headers}
-                              titles={x.titles}
-                              details={x.details}
-                            />
-                          </Timeline.Item>
-                        ))}
+                        <AnimatePresence
+                          onExitComplete={() => setIsVisibleSlow(true)}
+                        >
+                          {isVisibleSlow ? (
+                            <motion.div
+                              transition={{ duration: 0.75 }}
+                              initial={{ opacity: 0, scale: 0 }}
+                              animate={{ opacity: 1, scale: 1 }}
+                              exit={{ opacity: 0, scale: 0 }}
+                            >
+                              {resume?.educationitem.map((x, key) => (
+                                <Timeline.Item key={key}>
+                                  <ResumeItem
+                                    headers={x.headers}
+                                    titles={x.titles}
+                                    details={x.details}
+                                  />
+                                </Timeline.Item>
+                              ))}
+                            </motion.div>
+                          ) : null}
+                        </AnimatePresence>
                       </Timeline>
                     </Card>
-                    <Title level={4}>{resume.experience}</Title>
+                    <AnimatePresence onExitComplete={() => setIsVisible(true)}>
+                      {isVisible ? (
+                        <motion.div
+                          transition={{ duration: 0.5 }}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                        >
+                          <Title level={4}>{resume?.experience}</Title>
+                        </motion.div>
+                      ) : null}
+                    </AnimatePresence>
                     <Divider />
                     <Card
                       bordered={false}
@@ -144,19 +203,43 @@ const App: FC = () => {
                     >
                       <Space size="small" direction="vertical">
                         <Timeline>
-                          {resume.experienceitem.map((x, key) => (
-                            <Timeline.Item key={key}>
-                              <ResumeItem
-                                headers={x.headers}
-                                titles={x.titles}
-                                details={x.details}
-                              />
-                            </Timeline.Item>
-                          ))}
+                          <AnimatePresence
+                            onExitComplete={() => setIsVisibleSlow(true)}
+                          >
+                            {isVisibleSlow ? (
+                              <motion.div
+                                transition={{ duration: 0.75 }}
+                                initial={{ opacity: 0, scale: 0 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0 }}
+                              >
+                                {resume?.experienceitem.map((x, key) => (
+                                  <Timeline.Item key={key}>
+                                    <ResumeItem
+                                      headers={x.headers}
+                                      titles={x.titles}
+                                      details={x.details}
+                                    />
+                                  </Timeline.Item>
+                                ))}
+                              </motion.div>
+                            ) : null}
+                          </AnimatePresence>
                         </Timeline>
                       </Space>
                     </Card>
-                    <Title level={4}>{resume.certification}</Title>
+                    <AnimatePresence onExitComplete={() => setIsVisible(true)}>
+                      {isVisible ? (
+                        <motion.div
+                          transition={{ duration: 0.5 }}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                        >
+                          <Title level={4}>{resume?.certification}</Title>
+                        </motion.div>
+                      ) : null}{" "}
+                    </AnimatePresence>
                     <Divider />
                     <Card
                       bordered={false}
@@ -164,47 +247,149 @@ const App: FC = () => {
                       className="ant-card-section"
                     >
                       <Timeline>
-                        {resume.certificationitem.map((x, key) => (
-                          <Timeline.Item key={key}>
-                            <ResumeItem
-                              headers={x.headers}
-                              titles={x.titles}
-                              details={x.details}
-                            />
-                          </Timeline.Item>
-                        ))}
+                        <AnimatePresence
+                          onExitComplete={() => setIsVisibleSlow(true)}
+                        >
+                          {isVisibleSlow ? (
+                            <motion.div
+                              transition={{ duration: 0.75 }}
+                              initial={{ opacity: 0, scale: 0 }}
+                              animate={{ opacity: 1, scale: 1 }}
+                              exit={{ opacity: 0, scale: 0 }}
+                            >
+                              {resume?.certificationitem.map((x, key) => (
+                                <Timeline.Item key={key}>
+                                  <ResumeItem
+                                    headers={x.headers}
+                                    titles={x.titles}
+                                    details={x.details}
+                                  />
+                                </Timeline.Item>
+                              ))}
+                            </motion.div>
+                          ) : null}{" "}
+                        </AnimatePresence>
                       </Timeline>
                     </Card>
                   </>
                 }
                 rightCol={
                   <Card className="ant-card-resume-right-column" size="small">
-                    <Title level={2}>
-                      {resume.software}
-                      <br />
-                      {resume.engineer}
-                    </Title>
-                    <Title level={4}>{resume.releventcoursework}</Title>
+                    <AnimatePresence onExitComplete={() => setIsVisible(true)}>
+                      {isVisible ? (
+                        <motion.div
+                          transition={{ duration: 0.5 }}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                        >
+                          <Title level={2}>
+                            {resume?.software}
+                            <br />
+                            {resume?.engineer}
+                          </Title>
+                        </motion.div>
+                      ) : null}{" "}
+                    </AnimatePresence>
+                    <AnimatePresence onExitComplete={() => setIsVisible(true)}>
+                      {isVisible ? (
+                        <motion.div
+                          transition={{ duration: 0.5 }}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                        >
+                          <Title level={4}>{resume?.releventcoursework}</Title>
+                        </motion.div>
+                      ) : null}{" "}
+                    </AnimatePresence>
                     <Divider />
-                    {resume.releventcourseworkitem.map((x, key) => (
-                      <ResumeItem
-                        headers={x.headers}
-                        titles={x.titles}
-                        details={x.details}
-                      />
-                    ))}
-                    <Title level={4}>{resume.skills}</Title>
+                    <AnimatePresence
+                      onExitComplete={() => setIsVisibleSlow(true)}
+                    >
+                      {isVisibleSlow ? (
+                        <motion.div
+                          transition={{ duration: 0.75 }}
+                          initial={{ opacity: 0, scale: 0 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          exit={{ opacity: 0, scale: 0 }}
+                        >
+                          {resume?.releventcourseworkitem.map((x, key) => (
+                            <ResumeItem
+                              headers={x.headers}
+                              titles={x.titles}
+                              details={x.details}
+                            />
+                          ))}
+                        </motion.div>
+                      ) : null}{" "}
+                    </AnimatePresence>
+                    <AnimatePresence onExitComplete={() => setIsVisible(true)}>
+                      {isVisible ? (
+                        <motion.div
+                          transition={{ duration: 0.5 }}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                        >
+                          <Title level={4}>{resume?.skills}</Title>
+                        </motion.div>
+                      ) : null}
+                    </AnimatePresence>
                     <Divider />
-                    <Title level={5}>{resume.computer}</Title>
-                    {resume.computeritem.map((x, key) => (
-                      <ResumeItem
-                        headers={x.headers}
-                        titles={x.titles}
-                        details={x.details}
-                      />
-                    ))}
-                    <Title level={5}>{resume.language}</Title>
-                    <LanguageContainer language={resume.languageitem} />
+
+                    <AnimatePresence onExitComplete={() => setIsVisible(true)}>
+                      {isVisible ? (
+                        <motion.div
+                          transition={{ duration: 0.5 }}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                        >
+                          <Title level={5}>{resume?.computer}</Title>
+                        </motion.div>
+                      ) : null}
+                    </AnimatePresence>
+                    <AnimatePresence
+                      onExitComplete={() => setIsVisibleSlow(true)}
+                    >
+                      {isVisibleSlow ? (
+                        <motion.div
+                          transition={{ duration: 0.75 }}
+                          initial={{ opacity: 0, scale: 0 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          exit={{ opacity: 0, scale: 0 }}
+                        >
+                          {resume?.computeritem.map((x, key) => (
+                            <ResumeItem
+                              key={key}
+                              headers={x.headers}
+                              titles={x.titles}
+                              details={x.details}
+                            />
+                          ))}
+                        </motion.div>
+                      ) : null}{" "}
+                    </AnimatePresence>
+                    <AnimatePresence onExitComplete={() => setIsVisible(true)}>
+                      {isVisible ? (
+                        <motion.div
+                          transition={{ duration: 1 }}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                        >
+                          <Title level={5}>{resume?.language}</Title>
+                        </motion.div>
+                      ) : null}
+                    </AnimatePresence>
+                    <AnimatePresence
+                      onExitComplete={() => setIsVisibleSlow(true)}
+                    >
+                      {isVisibleSlow ? (
+                        <LanguageContainer language={resume?.languageitem} />
+                      ) : null}
+                    </AnimatePresence>
                   </Card>
                 }
                 rowProps={{ gutter: token.paddingSM }}
@@ -214,9 +399,11 @@ const App: FC = () => {
         </Layout.Content>
       </Layout>
       <FloatButton.Group icon={<MenuOutlined />} type="primary" trigger="click">
-        <Tooltip title={resume.tooltip.translate} placement={"left"}>
+        <Tooltip title={resume?.tooltip.translate} placement={"left"}>
           <FloatButton
             onClick={() => {
+              setIsVisible(false);
+              setIsVisibleSlow(false);
               setResume(resume.type === resume_en.type ? resume_kr : resume_en);
             }}
             icon={<GlobalOutlined />}
@@ -225,7 +412,7 @@ const App: FC = () => {
 
         <ReactToPrint
           trigger={() => (
-            <Tooltip title={resume.tooltip.print} placement={"left"}>
+            <Tooltip title={resume?.tooltip.print} placement={"left"}>
               <FloatButton icon={<PrinterOutlined />} />
             </Tooltip>
           )}

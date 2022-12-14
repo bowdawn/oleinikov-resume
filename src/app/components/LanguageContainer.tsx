@@ -1,6 +1,7 @@
 import { Progress } from "antd";
 import React from "react";
 import LanguageType from "src/core/types/Language";
+import { motion } from "framer-motion";
 
 const progress_props = {
   strokeColor: {
@@ -16,7 +17,12 @@ export const LanguageContainer: React.FC<{ language: LanguageType }> = ({
   language,
 }) => {
   return (
-    <>
+    <motion.div
+      transition={{ duration: 0.75 }}
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0 }}
+    >
       <>
         {language.english}
         <br />
@@ -32,6 +38,6 @@ export const LanguageContainer: React.FC<{ language: LanguageType }> = ({
         <br />
         <Progress percent={90} {...progress_props} />
       </>
-    </>
+    </motion.div>
   );
 };
