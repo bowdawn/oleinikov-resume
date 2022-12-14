@@ -46,6 +46,7 @@
     "i18next-browser-languagedetector": "^6.1.4",
     "react-i18next": "^12.1.1",
     "react-responsive": "^9.0.2",
+    "react-snowfall": "^1.2.1",
     "react-to-print": "^2.14.10"
   }
 }

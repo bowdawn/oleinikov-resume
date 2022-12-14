@@ -32,6 +32,7 @@ import NameContainer from "../components/NameContainer";
 import resume_en from "../../core/static/resume_en";
 import ReactToPrint from "react-to-print";
 import { ResponsiveContainer } from "../components/ResponsiveContainer";
+import Snowfall from "react-snowfall";
 
 const ResponsiveRow: FC<{
   mini?: boolean;
@@ -86,7 +87,9 @@ const App: FC = () => {
   );
   return (
     <>
-      <Layout className="resume">
+      <Snowfall />
+
+      <Layout>
         <Layout.Content>
           <Row align={"middle"}>
             <Card
