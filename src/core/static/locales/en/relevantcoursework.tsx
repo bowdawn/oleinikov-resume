@@ -65,7 +65,7 @@ export const relevantcoursework_en: ResumeItemType[] = [
   },
   {
     headers: [],
-    titles: [{ content: "Programming Languages Principles" }],
+    titles: [{ content: "Programming Language Principles" }],
     details: [],
   },
   {
