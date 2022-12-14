@@ -3,46 +3,39 @@ import ResumeItemType from "src/core/types/ResumeItem";
 export const relevantcoursework_en: ResumeItemType[] = [
   {
     headers: [],
-    titles: [
-      { content: "Object Oriented Programming" },
-      { content: "& Data Structures" },
-    ],
+    titles: [{ content: "Software Dev Process" }],
     details: [],
   },
   {
     headers: [],
-    titles: [{ content: "System Fundamentals Ⅰ" }],
-    details: [{ content: "• MIPS Assembly" }],
-  },
-  {
-    headers: [],
-    titles: [{ content: "System Fundamentals Ⅱ" }],
-    details: [{ content: "• C language" }],
+    titles: [{ content: "Software Arch & Design" }],
+    details: [],
   },
   {
     headers: [],
     titles: [{ content: "Software Engineering" }],
-    details: [
-      { content: "• Android Studios" },
-      { content: "• Eclipse IDE" },
-      { content: "• NetBeans IDE" },
-    ],
+    details: [],
   },
   {
     headers: [],
-    titles: [
-      { content: "Discrete Mathematics" },
-      { content: "& Theory of Computation" },
-    ],
+    titles: [{ content: "Computer Science Ⅰ, Ⅱ, Ⅲ" }],
     details: [],
   },
-  { headers: [], titles: [{ content: "Analysis of Algorithms" }], details: [] },
   {
     headers: [],
-    titles: [{ content: "Principles of Databases" }],
+    titles: [{ content: "System Fundamentals Ⅰ, Ⅱ" }],
     details: [],
   },
-  { headers: [], titles: [{ content: "Computer Networks" }], details: [] },
+  {
+    headers: [],
+    titles: [{ content: "DB Sys Concepts & Design" }],
+    details: [],
+  },
+  {
+    headers: [],
+    titles: [{ content: "Machine Learning For Trading" }],
+    details: [],
+  },
   {
     headers: [],
     titles: [{ content: "Artificial Intelligence" }],
@@ -50,12 +43,50 @@ export const relevantcoursework_en: ResumeItemType[] = [
   },
   {
     headers: [],
-    titles: [
-      { content: "Principles of " },
-      { content: "Programming Languages" },
-    ],
+    titles: [{ content: "Computer Vision" }],
     details: [],
   },
-  { headers: [], titles: [{ content: "Robotics" }], details: [] },
-  { headers: [], titles: [{ content: "Visualization" }], details: [] },
+  {
+    headers: [],
+    titles: [{ content: "Computer Networks" }],
+    details: [],
+  },
+  { headers: [], titles: [{ content: "Network Science" }], details: [] },
+  {
+    headers: [],
+    titles: [{ content: "Network Security" }],
+    details: [],
+  },
+  { headers: [], titles: [{ content: "Intro To Info Security" }], details: [] },
+  {
+    headers: [],
+    titles: [{ content: "ADV Malware Analysis" }],
+    details: [],
+  },
+  {
+    headers: [],
+    titles: [{ content: "Principles of Programing Languages" }],
+    details: [],
+  },
+  {
+    headers: [],
+    titles: [{ content: "Descrete Mathematics" }],
+    details: [],
+  },
+  {
+    headers: [],
+    titles: [{ content: "Analysis of Algorithms" }],
+    details: [],
+  },
 ];
+
+// 1.Software Dev Process
+// 2.Software Arch & Design
+// 3.DB Sys Concepts& Design
+// 4.Machine Learning For Trading
+// 5.Artificial Intelligence
+// 6.Network Science
+// 7.Network Security
+// 8.Intro To Info Security
+// 9.ADV Malware Analysis
+// 10.Analysis of Algorithms
