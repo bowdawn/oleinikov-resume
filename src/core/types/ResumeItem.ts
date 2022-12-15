@@ -1,6 +1,6 @@
 
 
-export type ResumeItemKey = "library_website" |  "oracle_associate" | "oracle_professional";
+export type ResumeItemKey = "library_website" |  "oracle_associate" | "oracle_professional" | "oracle";
 
 
 export type ResumeItemType = {

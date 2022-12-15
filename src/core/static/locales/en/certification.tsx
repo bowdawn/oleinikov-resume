@@ -3,33 +3,20 @@ import ResumeItemType from "src/core/types/ResumeItem";
 export const certification_en: ResumeItemType[] = [
   {
     headers: [
-      { id: "oracle_professional", content: "Oracle Certified Professional" },
+      {
+        id: "oracle",
+        content: "Oracle Certified Associate & Professional Certification",
+      },
     ],
     titles: [
       {
-        content: "Java SE 8 Programmer | July 20, 2018",
+        content: "Java SE 8 Programmer | June 2 & July 20, 2018",
       },
     ],
     details: [
       {
         content:
-          "• Verified understanding of Concurrency, Fork - Join Framework, Functional Interfaces, JDBC, Java Design Patterns, Java NIO.2 API, Localization, Regular Expressions, Parallel Streams and Stream API.",
-      },
-    ],
-  },
-  {
-    headers: [
-      { id: "oracle_associate", content: "Oracle Certified Associate" },
-    ],
-    titles: [
-      {
-        content: "Java SE 8 Programmer | June 2, 2018",
-      },
-    ],
-    details: [
-      {
-        content:
-          "• Verified understanding of Java, JDK 8, Java SE 8, Lambda Expressions, Java Application Development, and Java 8 Date & Time API.",
+          "• Verified understanding of Concurrency, Fork/Join Framework, Functional Interfaces, JDBC, Java Design Patterns, Java NIO.2 API, Localization, Regular Expressions, Parallel Streams, Stream API, JDK 8, Lambda Expressions, Java Application Development, and Java 8 Date & Time API.",
       },
     ],
   },

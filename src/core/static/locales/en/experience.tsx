@@ -2,6 +2,28 @@ import ResumeItemType from "src/core/types/ResumeItem";
 
 export const experience_en: ResumeItemType[] = [
   {
+    headers: [{ content: "Riupack Software Engineer" }],
+    titles: [
+      {
+        content:
+          "Web/Mobile Frontend & Backend Developer  | Aug 2022 Currently Employed",
+      },
+    ],
+    details: [
+      {
+        content:
+          "• Use of React for web development to implement shopping mall and admin page.",
+      },
+      {
+        content: "• Use of React Native for mobile development using webview.",
+      },
+      {
+        content:
+          "• Use of Python, Apollo, Django, GraphQL, and Saleor API for backend development.",
+      },
+    ],
+  },
+  {
     headers: [{ content: "Jinjoosoft Software Engineer" }],
     titles: [
       {
@@ -24,8 +46,9 @@ export const experience_en: ResumeItemType[] = [
   {
     headers: [{ content: "BNR Technology" }],
     titles: [
-      { content: "Android Mobile Development &" },
-      { content: "Eng-Rus-Kor Translator Position | Jan 2019 - Mar 2019" },
+      {
+        content: "Android Mobile Development | Jan 2019 - Mar 2019",
+      },
     ],
     details: [
       {
