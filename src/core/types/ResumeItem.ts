@@ -5,6 +5,7 @@ export type ResumeItemKey = "library_website" |  "oracle_associate" | "oracle_pr
 
 export type ResumeItemType = {
     id?: ResumeItemKey;
+ 
     headers: {content: string, id?: ResumeItemKey}[];
     titles: {content: string, id?: ResumeItemKey}[];
     details: {content: string, id?: ResumeItemKey}[];

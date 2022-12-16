@@ -11,7 +11,6 @@ import {
   Col,
   Divider,
   Typography,
-  Space,
   Timeline,
   Layout,
   Card,
@@ -19,6 +18,12 @@ import {
   FloatButton,
   RowProps,
   Tooltip,
+  Tour,
+  TourProps,
+  notification,
+  Space,
+  Button,
+  Checkbox,
 } from "antd";
 
 import {
@@ -32,11 +37,25 @@ import { useTranslation } from "react-i18next";
 import NameContainer from "../components/NameContainer";
 import resume_en from "../../core/static/resume_en";
 import ReactToPrint from "react-to-print";
-import { ResponsiveContainer } from "../components/ResponsiveContainer";
+import { isWeb, ResponsiveContainer } from "../components/ResponsiveContainer";
 import Snowfall from "react-snowfall";
 import { ContactContainer } from "../components/ContactContainer";
 import { LanguageContainer } from "../components/LanguageContainer";
 import { motion, AnimatePresence } from "framer-motion";
+import { ResumeBadge } from "../components/ResumeBadge";
+import { createContext } from "react";
+import { ResumeItemKey } from "src/core/types/ResumeItem";
+import { useMediaQuery } from "react-responsive";
+import { CheckboxChangeEvent } from "antd/es/checkbox";
+
+export const ResumeBadgeContext = createContext<{
+  [key in ResumeItemKey]: React.MutableRefObject<null> | null;
+}>({
+  library_website: null,
+  oracle: null,
+  oracle_associate: null,
+  oracle_professional: null,
+});
 
 const ResponsiveRow: FC<{
   mini?: boolean;
@@ -83,6 +102,7 @@ const ResponsiveRow: FC<{
 
 const { Title } = Typography;
 const App: FC = () => {
+  const [api, contextHolder] = notification.useNotification();
   const { token } = theme.useToken();
   const componentRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
   const { i18n } = useTranslation();
@@ -91,9 +111,187 @@ const App: FC = () => {
   const [resume, setResume] = useState(
     i18n.language?.includes("ko") ? resume_kr : resume_en
   );
+  const [checked, setChecked] = useState(false);
+  const isWeb = useMediaQuery({ query: "(min-width: 825px)" });
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+  const ref3_1 = useRef(null);
+  const ref4 = useRef(null);
+  const ref4_1 = useRef(null);
+  const ref5 = useRef(null);
+  const ref6 = useRef(null);
+  const ref7 = useRef(null);
+  const ref8 = useRef(null);
+  const ref9 = useRef(null);
+
+  const [open, setOpen] = useState<boolean>(false);
+  const [floatButtonGroupOpen, setFloatButtonGroupOpen] = useState(false);
+
+  const steps: TourProps["steps"] = [
+    {
+      title: "Welcome to Bogdan Oleinikov's Resume",
+      description:
+        "My contact information has been provided in the section below.",
+      placement: "bottom",
+      target: () => ref1.current,
+    },
+    {
+      title: "Welcome to Bogdan Oleinikov's Resume",
+      description:
+        "My education history information has been provided in the section below.",
+      placement: "right",
+      target: () => ref2.current,
+    },
+    {
+      title: "Welcome to Bogdan Oleinikov's Resume",
+      description: (
+        <div>
+          My work experience information has been provided in the section below.
+        </div>
+      ),
+      placement: "right",
+
+      target: () => ref3.current,
+    },
+    {
+      title: "Welcome to Bogdan Oleinikov's Resume",
+      description: (
+        <div>
+          <ResumeBadge type={"library_website"} />
+          *(The link icon may be clicked to view a personal project website)
+        </div>
+      ),
+      placement: "top",
+
+      target: () => ref3_1.current,
+    },
+    {
+      title: "Welcome to Bogdan Oleinikov's Resume",
+      description: (
+        <div>
+          My certification information has been provided in the section below.
+        </div>
+      ),
+      placement: "right",
+      target: () => ref4.current,
+    },
+    {
+      title: "Welcome to Bogdan Oleinikov's Resume",
+      description: (
+        <div>
+          <ResumeBadge type={"oracle"} />
+          *(The check icons may be clicked to view a digital certificate)
+        </div>
+      ),
+      placement: "right",
+      target: () => ref4_1.current,
+    },
+    {
+      title: "Welcome to Bogdan Oleinikov's Resume",
+      description:
+        "My relevant coursework information has been provided in the section below.",
+      placement: "left",
+      target: () => ref5.current,
+    },
+    {
+      title: "Welcome to Bogdan Oleinikov's Resume",
+      description:
+        "My skills information has been provided in the section below. This section has been divided into two sections. Computer skills and language skills.",
+      placement: "left",
+      target: () => ref6.current,
+    },
+    {
+      title: "Welcome to Bogdan Oleinikov's Resume",
+      description:
+        "In the bottom left corner, this button can be pressed to open a list of actions for the resume.",
+      placement: "left",
+      nextButtonProps: { onClick: () => setFloatButtonGroupOpen(true) },
+      target: () => ref7.current,
+    },
+    {
+      title: "Welcome to Bogdan Oleinikov's Resume",
+      description: "The list of actions may be be closed and opened.",
+      placement: "left",
+      nextButtonProps: { onClick: () => setFloatButtonGroupOpen(true) },
+      target: () => {
+        return ref7.current;
+      },
+    },
+    {
+      title: "Welcome to Bogdan Oleinikov's Resume",
+      description:
+        "There is an action to print the resume or save the resume as a PDF file.",
+      placement: "left",
+
+      target: () => ref8.current,
+    },
+    {
+      title: "Welcome to Bogdan Oleinikov's Resume",
+      description: "There is an action to translate the resume into Korean.",
+      placement: "left",
+      target: () => ref9.current,
+    },
+  ];
+
+  useEffect(() => {
+    if (isWeb) {
+      api.info({
+        key: "welcome",
+        duration: 0,
+        message: "Welcome",
+        description: (
+          <Space direction="vertical" size="small">
+            Would you like to view a tour?
+            <Checkbox
+              checked={checked}
+              onChange={(e: CheckboxChangeEvent) => {
+                setChecked(e.target.checked);
+              }}
+            >
+              Do not ask again.
+            </Checkbox>
+          </Space>
+        ),
+        btn: (
+          <Space>
+            <Button
+              type="default"
+              onClick={() => {
+                api.destroy();
+                if (checked) {
+                }
+              }}
+            >
+              No
+            </Button>
+            <Button
+              type="primary"
+              onClick={() => {
+                setOpen(true);
+                api.destroy();
+                if (checked) {
+                }
+              }}
+            >
+              Yes
+            </Button>
+          </Space>
+        ),
+      });
+    }
+  }, [checked]);
 
   return (
-    <>
+    <ResumeBadgeContext.Provider
+      value={{
+        library_website: ref3_1,
+        oracle: ref4_1,
+        oracle_associate: null,
+        oracle_professional: null,
+      }}
+    >
+      {contextHolder}
       <Snowfall />
       <Layout>
         <Layout.Content>
@@ -130,16 +328,18 @@ const App: FC = () => {
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
                               >
-                                <Title level={4} underline={true}>
+                                <Title ref={ref1} level={4} underline={true}>
                                   {resume?.contact}
                                 </Title>
                               </motion.div>
                             ) : null}
                           </AnimatePresence>
+
                           <ContactContainer />
                         </>
                       }
                     />
+
                     <AnimatePresence onExitComplete={() => setIsVisible(true)}>
                       {isVisible ? (
                         <motion.div
@@ -148,7 +348,9 @@ const App: FC = () => {
                           animate={{ opacity: 1 }}
                           exit={{ opacity: 0 }}
                         >
-                          <Title level={4}>{resume?.education}</Title>
+                          <Title ref={ref2} level={4}>
+                            {resume?.education}
+                          </Title>
                         </motion.div>
                       ) : null}
                     </AnimatePresence>
@@ -183,6 +385,7 @@ const App: FC = () => {
                         </AnimatePresence>
                       </Timeline>
                     </Card>
+
                     <AnimatePresence onExitComplete={() => setIsVisible(true)}>
                       {isVisible ? (
                         <motion.div
@@ -191,43 +394,49 @@ const App: FC = () => {
                           animate={{ opacity: 1 }}
                           exit={{ opacity: 0 }}
                         >
-                          <Title level={4}>{resume?.experience}</Title>
+                          <Title
+                            ref={ref3}
+                            level={4}
+                            style={{ marginRight: 0.1 }}
+                          >
+                            {resume?.experience}
+                          </Title>
                         </motion.div>
                       ) : null}
                     </AnimatePresence>
+
                     <Divider />
                     <Card
                       bordered={false}
                       size="small"
                       className="ant-card-section"
                     >
-                      <Space size="small" direction="vertical">
-                        <Timeline>
-                          <AnimatePresence
-                            onExitComplete={() => setIsVisibleSlow(true)}
-                          >
-                            {isVisibleSlow ? (
-                              <motion.div
-                                transition={{ duration: 0.75 }}
-                                initial={{ opacity: 0, scale: 0 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                exit={{ opacity: 0, scale: 0 }}
-                              >
-                                {resume?.experienceitem.map((x, key) => (
-                                  <Timeline.Item key={key}>
-                                    <ResumeItem
-                                      headers={x.headers}
-                                      titles={x.titles}
-                                      details={x.details}
-                                    />
-                                  </Timeline.Item>
-                                ))}
-                              </motion.div>
-                            ) : null}
-                          </AnimatePresence>
-                        </Timeline>
-                      </Space>
+                      <Timeline>
+                        <AnimatePresence
+                          onExitComplete={() => setIsVisibleSlow(true)}
+                        >
+                          {isVisibleSlow ? (
+                            <motion.div
+                              transition={{ duration: 0.75 }}
+                              initial={{ opacity: 0, scale: 0 }}
+                              animate={{ opacity: 1, scale: 1 }}
+                              exit={{ opacity: 0, scale: 0 }}
+                            >
+                              {resume?.experienceitem.map((x, key) => (
+                                <Timeline.Item key={key}>
+                                  <ResumeItem
+                                    headers={x.headers}
+                                    titles={x.titles}
+                                    details={x.details}
+                                  />
+                                </Timeline.Item>
+                              ))}
+                            </motion.div>
+                          ) : null}
+                        </AnimatePresence>
+                      </Timeline>
                     </Card>
+
                     <AnimatePresence onExitComplete={() => setIsVisible(true)}>
                       {isVisible ? (
                         <motion.div
@@ -236,10 +445,13 @@ const App: FC = () => {
                           animate={{ opacity: 1 }}
                           exit={{ opacity: 0 }}
                         >
-                          <Title level={4}>{resume?.certification}</Title>
+                          <Title ref={ref4} level={4}>
+                            {resume?.certification}
+                          </Title>
                         </motion.div>
-                      ) : null}{" "}
+                      ) : null}
                     </AnimatePresence>
+
                     <Divider />
                     <Card
                       bordered={false}
@@ -291,18 +503,24 @@ const App: FC = () => {
                         </motion.div>
                       ) : null}{" "}
                     </AnimatePresence>
-                    <AnimatePresence onExitComplete={() => setIsVisible(true)}>
-                      {isVisible ? (
-                        <motion.div
-                          transition={{ duration: 0.5 }}
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          exit={{ opacity: 0 }}
-                        >
-                          <Title level={4}>{resume?.releventcoursework}</Title>
-                        </motion.div>
-                      ) : null}{" "}
-                    </AnimatePresence>
+                    <div ref={ref5}>
+                      <AnimatePresence
+                        onExitComplete={() => setIsVisible(true)}
+                      >
+                        {isVisible ? (
+                          <motion.div
+                            transition={{ duration: 0.5 }}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                          >
+                            <Title ref={ref5} level={4}>
+                              {resume?.releventcoursework}
+                            </Title>
+                          </motion.div>
+                        ) : null}{" "}
+                      </AnimatePresence>
+                    </div>
                     <Divider />
                     <AnimatePresence
                       onExitComplete={() => setIsVisibleSlow(true)}
@@ -316,6 +534,7 @@ const App: FC = () => {
                         >
                           {resume?.releventcourseworkitem.map((x, key) => (
                             <ResumeItem
+                              key={key}
                               headers={x.headers}
                               titles={x.titles}
                               details={x.details}
@@ -324,19 +543,25 @@ const App: FC = () => {
                         </motion.div>
                       ) : null}{" "}
                     </AnimatePresence>
-                    <AnimatePresence onExitComplete={() => setIsVisible(true)}>
-                      {isVisible ? (
-                        <motion.div
-                          transition={{ duration: 0.5 }}
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          exit={{ opacity: 0 }}
-                        >
-                          <Title level={4}>{resume?.skills}</Title>
-                        </motion.div>
-                      ) : null}
-                    </AnimatePresence>
-                    <Divider />
+                    <div ref={ref6}>
+                      <AnimatePresence
+                        onExitComplete={() => setIsVisible(true)}
+                      >
+                        {isVisible ? (
+                          <motion.div
+                            transition={{ duration: 0.5 }}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                          >
+                            <Title ref={ref6} level={4}>
+                              {resume?.skills}
+                            </Title>
+                          </motion.div>
+                        ) : null}
+                      </AnimatePresence>
+                      <Divider />
+                    </div>
 
                     <AnimatePresence onExitComplete={() => setIsVisible(true)}>
                       {isVisible ? (
@@ -398,7 +623,15 @@ const App: FC = () => {
           </Row>
         </Layout.Content>
       </Layout>
-      <FloatButton.Group icon={<MenuOutlined />} type="primary" trigger="click">
+      <FloatButton.Group
+        onOpenChange={() => {
+          setFloatButtonGroupOpen(!floatButtonGroupOpen);
+        }}
+        open={floatButtonGroupOpen}
+        icon={<MenuOutlined />}
+        type="primary"
+        trigger="click"
+      >
         <Tooltip title={resume?.tooltip.translate} placement={"left"}>
           <FloatButton
             onClick={() => {
@@ -419,7 +652,33 @@ const App: FC = () => {
           content={() => componentRef.current}
         />
       </FloatButton.Group>
-    </>
+      <FloatButton
+        ref={ref7}
+        style={{ visibility: "hidden" }}
+        icon={<MenuOutlined />}
+      />
+      <FloatButton.Group style={{ visibility: "hidden" }} open={true}>
+        <FloatButton ref={ref9} style={{ visibility: "hidden" }} />
+        <FloatButton
+          ref={ref8}
+          style={{ visibility: "hidden", width: 40.1, height: 39.9 }}
+        />
+        <FloatButton />
+      </FloatButton.Group>
+      <ResponsiveContainer
+        web={
+          <Tour
+            open={open}
+            onClose={() => {
+              setOpen(false);
+              window.scrollTo(0, 0);
+            }}
+            onFinish={() => window.scrollTo(0, 0)}
+            steps={steps}
+          />
+        }
+      />
+    </ResumeBadgeContext.Provider>
   );
 };
 export default App;

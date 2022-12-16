@@ -21,12 +21,12 @@ export const education_kr: ResumeItemType[] = [
         content: "한국 뉴욕주립대학교 | 2015 - 2017 & 2018 - 2019",
       },
       {
-        content: "↪전체 학점 평균 3.49/4.00",
+        content: "스토니브룩 대학교 | 2017 - 2018",
       },
     ],
     details: [
       {
-        content: "스토니브룩 대학교 | 2017 - 2018",
+        content: "↪전체 학점 평균 3.49/4.00",
       },
     ],
   },

@@ -21,12 +21,12 @@ export const education_en: ResumeItemType[] = [
         content: "SUNY Korea University | 2015 - 2017 & 2018 - 2019",
       },
       {
-        content: "↪Cumulative GPA 3.49/4.00",
+        content: "Stony Brook University | 2017 - 2018",
       },
     ],
     details: [
       {
-        content: "Stony Brook University | 2017 - 2018",
+        content: "↪Cumulative GPA 3.49/4.00",
       },
     ],
   },
