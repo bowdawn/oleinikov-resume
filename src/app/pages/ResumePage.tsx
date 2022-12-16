@@ -107,9 +107,7 @@ const App: FC = () => {
   const componentRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
   const { i18n } = useTranslation();
   const [isVisible, setIsVisible] = useState(true);
-  const [showNotification, setShowNotification] = useState(
-    !!localStorage.getItem("tour")
-  );
+  const [showNotification, _] = useState(!!localStorage.getItem("tour"));
   const [isVisibleSlow, setIsVisibleSlow] = useState(true);
   const [resume, setResume] = useState(
     i18n.language?.includes("ko") ? resume_kr : resume_en
@@ -135,19 +133,24 @@ const App: FC = () => {
     {
       title: "Welcome to Bogdan Oleinikov's Resume",
       description:
+        "Happy winter! Please stay warm and enjoy the tour of the resume.",
+    },
+    {
+      title: "Section Overview",
+      description:
         "My contact information has been provided in the section below.",
       placement: "bottom",
       target: () => ref1.current,
     },
     {
-      title: "Welcome to Bogdan Oleinikov's Resume",
+      title: "Section Overview",
       description:
         "My education history information has been provided in the section below.",
       placement: "right",
       target: () => ref2.current,
     },
     {
-      title: "Welcome to Bogdan Oleinikov's Resume",
+      title: "Section Overview",
       description:
         "My work experience information has been provided in the section below.",
       placement: "right",
@@ -155,7 +158,7 @@ const App: FC = () => {
       target: () => ref3.current,
     },
     {
-      title: "Welcome to Bogdan Oleinikov's Resume",
+      title: "Section Overview",
       description: (
         <div>
           <ResumeBadge type={"library_website"} />
@@ -167,7 +170,7 @@ const App: FC = () => {
       target: () => ref3_1.current,
     },
     {
-      title: "Welcome to Bogdan Oleinikov's Resume",
+      title: "Section Overview",
       description:
         "My certification information has been provided in the section below.",
 
@@ -175,7 +178,7 @@ const App: FC = () => {
       target: () => ref4.current,
     },
     {
-      title: "Welcome to Bogdan Oleinikov's Resume",
+      title: "Section Overview",
       description: (
         <div>
           <ResumeBadge type={"oracle"} />
@@ -186,21 +189,21 @@ const App: FC = () => {
       target: () => ref4_1.current,
     },
     {
-      title: "Welcome to Bogdan Oleinikov's Resume",
+      title: "Section Overview",
       description:
         "My relevant coursework information has been listed in the section below.",
       placement: "left",
       target: () => ref5.current,
     },
     {
-      title: "Welcome to Bogdan Oleinikov's Resume",
+      title: "Section Overview",
       description:
         "My computer and language skills have been listed in the section below.",
       placement: "left",
       target: () => ref6.current,
     },
     {
-      title: "Welcome to Bogdan Oleinikov's Resume",
+      title: "Resume Actions",
       description:
         "This button can be pressed to open a list of actions for the resume.",
       placement: "left",
@@ -208,7 +211,7 @@ const App: FC = () => {
       target: () => ref7.current,
     },
     {
-      title: "Welcome to Bogdan Oleinikov's Resume",
+      title: "Resume Actions",
       description: "The list of actions may be opened and closed.",
       placement: "left",
       nextButtonProps: { onClick: () => setFloatButtonGroupOpen(true) },
@@ -217,7 +220,7 @@ const App: FC = () => {
       },
     },
     {
-      title: "Welcome to Bogdan Oleinikov's Resume",
+      title: "Resume Actions",
       description:
         "There is an action to print the resume or save the resume as a PDF file.",
       placement: "left",
@@ -225,10 +228,15 @@ const App: FC = () => {
       target: () => ref8.current,
     },
     {
-      title: "Welcome to Bogdan Oleinikov's Resume",
-      description: "There is an action to translate the resume into Korean.",
+      title: "Resume Actions",
+      description:
+        "There is an action to translate the resume into Korean/English.",
       placement: "left",
       target: () => ref9.current,
+    },
+    {
+      title: "Thank You",
+      description: "This concludes the tour. Have a wonderful day!",
     },
   ];
 
