@@ -107,6 +107,9 @@ const App: FC = () => {
   const componentRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
   const { i18n } = useTranslation();
   const [isVisible, setIsVisible] = useState(true);
+  const [showNotification, setShowNotification] = useState(
+    !!localStorage.getItem("tour")
+  );
   const [isVisibleSlow, setIsVisibleSlow] = useState(true);
   const [resume, setResume] = useState(
     i18n.language?.includes("ko") ? resume_kr : resume_en
@@ -230,7 +233,7 @@ const App: FC = () => {
   ];
 
   useEffect(() => {
-    if (isWeb) {
+    if (isWeb && !showNotification) {
       api.info({
         key: "welcome",
         duration: 0,
@@ -255,6 +258,7 @@ const App: FC = () => {
               onClick={() => {
                 api.destroy();
                 if (checked) {
+                  localStorage.setItem("tour", "hidden");
                 }
               }}
             >
@@ -266,6 +270,7 @@ const App: FC = () => {
                 setOpen(true);
                 api.destroy();
                 if (checked) {
+                  localStorage.setItem("tour", "hidden");
                 }
               }}
             >
