@@ -145,11 +145,8 @@ const App: FC = () => {
     },
     {
       title: "Welcome to Bogdan Oleinikov's Resume",
-      description: (
-        <div>
-          My work experience information has been provided in the section below.
-        </div>
-      ),
+      description:
+        "My work experience information has been provided in the section below.",
       placement: "right",
 
       target: () => ref3.current,
@@ -159,7 +156,7 @@ const App: FC = () => {
       description: (
         <div>
           <ResumeBadge type={"library_website"} />
-          *(The link icon may be clicked to view a personal project website)
+          *(The link icon can be clicked to view a personal project website)
         </div>
       ),
       placement: "top",
@@ -168,11 +165,9 @@ const App: FC = () => {
     },
     {
       title: "Welcome to Bogdan Oleinikov's Resume",
-      description: (
-        <div>
-          My certification information has been provided in the section below.
-        </div>
-      ),
+      description:
+        "My certification information has been provided in the section below.",
+
       placement: "right",
       target: () => ref4.current,
     },
@@ -181,7 +176,7 @@ const App: FC = () => {
       description: (
         <div>
           <ResumeBadge type={"oracle"} />
-          *(The check icons may be clicked to view a digital certificate)
+          *(The check icons can be clicked to view a digital certificate)
         </div>
       ),
       placement: "right",
@@ -190,28 +185,28 @@ const App: FC = () => {
     {
       title: "Welcome to Bogdan Oleinikov's Resume",
       description:
-        "My relevant coursework information has been provided in the section below.",
+        "My relevant coursework information has been listed in the section below.",
       placement: "left",
       target: () => ref5.current,
     },
     {
       title: "Welcome to Bogdan Oleinikov's Resume",
       description:
-        "My skills information has been provided in the section below. This section has been divided into two sections. Computer skills and language skills.",
+        "My computer and language skills have been listed in the section below.",
       placement: "left",
       target: () => ref6.current,
     },
     {
       title: "Welcome to Bogdan Oleinikov's Resume",
       description:
-        "In the bottom left corner, this button can be pressed to open a list of actions for the resume.",
+        "This button can be pressed to open a list of actions for the resume.",
       placement: "left",
       nextButtonProps: { onClick: () => setFloatButtonGroupOpen(true) },
       target: () => ref7.current,
     },
     {
       title: "Welcome to Bogdan Oleinikov's Resume",
-      description: "The list of actions may be be closed and opened.",
+      description: "The list of actions may be opened and closed.",
       placement: "left",
       nextButtonProps: { onClick: () => setFloatButtonGroupOpen(true) },
       target: () => {
