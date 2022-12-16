@@ -10,7 +10,7 @@ export const education_kr: ResumeItemType[] = [
     ],
     details: [
       {
-        content: "↪2022년 12월 졸업 예상",
+        content: "↪전체 학점 평균 3.9/4.00",
       },
     ],
   },

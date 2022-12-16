@@ -10,7 +10,7 @@ export const education_en: ResumeItemType[] = [
     ],
     details: [
       {
-        content: "↪Expected graduation December 2022",
+        content: "↪Cumulative GPA 3.9/4.00",
       },
     ],
   },
