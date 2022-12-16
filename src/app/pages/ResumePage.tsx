@@ -24,6 +24,7 @@ import {
   Space,
   Button,
   Checkbox,
+  ConfigProvider,
 } from "antd";
 
 import {
@@ -37,7 +38,7 @@ import { useTranslation } from "react-i18next";
 import NameContainer from "../components/NameContainer";
 import resume_en from "../../core/static/resume_en";
 import ReactToPrint from "react-to-print";
-import { isWeb, ResponsiveContainer } from "../components/ResponsiveContainer";
+import { ResponsiveContainer } from "../components/ResponsiveContainer";
 import Snowfall from "react-snowfall";
 import { ContactContainer } from "../components/ContactContainer";
 import { LanguageContainer } from "../components/LanguageContainer";
@@ -132,11 +133,16 @@ const App: FC = () => {
   const steps: TourProps["steps"] = [
     {
       title: "Welcome to Bogdan Oleinikov's Resume",
+      nextButtonProps: { children: "Next" },
+      prevButtonProps: { children: "Previous" },
+
       description:
         "Happy winter! Please stay warm and enjoy the tour of the resume.",
     },
     {
       title: "Section Overview",
+      nextButtonProps: { children: "Next" },
+      prevButtonProps: { children: "Previous" },
       description:
         "My contact information has been provided in the section below.",
       placement: "bottom",
@@ -144,6 +150,8 @@ const App: FC = () => {
     },
     {
       title: "Section Overview",
+      nextButtonProps: { children: "Next" },
+      prevButtonProps: { children: "Previous" },
       description:
         "My education history information has been provided in the section below.",
       placement: "right",
@@ -151,6 +159,8 @@ const App: FC = () => {
     },
     {
       title: "Section Overview",
+      nextButtonProps: { children: "Next" },
+      prevButtonProps: { children: "Previous" },
       description:
         "My work experience information has been provided in the section below.",
       placement: "right",
@@ -159,6 +169,8 @@ const App: FC = () => {
     },
     {
       title: "Section Overview",
+      nextButtonProps: { children: "Next" },
+      prevButtonProps: { children: "Previous" },
       description: (
         <div>
           <ResumeBadge type={"library_website"} />
@@ -171,6 +183,8 @@ const App: FC = () => {
     },
     {
       title: "Section Overview",
+      nextButtonProps: { children: "Next" },
+      prevButtonProps: { children: "Previous" },
       description:
         "My certification information has been provided in the section below.",
 
@@ -179,6 +193,8 @@ const App: FC = () => {
     },
     {
       title: "Section Overview",
+      nextButtonProps: { children: "Next" },
+      prevButtonProps: { children: "Previous" },
       description: (
         <div>
           <ResumeBadge type={"oracle"} />
@@ -190,6 +206,8 @@ const App: FC = () => {
     },
     {
       title: "Section Overview",
+      nextButtonProps: { children: "Next" },
+      prevButtonProps: { children: "Previous" },
       description:
         "My relevant coursework information has been listed in the section below.",
       placement: "left",
@@ -197,6 +215,8 @@ const App: FC = () => {
     },
     {
       title: "Section Overview",
+      nextButtonProps: { children: "Next" },
+      prevButtonProps: { children: "Previous" },
       description:
         "My computer and language skills have been listed in the section below.",
       placement: "left",
@@ -204,17 +224,26 @@ const App: FC = () => {
     },
     {
       title: "Resume Actions",
+
+      prevButtonProps: { children: "Previous" },
       description:
         "This button can be pressed to open a list of actions for the resume.",
       placement: "left",
-      nextButtonProps: { onClick: () => setFloatButtonGroupOpen(true) },
+      nextButtonProps: {
+        onClick: () => setFloatButtonGroupOpen(true),
+        children: "Next",
+      },
       target: () => ref7.current,
     },
     {
       title: "Resume Actions",
       description: "The list of actions may be opened and closed.",
       placement: "left",
-      nextButtonProps: { onClick: () => setFloatButtonGroupOpen(true) },
+      prevButtonProps: { children: "Previous" },
+      nextButtonProps: {
+        onClick: () => setFloatButtonGroupOpen(true),
+        children: "Next",
+      },
       target: () => {
         return ref7.current;
       },
@@ -224,11 +253,16 @@ const App: FC = () => {
       description:
         "There is an action to print the resume or save the resume as a PDF file.",
       placement: "left",
-
+      nextButtonProps: {
+        children: "Next",
+      },
       target: () => ref8.current,
     },
     {
       title: "Resume Actions",
+      nextButtonProps: {
+        children: "Next",
+      },
       description:
         "There is an action to translate the resume into Korean/English.",
       placement: "left",
@@ -236,6 +270,8 @@ const App: FC = () => {
     },
     {
       title: "Thank You",
+      nextButtonProps: { children: "Finish:)" },
+      prevButtonProps: { children: "Previous" },
       description: "This concludes the tour. Have a wonderful day!",
     },
   ];
