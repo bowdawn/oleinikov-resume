@@ -1,11 +1,18 @@
+import React from "react";
 import ResumeItemType from "src/core/types/ResumeItem";
+const content_mv = 8;
 
 export const computer_en: ResumeItemType[] = [
   {
     headers: [],
     titles: [
       {
-        content: "Node JS",
+        content: (
+          <div style={{ marginBottom: content_mv, marginTop: content_mv }}>
+            <u>Languages:</u> JavaScript, TypeScript, C/C++, Java, Python
+            <br />
+          </div>
+        ),
       },
     ],
     details: [],
@@ -14,21 +21,12 @@ export const computer_en: ResumeItemType[] = [
     headers: [],
     titles: [
       {
-        content: "Javascript, Typescript",
-      },
-    ],
-    details: [],
-  },
-  {
-    headers: [],
-    titles: [{ content: "React, Angular, Vue" }],
-    details: [],
-  },
-  {
-    headers: [],
-    titles: [
-      {
-        content: "C/C++, SQL",
+        content: (
+          <div style={{ marginTop: content_mv, marginBottom: content_mv }}>
+            <u>Web Development:</u> Node.js, React, Angular, Vue
+            <br />
+          </div>
+        ),
       },
     ],
     details: [],
@@ -37,7 +35,12 @@ export const computer_en: ResumeItemType[] = [
     headers: [],
     titles: [
       {
-        content: "MongoDB, Express",
+        content: (
+          <div style={{ marginBottom: content_mv, marginTop: content_mv }}>
+            <u>Database:</u> PostgreSQL, MongoDB
+            <br />
+          </div>
+        ),
       },
     ],
     details: [],
@@ -46,7 +49,13 @@ export const computer_en: ResumeItemType[] = [
     headers: [],
     titles: [
       {
-        content: "Java",
+        content: (
+          <div style={{ marginBottom: content_mv, marginTop: content_mv }}>
+            <u>Machine Learning and Data Science:</u> TensorFlow, PyTorch,
+            Pandas, NumPy
+            <br />
+          </div>
+        ),
       },
     ],
     details: [],
@@ -55,7 +64,11 @@ export const computer_en: ResumeItemType[] = [
     headers: [],
     titles: [
       {
-        content: "Spring, SpringBoot",
+        content: (
+          <div style={{ marginBottom: content_mv, marginTop: content_mv }}>
+            <u>Frameworks:</u> Express, Spring, SpringBoot, Django, GraphQL
+          </div>
+        ),
       },
     ],
     details: [],
@@ -64,47 +77,120 @@ export const computer_en: ResumeItemType[] = [
     headers: [],
     titles: [
       {
-        content: "Python",
+        content: (
+          <div style={{ marginBottom: content_mv, marginTop: content_mv }}>
+            <u>Others:</u> Netcore, Microservices
+          </div>
+        ),
       },
     ],
     details: [],
   },
-  {
-    headers: [],
-    titles: [
-      {
-        content: "POSTGRESQL, GRAPHQL, DJANGO",
-      },
-    ],
-    details: [],
-  },
-  {
-    headers: [],
-    titles: [
-      {
-        content: "Netcore, C/C++",
-      },
-    ],
-    details: [],
-  },
-  {
-    headers: [],
-    titles: [
-      {
-        content: "Microservices GRPC",
-      },
-    ],
-    details: [],
-  },
-  {
-    headers: [],
-    titles: [
-      {
-        content: "Cassandra Database",
-      },
-    ],
-    details: [],
-  },
+
+  // {
+  //   headers: [],
+  //   titles: [
+  //     {
+  //       content: "Node JS",
+  //     },
+  //   ],
+  //   details: [],
+  // },
+  // {
+  //   headers: [],
+  //   titles: [
+  //     {
+  //       content: "Javascript, Typescript",
+  //     },
+  //   ],
+  //   details: [],
+  // },
+  // {
+  //   headers: [],
+  //   titles: [{ content: "React, Angular, Vue" }],
+  //   details: [],
+  // },
+  // {
+  //   headers: [],
+  //   titles: [
+  //     {
+  //       content: "C/C++, SQL",
+  //     },
+  //   ],
+  //   details: [],
+  // },
+  // {
+  //   headers: [],
+  //   titles: [
+  //     {
+  //       content: "MongoDB, Express",
+  //     },
+  //   ],
+  //   details: [],
+  // },
+  // {
+  //   headers: [],
+  //   titles: [
+  //     {
+  //       content: "Java",
+  //     },
+  //   ],
+  //   details: [],
+  // },
+  // {
+  //   headers: [],
+  //   titles: [
+  //     {
+  //       content: "Spring, SpringBoot",
+  //     },
+  //   ],
+  //   details: [],
+  // },
+  // {
+  //   headers: [],
+  //   titles: [
+  //     {
+  //       content: "Python",
+  //     },
+  //   ],
+  //   details: [],
+  // },
+  // {
+  //   headers: [],
+  //   titles: [
+  //     {
+  //       content: "POSTGRESQL, GRAPHQL, DJANGO",
+  //     },
+  //   ],
+  //   details: [],
+  // },
+  // {
+  //   headers: [],
+  //   titles: [
+  //     {
+  //       content: "Netcore, C/C++",
+  //     },
+  //   ],
+  //   details: [],
+  // },
+  // {
+  //   headers: [],
+  //   titles: [
+  //     {
+  //       content: "Microservices GRPC",
+  //     },
+  //   ],
+  //   details: [],
+  // },
+  // {
+  //   headers: [],
+  //   titles: [
+  //     {
+  //       content: "Cassandra Database",
+  //     },
+  //   ],
+  //   details: [],
+  // },
 ];
 
 // 1. Node JS

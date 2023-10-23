@@ -24,10 +24,6 @@ export const education_en: ResumeItemType[] = [
         content: "Stony Brook University | 2017 - 2018",
       },
     ],
-    details: [
-      {
-        content: "↪Cumulative GPA 3.49/4.00",
-      },
-    ],
+    details: [],
   },
 ];

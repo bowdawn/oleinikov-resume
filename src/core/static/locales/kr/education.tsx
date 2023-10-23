@@ -24,10 +24,6 @@ export const education_kr: ResumeItemType[] = [
         content: "스토니브룩 대학교 | 2017 - 2018",
       },
     ],
-    details: [
-      {
-        content: "↪전체 학점 평균 3.49/4.00",
-      },
-    ],
+    details: [],
   },
 ];

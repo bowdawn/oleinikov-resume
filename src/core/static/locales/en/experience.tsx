@@ -2,62 +2,79 @@ import ResumeItemType from "src/core/types/ResumeItem";
 
 export const experience_en: ResumeItemType[] = [
   {
-    headers: [{ content: "Riupack Software Engineer" }],
+    headers: [{ content: "Korean Silver Exchange " }],
     titles: [
       {
-        content:
-          "Web/Mobile Frontend & Backend Developer  | Aug 2022 Currently Employed",
+        content: "Lead Software Engineer | February 2023 - Present",
       },
     ],
     details: [
       {
         content:
-          "• Use of React for web development to implement shopping mall and admin page.",
+          "• Automated hourly product pricing for accuracy and efficiency",
       },
       {
-        content: "• Use of React Native for mobile development using webview.",
+        content: "• Managed financial data for strategic decision-making",
       },
       {
         content:
-          "• Use of Python, Apollo, Django, GraphQL, and Saleor API for backend development.",
+          "• Enhanced user satisfaction and efficiency through interface design renewal.",
       },
     ],
   },
   {
-    headers: [{ content: "Jinjoosoft Software Engineer" }],
+    headers: [{ content: "Riupack" }],
     titles: [
       {
-        content:
-          "Web/Mobile Frontend & Backend Developer | Oct 2019 - Oct 2020",
+        content: "Full Stack Software Engineer | Aug 2022 - February 2023",
       },
     ],
     details: [
       {
-        content:
-          "• Use of Angular, React, and Vue libraries for web development.",
+        content: "• Developed React-based shopping mall and admin pages.",
       },
-      { content: "• Use of React Native for mobile development." },
+      {
+        content: "• Created mobile apps using React Native.",
+      },
       {
         content:
-          "• Use of Netcore, Docker, and Express for backend development.",
+          "• Utilized Python, Apollo, Django, GraphQL, and Saleor API for backend development.",
       },
     ],
   },
   {
-    headers: [{ content: "BNR Technology" }],
+    headers: [{ content: "Jinjoosoft" }],
     titles: [
       {
-        content: "Android Mobile Development | Jan 2019 - Mar 2019",
+        content: "Full Stack Software Engineer | Oct 2019 - Oct 2020",
+      },
+    ],
+    details: [
+      {
+        content: "• Worked with Angular, React, and Vue for web development.",
+      },
+      { content: "• Developed mobile applications using React Native." },
+      {
+        content:
+          "• Utilized Netcore, Docker, and Express for backend development.",
+      },
+    ],
+  },
+  {
+    headers: [{ content: "BNR Technology Android Developer" }],
+    titles: [
+      {
+        content: "Android Developer | Jan 2019 - Mar 2019",
       },
     ],
     details: [
       {
         content:
-          "• Use of Android Studios and Firebase for mobile app software development.",
+          "• Created mobile applications with Android Studio and Firebase.",
       },
       {
         content:
-          "• Created written translations for English, Russian, and Korean language.",
+          "• Provided written translations for English, Russian, and Korean language localization.",
       },
     ],
   },
@@ -67,11 +84,7 @@ export const experience_en: ResumeItemType[] = [
     details: [
       {
         content:
-          "• Deployment of a library database providing frontend React Typescript GUI.",
-      },
-      {
-        content:
-          "• Backend MongoDB implementation for add/modify function of book records.",
+          "• Developed a library system using MongoDB, Express, React, and Node Stack.",
       },
     ],
   },
