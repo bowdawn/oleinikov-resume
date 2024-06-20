@@ -2,90 +2,105 @@ import ResumeItemType from "src/core/types/ResumeItem";
 
 export const experience_en: ResumeItemType[] = [
   {
-    headers: [{ content: "Korean Silver Exchange " }],
-    titles: [
+    headers: [
       {
-        content: "Lead Software Engineer | February 2023 - Present",
+        content:
+          "Korean Silver Exchange | Lead Software Engineer | February 2023 - December 2023",
       },
     ],
+    titles: [],
     details: [
       {
         content:
-          "• Automated hourly product pricing for accuracy and efficiency",
+          "Implemented automated hourly product pricing system to ensure accuracy and efficiency, managed financial data to support strategic decision-making, and improved user experience satisfaction through interface design enhancements.",
       },
-      {
-        content: "• Managed financial data for strategic decision-making",
-      },
-      {
-        content:
-          "• Enhanced user satisfaction and efficiency through interface design renewal.",
-      },
+      // {
+      //   content:
+      //     "• Automated hourly product pricing for accuracy and efficiency",
+      // },
+      // {
+      //   content: "• Managed financial data for strategic decision-making",
+      // },
+      // {
+      //   content:
+      //     "• Enhanced user satisfaction and efficiency through interface design renewal.",
+      // },
     ],
   },
   {
-    headers: [{ content: "Riupack" }],
-    titles: [
-      {
-        content: "Full Stack Software Engineer | Aug 2022 - February 2023",
-      },
-    ],
-    details: [
-      {
-        content: "• Developed React-based shopping mall and admin pages.",
-      },
-      {
-        content: "• Created mobile apps using React Native.",
-      },
+    headers: [
       {
         content:
-          "• Utilized Python, Apollo, Django, GraphQL, and Saleor API for backend development.",
+          "Riupack | Full Stack Software Engineer | Aug 2022 - February 2023",
       },
+    ],
+    titles: [],
+    details: [
+      {
+        content:
+          "Developed React-based shopping mall and admin pages, created mobile apps using React Native, and utilized Python, Apollo, Django, GraphQL, and Saleor API for backend development.",
+      },
+      // {
+      //   content: "• Developed React-based shopping mall and admin pages.",
+      // },
+      // {
+      //   content: "• Created mobile apps using React Native.",
+      // },
+      // {
+      //   content:
+      //     "• Utilized Python, Apollo, Django, GraphQL, and Saleor API for backend development.",
+      // },
     ],
   },
   {
-    headers: [{ content: "Jinjoosoft" }],
-    titles: [
-      {
-        content: "Full Stack Software Engineer | Oct 2019 - Oct 2020",
-      },
-    ],
-    details: [
-      {
-        content: "• Worked with Angular, React, and Vue for web development.",
-      },
-      { content: "• Developed mobile applications using React Native." },
+    headers: [
       {
         content:
-          "• Utilized Netcore, Docker, and Express for backend development.",
+          "Jinjoosoft | Full Stack Software Engineer | Oct 2019 - Oct 2020",
       },
     ],
-  },
-  {
-    headers: [{ content: "BNR Technology Android Developer" }],
-    titles: [
-      {
-        content: "Android Developer | Jan 2019 - Mar 2019",
-      },
-    ],
+    titles: [],
     details: [
       {
         content:
-          "• Created mobile applications with Android Studio and Firebase.",
+          "Worked extensively with Angular, React, and Vue for web development, developed mobile applications using React Native, and utilized Netcore, Docker, and Express for backend development.",
       },
-      {
-        content:
-          "• Provided written translations for English, Russian, and Korean language localization.",
-      },
+      // {
+      //   content: "• Worked with Angular, React, and Vue for web development.",
+      // },
+      // { content: "• Developed mobile applications using React Native." },
+      // {
+      //   content:
+      //     "• Utilized Netcore, Docker, and Express for backend development.",
+      // },
     ],
   },
-  {
-    headers: [{ id: "library_website", content: "Family Library Project" }],
-    titles: [{ content: "Personal Project | Spring 2022" }],
-    details: [
-      {
-        content:
-          "• Developed a library system using MongoDB, Express, React, and Node Stack.",
-      },
-    ],
-  },
+  // {
+  //   headers: [{ content: "BNR Technology Android Developer" }],
+  //   titles: [
+  //     {
+  //       content: "Android Developer | Jan 2019 - Mar 2019",
+  //     },
+  //   ],
+  //   details: [
+  //     {
+  //       content:
+  //         "• Created mobile applications with Android Studio and Firebase.",
+  //     },
+  //     {
+  //       content:
+  //         "• Provided written translations for English, Russian, and Korean language localization.",
+  //     },
+  //   ],
+  // },
+  // {
+  //   headers: [{ id: "library_website", content: "Family Library Project" }],
+  //   titles: [{ content: "Personal Project | Spring 2022" }],
+  //   details: [
+  //     {
+  //       content:
+  //         "• Developed a library system using MongoDB, Express, React, and Node Stack.",
+  //     },
+  //   ],
+  // },
 ];

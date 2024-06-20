@@ -24,7 +24,6 @@ import {
   Space,
   Button,
   Checkbox,
-  ConfigProvider,
 } from "antd";
 
 import {
@@ -39,7 +38,7 @@ import NameContainer from "../components/NameContainer";
 import resume_en from "../../core/static/resume_en";
 import ReactToPrint from "react-to-print";
 import { ResponsiveContainer } from "../components/ResponsiveContainer";
-import Snowfall from "react-snowfall";
+
 import { ContactContainer } from "../components/ContactContainer";
 import { LanguageContainer } from "../components/LanguageContainer";
 import { motion, AnimatePresence } from "framer-motion";
@@ -48,6 +47,9 @@ import { createContext } from "react";
 import { ResumeItemKey } from "src/core/types/ResumeItem";
 import { useMediaQuery } from "react-responsive";
 import { CheckboxChangeEvent } from "antd/es/checkbox";
+import getSeason, { getSeasonMessage } from "src/core/helpers/season";
+import LeafEffect from "../components/LeafEffect";
+import SnowfallEffect from "../components/SnowfallEffect";
 
 export const ResumeBadgeContext = createContext<{
   [key in ResumeItemKey]: React.MutableRefObject<null> | null;
@@ -96,7 +98,7 @@ const ResponsiveRow: FC<{
   return (
     <ResponsiveContainer
       mobile={getRowLayout(24, 24)}
-      web={getRowLayout(16, 8)}
+      web={getRowLayout(24, 24)}
     />
   );
 };
@@ -136,8 +138,7 @@ const App: FC = () => {
       nextButtonProps: { children: "Next" },
       prevButtonProps: { children: "Previous" },
 
-      description:
-        "Happy winter! Please stay warm and enjoy the tour of the resume.",
+      description: getSeasonMessage(),
     },
     {
       title: "Section Overview",
@@ -167,20 +168,7 @@ const App: FC = () => {
 
       target: () => ref3.current,
     },
-    {
-      title: "Section Overview",
-      nextButtonProps: { children: "Next" },
-      prevButtonProps: { children: "Previous" },
-      description: (
-        <div>
-          <ResumeBadge type={"library_website"} />
-          *(The link icon can be clicked to view a personal project website)
-        </div>
-      ),
-      placement: "top",
 
-      target: () => ref3_1.current,
-    },
     {
       title: "Section Overview",
       nextButtonProps: { children: "Next" },
@@ -336,7 +324,8 @@ const App: FC = () => {
       }}
     >
       {contextHolder}
-      <Snowfall />
+      {getSeason() == "winter" ? <SnowfallEffect /> : <LeafEffect />}
+
       <Layout>
         <Layout.Content>
           <Row align={"middle"}>
@@ -531,7 +520,7 @@ const App: FC = () => {
                 }
                 rightCol={
                   <Card className="ant-card-resume-right-column" size="small">
-                    <AnimatePresence onExitComplete={() => setIsVisible(true)}>
+                    {/* <AnimatePresence onExitComplete={() => setIsVisible(true)}>
                       {isVisible ? (
                         <motion.div
                           transition={{ duration: 0.5 }}
@@ -564,8 +553,7 @@ const App: FC = () => {
                           </motion.div>
                         ) : null}{" "}
                       </AnimatePresence>
-                    </div>
-                    <Divider />
+                    </div>  <Divider />
                     <AnimatePresence
                       onExitComplete={() => setIsVisibleSlow(true)}
                     >
@@ -586,7 +574,7 @@ const App: FC = () => {
                           ))}
                         </motion.div>
                       ) : null}{" "}
-                    </AnimatePresence>
+                    </AnimatePresence> 
                     <div ref={ref6}>
                       <AnimatePresence
                         onExitComplete={() => setIsVisible(true)}
@@ -605,7 +593,7 @@ const App: FC = () => {
                         ) : null}
                       </AnimatePresence>
                       <Divider />
-                    </div>
+                    </div>*/}
 
                     <AnimatePresence onExitComplete={() => setIsVisible(true)}>
                       {isVisible ? (

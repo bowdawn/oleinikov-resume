@@ -8,7 +8,7 @@ export const section_kr: SectionLabelType = {
   software: "소프트웨어",
   engineer: "엔지니어",
   releventcoursework: "관련 전공수강 내역",
-  skills: "보유능력",
-  computer: "컴퓨터",
+  skills: "스킬",
+  computer: "기술",
   language: "언어",
 };

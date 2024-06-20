@@ -9,9 +9,9 @@ export const education_en: ResumeItemType[] = [
       },
     ],
     details: [
-      {
-        content: "↪Cumulative GPA 3.8/4.00",
-      },
+      // {
+      //   content: "↪Cumulative GPA 3.8/4.00",
+      // },
     ],
   },
   {

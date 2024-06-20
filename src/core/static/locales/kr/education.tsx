@@ -9,9 +9,9 @@ export const education_kr: ResumeItemType[] = [
       },
     ],
     details: [
-      {
-        content: "↪전체 학점 평균 3.8/4.00",
-      },
+      // {
+      //   content: "↪전체 학점 평균 3.8/4.00",
+      // },
     ],
   },
   {

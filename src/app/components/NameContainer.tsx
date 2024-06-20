@@ -9,10 +9,12 @@ const { Title, Text } = Typography;
 const NameContainer: FC<{ type: Resume["type"] }> = (props: {
   type: Resume["type"];
 }) => {
-  const level = props.type == "En" ? 1 : 2;
+  const level = props.type == "En" ? 2 : 2;
   const korean_subheader =
     props.type == "Kr" ? (
-      <Text type="secondary">(국문: {resume_kr.last + resume_kr.first})</Text>
+      <div>
+        <Text type="secondary">(국문: {resume_kr.last + resume_kr.first})</Text>
+      </div>
     ) : null;
   {
     return (
@@ -27,6 +29,9 @@ const NameContainer: FC<{ type: Resume["type"] }> = (props: {
           {resume_en.first}
           <div className="last-name">{resume_en.last}</div>
         </Title>
+        <Text type="secondary" className="occupation">
+          Software Engineeer
+        </Text>
         {korean_subheader}
       </motion.div>
     );

@@ -9,6 +9,6 @@ export const section_en: SectionLabelType = {
   engineer: "Engineer",
   releventcoursework: "Relevent Coursework",
   skills: "Skills",
-  computer: "Computer",
+  computer: "Technical Skills",
   language: "Languages",
 };

@@ -12,7 +12,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
-      favicon: "./src/core/images/favicon.png"
+      favicon: "./src/core/images/favicon.png",
     }),
   ],
   resolve: {
@@ -24,26 +24,22 @@ module.exports = {
       {
         test: /\.(js|ts)x?$/,
         exclude: /node_modules/,
-        use: ["babel-loader"]
+        use: ["babel-loader"],
       },
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        use: ["style-loader", "css-loader"]
+        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.scss$/,
-        use: [
-            'style-loader',
-            'css-loader',
-            'sass-loader'
-        ]
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
         exclude: /node_modules/,
-        use: ["file-loader"]
-      }, 
+        use: ["file-loader"],
+      },
     ],
   },
 };

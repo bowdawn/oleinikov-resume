@@ -12,6 +12,10 @@ export const ContactContainer: React.FC = () => {
   return (
     <>
       <div>
+        <i className="mdi-icon mdi-map-marker-outline reverse"></i>
+        {contact_default.address}
+      </div>
+      <div>
         <PhoneOutlined /> {contact_default.mobile}
       </div>
       <div>
