@@ -30,7 +30,7 @@ const NameContainer: FC<{ type: Resume["type"] }> = (props: {
           <div className="last-name">{resume_en.last}</div>
         </Title>
         <Text type="secondary" className="occupation">
-          Software Engineeer
+          Software Engineer
         </Text>
         {korean_subheader}
       </motion.div>
