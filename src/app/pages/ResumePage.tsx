@@ -547,7 +547,7 @@ const App: FC = () => {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                           >
-                            <Title ref={ref5} level={4}>
+                            <Title  level={4}>
                               {resume?.releventcoursework}
                             </Title>
                           </motion.div>
@@ -603,7 +603,7 @@ const App: FC = () => {
                           animate={{ opacity: 1 }}
                           exit={{ opacity: 0 }}
                         >
-                          <Title level={5}>{resume?.computer}</Title>
+                          <Title ref={ref5} level={5}>{resume?.computer}</Title>
                         </motion.div>
                       ) : null}
                     </AnimatePresence>
@@ -636,7 +636,7 @@ const App: FC = () => {
                           animate={{ opacity: 1 }}
                           exit={{ opacity: 0 }}
                         >
-                          <Title level={5}>{resume?.language}</Title>
+                          <Title ref={ref6} level={5}>{resume?.language}</Title>
                         </motion.div>
                       ) : null}
                     </AnimatePresence>
