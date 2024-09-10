@@ -197,7 +197,7 @@ const App: FC = () => {
       nextButtonProps: { children: "Next" },
       prevButtonProps: { children: "Previous" },
       description:
-        "My relevant coursework information has been listed in the section below.",
+        "My technical skills has been listed in the section below.",
       placement: "left",
       target: () => ref5.current,
     },
@@ -206,7 +206,7 @@ const App: FC = () => {
       nextButtonProps: { children: "Next" },
       prevButtonProps: { children: "Previous" },
       description:
-        "My computer and language skills have been listed in the section below.",
+        "My language skills have been listed in the section below.",
       placement: "left",
       target: () => ref6.current,
     },
