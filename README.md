@@ -1,10 +1,10 @@
 # Personal Portfolio - [Explore My Resume Here! 🌐](https://oleinikov-resume.vercel.app/)
 
-Welcome to my personal portfolio! This repository showcases my educational background, professional background and skills as a software engineer.
+Welcome to my personal portfolio! This repository presents a comprehensive view of my educational background, professional experience, and technical skills as a Software Engineer.
 
 ## Description
 
-This portfolio is developed using React and styled with the Ant Design framework. It showcases my educational background, professional experience, and technical skills. Dive into the various sections to learn more about my work, skills, and projects.
+This portfolio is developed using **React** and styled with the **Ant Design** framework, delivering a polished and responsive user experience. It highlights my educational background, professional journey, and certifications, showcasing my technical expertise across various areas of software engineering. This includes web development, backend systems, data processing, and system integration, reflecting my ability to tackle complex problems and innovate solutions.
 
 ## [🚀 Live Demo](https://oleinikov-resume.vercel.app/)
 
