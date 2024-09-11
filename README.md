@@ -23,3 +23,18 @@ To run this project locally, follow these steps:
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/bowdawn/oleinikov-resume.git
+
+2. **Install dependencies:**:
+   ```bash
+   npm install
+
+3. **Run the development server:**:
+   ```bash
+   npm run start
+
+## Contact
+If you have any questions or feedback, feel free to reach out via Email, LinkedIn or GitHub.
+
+Enjoy exploring my portfolio!
+
+
