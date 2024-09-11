@@ -1,4 +1,4 @@
-# Personal Portfolio [View Here](https://oleinikov-resume.vercel.app/)
+# Personal Portfolio - [Explore My Work Here! 🌐](https://oleinikov-resume.vercel.app/)
 
 Welcome to my personal portfolio! This repository showcases my skills, projects, and experience as a software engineer.
 
@@ -6,7 +6,7 @@ Welcome to my personal portfolio! This repository showcases my skills, projects,
 
 This portfolio was built using **React** and styled with the **Ant Design** component framework. It highlights my educational background, professional journey, and the technical skills I possess. You can explore various sections that provide detailed information about my work experience, technical skills, and more.
 
-## Live Demo
+## [🚀 Live Demo](https://oleinikov-resume.vercel.app/)
 
 Check out the live version of the portfolio [here](https://oleinikov-resume.vercel.app/).
 
