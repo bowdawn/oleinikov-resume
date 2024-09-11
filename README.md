@@ -1,20 +1,20 @@
 # Personal Portfolio - [Explore My Resume Here! 🌐](https://oleinikov-resume.vercel.app/)
 
-Welcome to my personal portfolio! This repository showcases my skills, projects, and experience as a software engineer.
+Welcome to my personal portfolio! This repository showcases my educational background, professional background and skills as a software engineer.
 
 ## Description
 
-This portfolio was built using **React** and styled with the **Ant Design** component framework. It highlights my educational background, professional journey, and the technical skills I possess. You can explore various sections that provide detailed information about my work experience, technical skills, and more.
+This portfolio is developed using React and styled with the Ant Design framework. It showcases my educational background, professional experience, and technical skills. Dive into the various sections to learn more about my work, skills, and projects.
 
 ## [🚀 Live Demo](https://oleinikov-resume.vercel.app/)
 
-Check out the live version of the portfolio [here](https://oleinikov-resume.vercel.app/).
+Check out the live version of the portfolio by clicking [here](https://oleinikov-resume.vercel.app/).
 
 ## Features
 
-- **Built with React**: A powerful JavaScript library for building user interfaces.
-- **Styled with Ant Design**: A popular design system and component library for creating beautiful and responsive layouts.
-- **Responsive Design**: Fully responsive and looks great on all devices.
+- **Built with React**: A robust JavaScript library for building dynamic user interfaces.
+- **Styled with Ant Design**: A widely-used design system and component library for creating visually appealing and responsive layouts.
+- **Responsive Design**: Designed to look great on any device, from desktops to smartphones.
 
 ## Getting Started
 
@@ -35,6 +35,6 @@ To run this project locally, follow these steps:
 ## Contact
 If you have any questions or feedback, feel free to reach out via Email, LinkedIn or GitHub.
 
-Enjoy exploring my portfolio!
+Thank you for visiting my portfolio!
 
 
