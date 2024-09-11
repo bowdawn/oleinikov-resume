@@ -330,7 +330,7 @@ const App: FC = () => {
         <Layout.Content>
           <Row align={"middle"}>
             <Card
-              className="ant-card-resume"
+              className="ant-card-resume bko-print-resume"
               size="small"
               ref={componentRef}
               bordered={false}
@@ -681,7 +681,10 @@ const App: FC = () => {
               <FloatButton icon={<PrinterOutlined />} />
             </Tooltip>
           )}
+          documentTitle = {"Bogdan Oleinikov Resume"}
           content={() => componentRef.current}
+       
+         
         />
       </FloatButton.Group>
       <FloatButton

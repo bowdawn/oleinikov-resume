@@ -36,3 +36,23 @@ body {
 .download-kr {
   color: #073763;
 }
+
+@media print {
+  .bko-print-resume {
+    .ant-progress{
+      display: none;
+    }
+    .ant-card-body {
+      background-color: white;
+   
+    }
+    .ant-card{
+      border: none;
+    }
+    .anticon.anticon-check-circle {
+      display: none;
+    }
+  }
+
+}
+
