@@ -1,4 +1,4 @@
-# Personal Portfolio [View Here](https://oleinikov-resume.vercel.app/).
+# Personal Portfolio [View Here](https://oleinikov-resume.vercel.app/)
 
 Welcome to my personal portfolio! This repository showcases my skills, projects, and experience as a software engineer.
 
