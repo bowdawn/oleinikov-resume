@@ -145,7 +145,7 @@ const App: FC = () => {
       nextButtonProps: { children: "Next" },
       prevButtonProps: { children: "Previous" },
       description:
-        "My contact information has been provided in the section below.",
+        "My contact information are provided in the section below.",
       placement: "bottom",
       target: () => ref1.current,
     },
@@ -154,7 +154,7 @@ const App: FC = () => {
       nextButtonProps: { children: "Next" },
       prevButtonProps: { children: "Previous" },
       description:
-        "My education history information has been provided in the section below.",
+        "My education history information are provided in the section below.",
       placement: "right",
       target: () => ref2.current,
     },
@@ -163,7 +163,7 @@ const App: FC = () => {
       nextButtonProps: { children: "Next" },
       prevButtonProps: { children: "Previous" },
       description:
-        "My work experience information has been provided in the section below.",
+        "My work experience information are provided in the section below.",
       placement: "right",
 
       target: () => ref3.current,
@@ -174,7 +174,7 @@ const App: FC = () => {
       nextButtonProps: { children: "Next" },
       prevButtonProps: { children: "Previous" },
       description:
-        "My certification information has been provided in the section below.",
+        "My certification information are provided in the section below.",
 
       placement: "right",
       target: () => ref4.current,
@@ -197,7 +197,7 @@ const App: FC = () => {
       nextButtonProps: { children: "Next" },
       prevButtonProps: { children: "Previous" },
       description:
-        "My technical skills has been listed in the section below.",
+        "My technical skill are listed in the section below.",
       placement: "left",
       target: () => ref5.current,
     },
@@ -206,7 +206,7 @@ const App: FC = () => {
       nextButtonProps: { children: "Next" },
       prevButtonProps: { children: "Previous" },
       description:
-        "My language skills have been listed in the section below.",
+        "My language skills are listed in the section below.",
       placement: "left",
       target: () => ref6.current,
     },
