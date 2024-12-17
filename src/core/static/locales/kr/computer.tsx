@@ -78,7 +78,7 @@ export const computer_kr: ResumeItemType[] = [
       {
         content: (
           <div style={{ marginBottom: content_mv, marginTop: content_mv }}>
-            <u>기타:</u> Netcore, Microservices
+            <u>기타:</u> ASP.Net Core, Microservices
           </div>
         ),
       },

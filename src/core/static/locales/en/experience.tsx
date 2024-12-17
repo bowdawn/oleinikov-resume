@@ -63,44 +63,9 @@ export const experience_en: ResumeItemType[] = [
     details: [
       {
         content:
-          "Worked extensively with Angular, React, and Vue for web development, developed mobile applications using React Native, and utilized Netcore, Docker, and Express for backend development.",
+          "Worked extensively with Angular, React, and Vue for web development, developed mobile applications using React Native, and utilized ASP.Net Core, Docker, and Express for backend development.",
       },
-      // {
-      //   content: "• Worked with Angular, React, and Vue for web development.",
-      // },
-      // { content: "• Developed mobile applications using React Native." },
-      // {
-      //   content:
-      //     "• Utilized Netcore, Docker, and Express for backend development.",
-      // },
+    
     ],
   },
-  // {
-  //   headers: [{ content: "BNR Technology Android Developer" }],
-  //   titles: [
-  //     {
-  //       content: "Android Developer | Jan 2019 - Mar 2019",
-  //     },
-  //   ],
-  //   details: [
-  //     {
-  //       content:
-  //         "• Created mobile applications with Android Studio and Firebase.",
-  //     },
-  //     {
-  //       content:
-  //         "• Provided written translations for English, Russian, and Korean language localization.",
-  //     },
-  //   ],
-  // },
-  // {
-  //   headers: [{ id: "library_website", content: "Family Library Project" }],
-  //   titles: [{ content: "Personal Project | Spring 2022" }],
-  //   details: [
-  //     {
-  //       content:
-  //         "• Developed a library system using MongoDB, Express, React, and Node Stack.",
-  //     },
-  //   ],
-  // },
 ];

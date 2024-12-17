@@ -57,36 +57,6 @@ export const experience_kr: ResumeItemType[] = [
         content:
           "Angular, React, 및 Vue를 활용하여 웹 애플리케이션을 개발하였으며, React Native를 사용하여 모바일 애플리케이션을 제작했습니다. 또한 .NET Core와 Docker를 기반으로 한 Express를 활용하여 백엔드 개발을 수행했습니다.",
       },
-      // {
-      //   content: "• Angular, React, 및 Vue를 사용하여 웹앱 개발.",
-      // },
-      // { content: "• React Native를 활용하여 모바일앱 개발." },
-      // {
-      //   content: "• Netcore, Docker, 및 Express를 사용한 백엔드 개발 경험.",
-      // },
     ],
   },
-  // {
-  //   headers: [{ content: "(주)비앤알테크널러지" }],
-  //   titles: [{ content: "안드로이드 개발자 | 2019.1 - 2019.3" }],
-  //   details: [
-  //     {
-  //       content:
-  //         "• 안드로이드 스튜디오 및 Firebase를 활용한 모바일 소프트웨어 개발.",
-  //     },
-  //     {
-  //       content: "• 영어, 러시아어, 한국어 번역 업무 수행.",
-  //     },
-  //   ],
-  // },
-  // {
-  //   headers: [{ id: "library_website", content: "가족 도서관 프로젝트" }],
-  //   titles: [{ content: "개인 프로젝트 | 2022 봄" }],
-  //   details: [
-  //     {
-  //       content:
-  //         "• MongoDB, Express, React 및 Node 스택을 활용하여 도서관 시스템 개발",
-  //     },
-  //   ],
-  // },
 ];
